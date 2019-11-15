@@ -3,3 +3,79 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+.report {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  /* @include for-tablet-landscape-up {
+    @include grid-background;
+  } */
+}
+
+/* //set up our grid template areas */
+.report_header {
+  grid-area: header;
+  text-align: center;
+}
+.report-logo {
+  margin: 2em 0 1em;
+  height: 4em;
+}
+.report_readout {
+  grid-area: score;
+}
+.report_chart {
+  grid-area: chart;
+}
+.report_next-steps {
+  grid-area: next;
+}
+.report_save {
+  grid-area: save;
+}
+.report-title {
+  margin: 0;
+  /* color: $brand-blue; */
+  line-height: 1em;
+  font-size: 1.3em;
+}
+
+/* .report-container {
+  max-width: $inner-container-width;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1.5em;
+  grid-template-areas:
+    "header  header"
+    "score  score"
+    "chart chart"
+    "next next"
+    "save save";
+  width: 100%;
+  height: 100%;
+  grid-template-columns: minmax(0, 50%) minmax(0, 50%);
+  background: $brand-dark-blue;
+  padding: 0 1.2em 2em 1.2em;
+
+  @include for-tablet-landscape-up {
+    @include shadow;
+    grid-template-areas:
+      "header  header"
+      "score   chart"
+      "next    next"
+      "save    save";
+    padding: 0 2em 2em 2em;
+  }
+} */
+.report-grid_cell {
+  /* border: 1px solid $brand-blue; */
+  padding: 20px;
+}
+
+.button-container {
+  text-align: center;
+}

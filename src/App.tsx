@@ -1,12 +1,12 @@
 import * as React from 'react';
 import './App.css';
-import Container from "./components/Container";
+import Report from "./components/Report";
 
 
 class App extends React.Component {
   public render() {
     return (
-      <Container message="Hello"/>
+      <Report message="Hello"/>
     )
   }
 }

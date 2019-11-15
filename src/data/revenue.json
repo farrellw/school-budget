@@ -1,0 +1,17 @@
+{
+    "bySource": {
+        "General Operating": 299000000,
+        "Deseg Expansion": 3300000,
+        "Federal": 41673586,
+        "Food Service": 19067363,
+        "Capital": -330000,
+        "Debt": 27626687,
+        "Trust": 5657630
+    },
+    "byCategory": {
+        "Local": 298736099,
+        "County": 3597275,
+        "State": 34427091,
+        "Federal": 56264802
+    }
+}
