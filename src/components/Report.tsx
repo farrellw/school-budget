@@ -1,9 +1,30 @@
 import * as React from "react";
+import { useState } from "react";
 import Revenue from './Revenue';
 
 interface IProps { message: string };
 
+type ShowOptions = "Revenue" | "Expenses";
+
 function Report({ message }: IProps) {
+  const [show, setShow] = useState<ShowOptions>("Revenue");
+
+  const showRevenue = () => {
+    setShow("Revenue");
+  }
+
+  const showExpenses = () => {
+    setShow("Expenses");
+  }
+
+  let showReport;
+
+  if (show === "Revenue") {
+    showReport = <Revenue />
+  } else if (show === "Expenses") {
+    showReport = <Revenue />
+  }
+
   return (
     <div className="report">
       <section className="report-container">
@@ -13,10 +34,10 @@ function Report({ message }: IProps) {
             </h1>
         </div>
         <div className="button-container">
-          <button>Revenue</button>
-          <button>Expenses</button>
+          <button onClick={showRevenue}>Revenue</button>
+          <button onClick={showExpenses}>Expenses</button>
         </div>
-        <Revenue />
+        {showReport}
       </section>
     </div>
   )
