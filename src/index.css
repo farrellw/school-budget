@@ -1,3 +1,9 @@
+:root {
+  --primary-bg-color: #F4C142;
+  --secondary-bg-color: #194989;
+  --tertiary-bg-color: #0E2A4F;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,10 +16,14 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--primary-bg-color);
 }
 
 .report_header {
   text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  min-height: 4em;
 }
 
 .report-title {
@@ -24,4 +34,44 @@ body {
 
 .button-container {
   text-align: center;
+}
+
+.revenue-section {
+  display: flex;
+  flex-direction: row;
+  justify-content:  center;
+  background-color: white;
+}
+
+.doughnut-chart-container {
+  margin: 1em;
+}
+
+.doughnut_chart {
+  height: 18em;
+}
+
+button {
+  color: var(--secondary-bg-color);
+  font-size: 1.2em;
+  font-weight: 700;
+  background: none;
+  border: 2px solid var(--secondary-bg-color);
+  border-radius: 20px;
+  padding: 0.3em 1em 0.3em 1em;
+}
+
+button:focus,
+.link-btn:focus {
+  outline: 1px dashed var(--secondary-bg-color);
+}
+
+button:hover, button:active, .link-btn:hover, .link-btn:active {
+    color: var(--teriary-bg-color);
+    border-color: var(--teriary-bg-color);
+}
+
+button:disabled, .link-btn:disabled {
+    color: grey;
+    border-color: grey;
 }

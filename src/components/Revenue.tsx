@@ -5,10 +5,12 @@ import DoughnutChart from './DoughnutChart';
 function Revenue() {
     return (
         <section className="revenue-section">
-            <div className="by-source">
-                <DoughnutChart id={"revenue-readout"} data={revenueJSON.bySource} title="Revenue by source" />
+            <div className="by-source doughnut-chart-container">
+                <DoughnutChart id={"revenue-readout-source"} data={revenueJSON.bySource} title="Revenue by source" />
             </div>
-            <div className="by-category" />
+            <div className="by-category doughnut-chart-container">
+                <DoughnutChart id={"revenue-readout-category"} data={revenueJSON.byCategory} title="Revenue by category" />
+            </div>
         </section>
     )
 }
