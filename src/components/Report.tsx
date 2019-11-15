@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import Revenue from './Revenue';
+import Expenses from './Expenses';
 
 interface IProps { message: string };
 
@@ -22,7 +23,7 @@ function Report({ message }: IProps) {
   if (show === "Revenue") {
     showReport = <Revenue />
   } else if (show === "Expenses") {
-    showReport = <Revenue />
+    showReport = <Expenses />
   }
 
   return (

@@ -36,7 +36,7 @@ body {
   text-align: center;
 }
 
-.revenue-section {
+.revenue-section, .expenses-section {
   display: flex;
   flex-direction: row;
   justify-content:  center;
