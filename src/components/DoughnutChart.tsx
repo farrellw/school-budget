@@ -1,25 +1,32 @@
 import { Chart } from "chart.js";
 import * as React from "react";
 import { useEffect } from "react";
+import IData from 'src/models/Data';
+
 
 interface IProps {
     id: string;
-    score: number;
+    data: any;
     title: string;
-    color: string;
 };
-function DoughnutChart({ score, title, id, color }: IProps): JSX.Element | null {
+function DoughnutChart({ data, id, title }: IProps): JSX.Element | null {
     {
         useEffect(() => {
             const ctx = document.getElementById(id) as HTMLCanvasElement;
             const chart = new Chart(ctx, {
                 type: "doughnut",
                 data: {
-                    labels: [score.toString()],
+                    labels: data.map((node: IData) => {
+                        return node.label;
+                    }),
                     datasets: [
                         {
-                            data: [score, 5 - score],
-                            backgroundColor: [color, "rgba(0, 0, 0, 0.125)"],
+                            data: data.map((node: IData) => {
+                                return node.amount;
+                            }),
+                            backgroundColor: data.map((node: IData) => {
+                                return node.color;
+                            }),
                             borderWidth: 0
                         }
                     ]
@@ -27,9 +34,16 @@ function DoughnutChart({ score, title, id, color }: IProps): JSX.Element | null 
                 options: {
                     maintainAspectRatio: false,
                     responsive: true,
-                    cutoutPercentage: 80,
-                    legend: { display: false },
-                    title: { text: score.toString() }
+                    cutoutPercentage: 60,
+                    legend: {
+                        display: true,
+                        position: "bottom",
+                        fullWidth: false
+                    },
+                    title: {
+                        text: title,
+                        display: true
+                    }
                 }
             });
             console.log(chart);
@@ -37,7 +51,6 @@ function DoughnutChart({ score, title, id, color }: IProps): JSX.Element | null 
 
         return (
             <div className="doughnut_chart">
-                <p className="doughnut_chart-title">{title}</p>
                 <canvas id={id} className="doughnut_chart-canvas" />
             </div>
         );

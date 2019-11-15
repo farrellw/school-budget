@@ -1,17 +1,61 @@
 {
-    "bySource": {
-        "General Operating": 299000000,
-        "Deseg Expansion": 3300000,
-        "Federal": 41673586,
-        "Food Service": 19067363,
-        "Capital": -330000,
-        "Debt": 27626687,
-        "Trust": 5657630
-    },
-    "byCategory": {
-        "Local": 298736099,
-        "County": 3597275,
-        "State": 34427091,
-        "Federal": 56264802
-    }
+    "bySource": [
+        {
+            "label": "General Operating",
+            "amount": 299000000,
+            "color": "rgb(255, 99, 132)"
+        },
+        {
+            "label": "Deseg Expansion",
+            "amount": 3300000,
+            "color": "rgb(201, 203, 207)"
+        },
+        {
+            "label": "Federal",
+            "amount": 41673586,
+            "color": "rgb(255, 205, 86)"
+        },
+        {
+            "label": "Food Service",
+            "amount": 19067363,
+            "color": "rgb(75, 192, 192)"
+        },
+        {
+            "label": "Capital",
+            "amount": -330000,
+            "color": "rgb(54, 162, 235)"
+        },
+        {
+            "label": "Debt",
+            "amount": 27626687,
+            "color": "rgb(153, 102, 255)"
+        },
+        {
+            "label": "Trust",
+            "amount": 5657630,
+            "color": "rgb(255, 159, 64)"
+        }
+    ],
+    "byCategory": [
+        {
+            "label": "Local",
+            "amount": 298736099,
+            "color": "blue"
+        },
+        {
+            "label": "County",
+            "amount": 3597275,
+            "color": "red"
+        },
+        {
+            "label": "State",
+            "amount": 34427091,
+            "color": "orange"
+        },
+        {
+            "label": "Federal",
+            "amount": 56264802,
+            "color": "teal"
+        }
+    ]
 }
