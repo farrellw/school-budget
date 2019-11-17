@@ -10,7 +10,6 @@ interface IProps {
     title: string;
 };
 function DoughnutChart({ data, id, title }: IProps): JSX.Element | null {
-    {
         useEffect(() => {
             const ctx = document.getElementById(id) as HTMLCanvasElement;
             const chart = new Chart(ctx, {
@@ -37,14 +36,32 @@ function DoughnutChart({ data, id, title }: IProps): JSX.Element | null {
                     cutoutPercentage: 60,
                     legend: {
                         display: true,
-                        position: "bottom",
-                        fullWidth: false
+                        position: "bottom"
                     },
                     title: {
                         text: title,
                         display: true
+                    },
+                    tooltips: {
+                        callbacks: {
+                            label: (toolTipItem: Chart.ChartTooltipItem, dater: Chart.ChartData) => {
+                                if(dater.datasets && dater.datasets[0] && dater.datasets[0].data){
+                                    if(toolTipItem.index !== undefined){
+                                        const selectedValue = dater.datasets[0].data[toolTipItem.index];
+                                        if(typeof selectedValue === "number"){
+                                            if(selectedValue >= 1000){
+                                                return '$' + selectedValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                             } else {
+                                                return '$' + selectedValue;
+                                             }
+                                        }
+                                    }
+                                }
+                                return "Tooltip Error Handler";
+                            }
+                        }
                     }
-                }
+                },
             });
             console.log(chart);
         });
@@ -54,7 +71,6 @@ function DoughnutChart({ data, id, title }: IProps): JSX.Element | null {
                 <canvas id={id} className="doughnut_chart-canvas" />
             </div>
         );
-    }
 }
 
 export default DoughnutChart;

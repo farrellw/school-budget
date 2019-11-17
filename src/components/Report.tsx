@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import Revenue from './Revenue';
 import Expenses from './Expenses';
+import ReportTable from "./ReportTable";
 
 interface IProps { message: string };
 
@@ -39,6 +40,7 @@ function Report({ message }: IProps) {
           <button onClick={showExpenses}>Expenses</button>
         </div>
         {showReport}
+        <ReportTable/>
       </section>
     </div>
   )
