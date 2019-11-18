@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Open Sans", "Roboto", sans-serif;
 }
 
 
@@ -17,6 +17,35 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--primary-bg-color);
+}
+
+.table {
+}
+
+/* spacing */
+
+table {
+  table-layout: fixed;
+  width: 30em;
+  border: 3px solid black;
+  margin: 30px;
+}
+
+thead th:nth-child(1) {
+  width: 60%;
+}
+
+thead th:nth-child(2) {
+  width: 40%;
+}
+
+th, td {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
 }
 
 .report_header {
