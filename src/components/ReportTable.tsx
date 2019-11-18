@@ -24,8 +24,8 @@ function ReportTable() {
                     )
                 })}
             </select><br />
-            <caption>{selected}</caption>
             <table >
+                <caption>{selected}</caption>
                 <thead>
                     <tr>
                         <th>Field Name</th>
