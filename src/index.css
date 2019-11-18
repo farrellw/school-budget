@@ -16,7 +16,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-bg-color);
 }
 
 /* spacing */
@@ -50,7 +49,6 @@ tr:hover {
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;
-  min-height: 4em;
 }
 
 .report-title {
