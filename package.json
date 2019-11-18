@@ -2,6 +2,7 @@
   "name": "school-budget",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@types/react-table": "^6.8.5",
     "chart.js": "^2.9.3",
