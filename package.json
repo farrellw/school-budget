@@ -16,7 +16,8 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "buildForDeploy": "npm run build; rm -rf docs; mv build docs;"
   },
   "devDependencies": {
     "@types/chart.js": "^2.9.0",
