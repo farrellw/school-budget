@@ -5,3 +5,6 @@ Quick prototype containing a few graphs of SLPS budget data.
 
 ## Visit the site
 https://farrellw.github.io/school-budget/
+
+## Issues
+https://trello.com/b/1vuWZGay/wepower-budget
