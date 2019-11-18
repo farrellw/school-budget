@@ -19,9 +19,6 @@ body {
   background-color: var(--primary-bg-color);
 }
 
-.table {
-}
-
 /* spacing */
 
 table {
@@ -29,6 +26,7 @@ table {
   width: 30em;
   border: 3px solid black;
   margin: 30px;
+  margin: auto;
 }
 
 thead th:nth-child(1) {
