@@ -33,7 +33,6 @@ body {
 
 table {
   table-layout: fixed;
-  width: 30em;
   border: 3px solid black;
   margin: auto;
 }
@@ -48,14 +47,18 @@ thead th:nth-child(2) {
 
 thead th:nth-child(3) {
   width: 25%;
-} 
+}
 
 th, td {
   padding: 20px;
   border-bottom: 1px solid #ddd;
 }
 
-tr:hover {
+th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3) {
+  text-align: right;
+}
+
+tbody tr:hover {
   background-color: #f5f5f5;
 }
 
