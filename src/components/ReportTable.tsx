@@ -10,9 +10,11 @@ function ReportTable() {
         setSelected(event.currentTarget.value);
     }
 
+
+    // TODO use a better default
     const formData = (savedSchoolsJSON.find((node) => {
         return node.name === selected;
-    }) || savedSchoolsJSON[0])["non-grant-operating-budget"];
+    }) || savedSchoolsJSON[0]);
 
     // Render the UI for your table
     return (
@@ -23,43 +25,51 @@ function ReportTable() {
                         <option key={i} value={n.name} >{n.name}</option>
                     )
                 })}
-            </select><br />
-            <table >
+            </select>
+            <table>
                 <caption>{selected}</caption>
                 <thead>
                     <tr>
                         <th>Field Name</th>
-                        <th>Value</th>
+                        <th>Non Grant Op Budget</th>
+                        <th>Grant Op Budget</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Administrative Salaries</td>
-                        <td>{formData["Administrative Salaries"]}</td>
+                        <td>{formData["non-grant-operating-budget"]["Administrative Salaries"]}</td>
+                        <td>{formData["grant-operating-budget"]["Administrative Salaries"]}</td>
                     </tr>
                     <tr>
                         <td>Instructional Salaries</td>
-                        <td>{formData["Instructional Salaries"]}</td>
+                        <td>{formData["non-grant-operating-budget"]["Instructional Salaries"]}</td>
+                        <td>{formData["grant-operating-budget"]["Instructional Salaries"]}</td>
                     </tr>
                     <tr>
                         <td>Instructional Support Salaries</td>
-                        <td>{formData["Instructional Support Salaries"]}</td>
+                        <td>{formData["non-grant-operating-budget"]["Instructional Support Salaries"]}</td>
+                        <td>{formData["grant-operating-budget"]["Instructional Support Salaries"]}</td>
                     </tr>
                     <tr>
                         <td>Non-Instructional Support Salaries</td>
-                        <td>{formData["Non-Instructional Support Salaries"]}</td>
+                        <td>{formData["non-grant-operating-budget"]["Non-Instructional Support Salaries"]}</td>
+                        <td>{formData["grant-operating-budget"]["Non-Instructional Support Salaries"]}</td>
                     </tr>
                     <tr>
                         <td>Temp/Part-Time/Sub</td>
-                        <td>{formData["Temp/Part-Time/Sub"]}</td>
+                        <td>{formData["non-grant-operating-budget"]["Temp/Part-Time/Sub"]}</td>
+                        <td>{formData["grant-operating-budget"]["Temp/Part-Time/Sub"]}</td>
                     </tr>
                     <tr>
                         <td>Benefits</td>
-                        <td>{formData.Benefits}</td>
+                        <td>{formData["non-grant-operating-budget"].Benefits}</td>
+                        <td>{formData["grant-operating-budget"].Benefits}</td>
                     </tr>
                     <tr>
                         <td>Discretionary Budget</td>
-                        <td>{formData["Discretionary Budget"]}</td>
+                        <td>{formData["non-grant-operating-budget"]["Discretionary Budget"]}</td>
+                        <td>{formData["grant-operating-budget"]["Discretionary Budget"]}</td>
                     </tr>
                 </tbody>
             </table>
