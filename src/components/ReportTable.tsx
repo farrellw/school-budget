@@ -18,8 +18,8 @@ function ReportTable() {
 
     // Render the UI for your table
     return (
-        <section className="table">
-            <select onChange={setSelection}>
+        <section className="table-section">
+            <select className="table-select" onChange={setSelection}>
                 {savedSchoolsJSON.map((n, i: number) => {
                     return (
                         <option key={i} value={n.name} >{n.name}</option>
