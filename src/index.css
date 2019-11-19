@@ -66,6 +66,7 @@ tr:hover {
   flex-direction: row;
   justify-content:  center;
   background-color: white;
+  flex-wrap: wrap;
 }
 
 .doughnut-chart-container {
