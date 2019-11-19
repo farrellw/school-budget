@@ -3,7 +3,9 @@ var fs = require("fs");
 // Or var xlsx = require('node-xlsx').default;
 
 // Parse a buffer
-const workSheets = xlsx.parse(fs.readFileSync(`${__dirname}/25pgs.xlsx`));
+const workSheets = xlsx.parse(
+  fs.readFileSync(`${__dirname}/ElementaryTwo.xlsx`)
+);
 
 const sheetOne = workSheets[0];
 const data = sheetOne.data;
@@ -15,13 +17,13 @@ var grantLabel = "grant-operating-budget";
 
 data.forEach(row => {
   var rowName = row[6];
-  if (rowName === "Administra!ve Salaries") {
+  if (rowName && rowName.startsWith("Adm")) {
     if (grantLabel === "grant-operating-budget") {
       grantLabel = "non-grant-operating-budget";
       currentSchoolCount += 1;
       json[currentSchoolCount] = {
         name: "unknown",
-        type: "HS"
+        type: "ES"
       };
     } else {
       grantLabel = "grant-operating-budget";
@@ -49,4 +51,4 @@ data.forEach(row => {
   }
 });
 
-fs.writeFileSync("savedSchools.json", JSON.stringify(json));
+fs.writeFileSync("elementaryTwo.json", JSON.stringify(json));

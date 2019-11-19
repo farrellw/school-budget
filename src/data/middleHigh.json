@@ -1,0 +1,508 @@
+[
+    {
+      "name": "Clyde Miller Career Academy",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$198,977",
+        "Instructional Salaries": "$1,991,495",
+        "Instructional Support Salaries": "$70,199",
+        "Non-Instructional Support Salaries": "$468,668",
+        "Temp/Part-Time/Sub": "$70,000",
+        "Benefits": "$1,216,276",
+        "Discretionary Budget": "$75,204"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$419",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$21,216",
+        "Non-Instructional Support Salaries": "$60,451",
+        "Temp/Part-Time/Sub": "$67",
+        "Benefits": "$42,748",
+        "Discretionary Budget": "$135,791"
+      }
+    },
+    {
+      "name": "Gateway STEM High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$372,745",
+        "Instructional Salaries": "$4,131,851",
+        "Instructional Support Salaries": "$268,214",
+        "Non-Instructional Support Salaries": "$740,856",
+        "Temp/Part-Time/Sub": "$110,000",
+        "Benefits": "$2,443,323",
+        "Discretionary Budget": "$158,466"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$737",
+        "Instructional Salaries": "$96,661",
+        "Instructional Support Salaries": "$39,967",
+        "Non-Instructional Support Salaries": "$175,797",
+        "Temp/Part-Time/Sub": "$118",
+        "Benefits": "$173,471",
+        "Discretionary Budget": "$113,723"
+      }
+    },
+    {
+      "name": "Nottingham CAJT High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$89,366",
+        "Instructional Salaries": "$952,243",
+        "Instructional Support Salaries": "$466,707",
+        "Non-Instructional Support Salaries": "$141,496",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$814,935",
+        "Discretionary Budget": "$15,161"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$363",
+        "Instructional Salaries": "$63,323",
+        "Instructional Support Salaries": "$26,721",
+        "Non-Instructional Support Salaries": "$902",
+        "Temp/Part-Time/Sub": "$14",
+        "Benefits": "$48,425",
+        "Discretionary Budget": "$35,122"
+      }
+    },
+    {
+      "name": "Cleveland NJROTC High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$185,249",
+        "Instructional Salaries": "$964,699",
+        "Instructional Support Salaries": "$37,863",
+        "Non-Instructional Support Salaries": "$249,175",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$645,997",
+        "Discretionary Budget": "$38,303"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$209",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$24,398",
+        "Non-Instructional Support Salaries": "$62,114",
+        "Temp/Part-Time/Sub": "$33",
+        "Benefits": "$45,127",
+        "Discretionary Budget": "$21,533"
+      }
+    },
+    {
+      "name": "Carnahan High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$211,285",
+        "Instructional Salaries": "$1,042,421",
+        "Instructional Support Salaries": "$62,233",
+        "Non-Instructional Support Salaries": "$273,395",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$719,363",
+        "Discretionary Budget": "$37,739"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$254",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$19,976",
+        "Non-Instructional Support Salaries": "$62,336",
+        "Temp/Part-Time/Sub": "$41",
+        "Benefits": "$45,419",
+        "Discretionary Budget": "$67,092"
+      }
+    },
+    {
+      "name": "Coll Schl of Med",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$189,244",
+        "Instructional Salaries": "$687,091",
+        "Instructional Support Salaries": "$0",
+        "Non-Instructional Support Salaries": "$196,408",
+        "Temp/Part-Time/Sub": "$53,000",
+        "Benefits": "$495,406",
+        "Discretionary Budget": "$38,053"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$0",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$0",
+        "Non-Instructional Support Salaries": "$48,829",
+        "Temp/Part-Time/Sub": "$0",
+        "Benefits": "$23,401",
+        "Discretionary Budget": "$0"
+      }
+    },
+    {
+      "name": "N.W. Transport & Law High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$183,788",
+        "Instructional Salaries": "$1,288,729",
+        "Instructional Support Salaries": "$128,476",
+        "Non-Instructional Support Salaries": "$332,890",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$862,992",
+        "Discretionary Budget": "$26,340"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$141",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$57,997",
+        "Non-Instructional Support Salaries": "$106,006",
+        "Temp/Part-Time/Sub": "$22",
+        "Benefits": "$85,055",
+        "Discretionary Budget": "$2,167"
+      }
+    },
+    {
+      "name": "Metro Academic Classic High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$198,399",
+        "Instructional Salaries": "$1,056,801",
+        "Instructional Support Salaries": "$0",
+        "Non-Instructional Support Salaries": "$341,193",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$719,666",
+        "Discretionary Budget": "$129,045"
+      },
+      "grant-operating-budget": {
+        
+      }
+    },
+    {
+      "name": "McKinley CJA High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$298,471",
+        "Instructional Salaries": "$1,788,652",
+        "Instructional Support Salaries": "$229,966",
+        "Non-Instructional Support Salaries": "$318,154",
+        "Temp/Part-Time/Sub": "$60,500",
+        "Benefits": "$1,188,077",
+        "Discretionary Budget": "$34,845"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$0",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$0",
+        "Non-Instructional Support Salaries": "$48,830",
+        "Temp/Part-Time/Sub": "$0",
+        "Benefits": "$23,415",
+        "Discretionary Budget": "$0"
+        
+      }
+    },
+    {
+      "name": "Roosevelt High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$235,724",
+        "Instructional Salaries": "$1,792,970",
+        "Instructional Support Salaries": "$103,930",
+        "Non-Instructional Support Salaries": "$439,117",
+        "Temp/Part-Time/Sub": "$52,500",
+        "Benefits": "$1,173,543",
+        "Discretionary Budget": "$54,759"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$251",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$18,419",
+        "Non-Instructional Support Salaries": "$100,344",
+        "Temp/Part-Time/Sub": "$40",
+        "Benefits": "$66,624",
+        "Discretionary Budget": "$65,705"
+        
+      }
+    },
+    {
+      "name": "Sordan IS High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$212,049",
+        "Instructional Salaries": "$1,734,100",
+        "Instructional Support Salaries": "$65,762",
+        "Non-Instructional Support Salaries": "$482,728",
+        "Temp/Part-Time/Sub": "$52,500",
+        "Benefits": "$1,116,635",
+        "Discretionary Budget": "$75,127"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$385",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$19,038",
+        "Non-Instructional Support Salaries": "$64,061",
+        "Temp/Part-Time/Sub": "$62",
+        "Benefits": "$36,915",
+        "Discretionary Budget": "$4,961"
+        
+      }
+    },
+    {
+      "name": "Sumner High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$138,474",
+        "Instructional Salaries": "$1,208,147",
+        "Instructional Support Salaries": "$89,559",
+        "Non-Instructional Support Salaries": "$352,755",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$800,268",
+        "Discretionary Budget": "$35,144"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$171",
+        "Temp/Part-Time/Sub": "$27",
+        "Benefits": "$40,278"
+      }
+    },
+    {
+      "name": "Vashon High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$389,899",
+        "Instructional Salaries": "$1,573,390",
+        "Instructional Support Salaries": "$84,280",
+        "Non-Instructional Support Salaries": "$608,471",
+        "Temp/Part-Time/Sub": "$70,000",
+        "Benefits": "$1,195,744",
+        "Discretionary Budget": "$54,716"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$262",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$42,203",
+        "Non-Instructional Support Salaries": "$72,044",
+        "Temp/Part-Time/Sub": "$42",
+        "Benefits": "$61,906",
+        "Discretionary Budget": "$52,770"
+        
+      }
+    },
+    {
+      "name": "Central VPA High",
+      "type": "HS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$197,692",
+        "Instructional Salaries": "$1,373,205",
+        "Instructional Support Salaries": "$40,056",
+        "Non-Instructional Support Salaries": "$308,916",
+        "Temp/Part-Time/Sub": "$38,000",
+        "Benefits": "$866,945",
+        "Discretionary Budget": "$57,500"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$287",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$23,126",
+        "Non-Instructional Support Salaries": "$58,308",
+        "Temp/Part-Time/Sub": "$46",
+        "Benefits": "$42,743",
+        "Discretionary Budget": "$37,996"
+        
+      }
+    },
+    {
+      "name": "Yeatman Middle",
+      "type": "MS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$99,345",
+        "Instructional Salaries": "$997,726",
+        "Instructional Support Salaries": "$80,730",
+        "Non-Instructional Support Salaries": "$146,713",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$623,421",
+        "Discretionary Budget": "$44,826"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$189",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$67,698",
+        "Non-Instructional Support Salaries": "$60,919",
+        "Temp/Part-Time/Sub": "$30",
+        "Benefits": "$65,362",
+        "Discretionary Budget": "$173"
+        
+      }
+    },
+    {
+      "name": "Busch AAA Middle",
+      "type": "MS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$105,336",
+        "Instructional Salaries": "$1,092,466",
+        "Instructional Support Salaries": "$169,888",
+        "Non-Instructional Support Salaries": "$203,631",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$738,622",
+        "Discretionary Budget": "$35,579"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$239",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$17,054",
+        "Non-Instructional Support Salaries": "$65,829",
+        "Temp/Part-Time/Sub": "$38",
+        "Benefits": "$43,516",
+        "Discretionary Budget": "$8,034"
+        
+      }
+    },
+    {
+      "name": "Carr Lane VPA Middle",
+      "type": "MS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$158,276",
+        "Instructional Salaries": "$1,535,310",
+        "Instructional Support Salaries": "$101,513",
+        "Non-Instructional Support Salaries": "$210,999",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$933,940",
+        "Discretionary Budget": "$52,454"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$392",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$57,048",
+        "Non-Instructional Support Salaries": "$61,727",
+        "Temp/Part-Time/Sub": "$63",
+        "Benefits": "$61,930",
+        "Discretionary Budget": "$11,985"
+        
+      }
+    },
+    {
+      "name": "McKinley Leadership Academy",
+      "type": "MS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$0",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$0",
+        "Non-Instructional Support Salaries": "$0",
+        "Temp/Part-Time/Sub": "$0",
+        "Benefits": "$1,485",
+        "Discretionary Budget": "$38,893"
+        
+      }
+    },
+    {
+      "name": "Fanning Middle",
+      "type": "MS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$100,108",
+        "Instructional Salaries": "$652,167",
+        "Instructional Support Salaries": "$58,866",
+        "Non-Instructional Support Salaries": "$157,157",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$467,594",
+        "Discretionary Budget": "$16,768"
+        
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$225",
+        "Instructional Salaries": "$47,562",
+        "Instructional Support Salaries": "$77,799",
+        "Non-Instructional Support Salaries": "$65,420",
+        "Temp/Part-Time/Sub": "$4,840",
+        "Benefits": "$114,611",
+        "Discretionary Budget": "$184,227"
+      }
+    },
+      {
+      "name": "Gateway Middle",
+      "type": "MS",
+      "non-grant-operating-budget": {
+      "Administrative Salaries": "$167,419",
+        "Instructional Salaries": "$1,613,908",
+        "Instructional Support Salaries": "$298,734",
+        "Non-Instructional Support Salaries": "$240,456",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$1,129,772",
+        "Discretionary Budget": "$58,715"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$401",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$48,906",
+        "Non-Instructional Support Salaries": "$65,386",
+        "Temp/Part-Time/Sub": "$64",
+        "Benefits": "$65,607",
+        "Discretionary Budget": "$155,327"
+      }
+    },
+    {
+      "name": "AESM Middle",
+      "type": "MS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$98,392",
+        "Instructional Salaries": "$995,321",
+        "Instructional Support Salaries": "$152,623",
+        "Non-Instructional Support Salaries": "$194,648",
+        "Temp/Part-Time/Sub": "$0",
+        "Benefits": "$684,513",
+        "Discretionary Budget": "$43,268"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$183",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$23,762",
+        "Non-Instructional Support Salaries": "$63,723",
+        "Temp/Part-Time/Sub": "$29",
+        "Benefits": "$44,159",
+        "Discretionary Budget": "$10,059"
+      }
+    },
+    {
+      "name": "Long Middle",
+      "type": "MS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$94,921",
+        "Instructional Salaries": "$961,046",
+        "Instructional Support Salaries": "$60,975",
+        "Non-Instructional Support Salaries": "$118,269",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$586,394",
+        "Discretionary Budget": "$26,561"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$122",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$11,139",
+        "Non-Instructional Support Salaries": "$64,143",
+        "Temp/Part-Time/Sub": "$19",
+        "Benefits": "$35,750",
+        "Discretionary Budget": "$565"
+      }
+    },
+    {
+      "name": "Compton Drew Middle",
+      "type": "MS",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$173,257",
+        "Instructional Salaries": "$1,559,989",
+        "Instructional Support Salaries": "$179,496",
+        "Non-Instructional Support Salaries": "$272,377",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$1,007,087",
+        "Discretionary Budget": "$47,950"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$348",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$52,434",
+        "Non-Instructional Support Salaries": "$61,916",
+        "Temp/Part-Time/Sub": "$56",
+        "Benefits": "$60,747",
+        "Discretionary Budget": "$22,535"
+      }
+    }
+  ]

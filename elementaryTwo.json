@@ -1,0 +1,492 @@
+[
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$95,117",
+        "Instructional Salaries": "$516,274",
+        "Instructional Support Salaries": "$64,431",
+        "Non-Instructional Support Salaries": "$120,182",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$400,315",
+        "Discretionary Budget": "$26,275"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$170",
+        "Instructional Salaries": "$45,421",
+        "Instructional Support Salaries": "$15,187",
+        "Non-Instructional Support Salaries": "$62,904",
+        "Temp/Part-Time/Sub": "$19",
+        "Benefits": "$65,443",
+        "Discretionary Budget": "$82"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$165,375",
+        "Instructional Salaries": "$1,054,832",
+        "Instructional Support Salaries": "$141,521",
+        "Non-Instructional Support Salaries": "$109,456",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$662,995",
+        "Discretionary Budget": "$36,478"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$330",
+        "Instructional Salaries": "$81,187",
+        "Instructional Support Salaries": "$69,883",
+        "Non-Instructional Support Salaries": "$86,395",
+        "Temp/Part-Time/Sub": "$37",
+        "Benefits": "$123,820",
+        "Discretionary Budget": "$43,009"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$167,028",
+        "Instructional Salaries": "$904,204",
+        "Instructional Support Salaries": "$146,597",
+        "Non-Instructional Support Salaries": "$88,360",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$651,666",
+        "Discretionary Budget": "$25,011"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$339",
+        "Temp/Part-Time/Sub": "$37",
+        "Benefits": "$97,699"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$90,023",
+        "Instructional Salaries": "$857,876",
+        "Instructional Support Salaries": "$65,962",
+        "Non-Instructional Support Salaries": "$133,156",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$563,390",
+        "Discretionary Budget": "$32,450"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$84",
+        "Temp/Part-Time/Sub": "$0",
+        "Benefits": "$52"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$92,022",
+        "Instructional Salaries": "$1,045,328",
+        "Instructional Support Salaries": "$189,395",
+        "Non-Instructional Support Salaries": "$118,026",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$688,417",
+        "Discretionary Budget": "$34,900"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$271",
+        "Instructional Salaries": "$64,240",
+        "Instructional Support Salaries": "$35,075",
+        "Non-Instructional Support Salaries": "$63,447",
+        "Temp/Part-Time/Sub": "$30",
+        "Benefits": "$83,179",
+        "Discretionary Budget": "$2,804"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$166,960",
+        "Instructional Salaries": "$1,404,199",
+        "Instructional Support Salaries": "$240,736",
+        "Non-Instructional Support Salaries": "$149,971",
+        "Temp/Part-Time/Sub": "$52,500",
+        "Benefits": "$908,995",
+        "Discretionary Budget": "$55,450"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$353",
+        "Instructional Salaries": "$104,500",
+        "Instructional Support Salaries": "$101,702",
+        "Non-Instructional Support Salaries": "$40,635",
+        "Temp/Part-Time/Sub": "$39",
+        "Benefits": "$150,931",
+        "Discretionary Budget": "$64,617"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$87,613",
+        "Instructional Salaries": "$588,576",
+        "Instructional Support Salaries": "$105,802",
+        "Non-Instructional Support Salaries": "$115,199",
+        "Temp/Part-Time/Sub": "$0",
+        "Benefits": "$441,813",
+        "Discretionary Budget": "$20,587"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$194",
+        "Instructional Salaries": "$55,625",
+        "Instructional Support Salaries": "$28,674",
+        "Non-Instructional Support Salaries": "$60,408",
+        "Temp/Part-Time/Sub": "$21",
+        "Benefits": "$81,767",
+        "Discretionary Budget": "$5,546"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$102,762",
+        "Instructional Salaries": "$767,688",
+        "Instructional Support Salaries": "$138,416",
+        "Non-Instructional Support Salaries": "$161,571",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$542,976",
+        "Discretionary Budget": "$29,980"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$298",
+        "Instructional Salaries": "$67,452",
+        "Instructional Support Salaries": "$108,283",
+        "Non-Instructional Support Salaries": "$44,322",
+        "Temp/Part-Time/Sub": "$42",
+        "Benefits": "$128,998",
+        "Discretionary Budget": "$133,414"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$155,950",
+        "Instructional Salaries": "$1,658,247",
+        "Instructional Support Salaries": "$302,737",
+        "Non-Instructional Support Salaries": "$222,356",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$1,132,736",
+        "Discretionary Budget": "$54,079"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$413",
+        "Instructional Salaries": "$139,835",
+        "Instructional Support Salaries": "$110,763",
+        "Non-Instructional Support Salaries": "$64,300",
+        "Temp/Part-Time/Sub": "$46",
+        "Benefits": "$158,943",
+        "Discretionary Budget": "$3,677"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$85,670",
+        "Instructional Salaries": "$825,473",
+        "Instructional Support Salaries": "$62,886",
+        "Non-Instructional Support Salaries": "$167,751",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$551,993",
+        "Discretionary Budget": "$38,768"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$313",
+        "Instructional Salaries": "$90,474",
+        "Instructional Support Salaries": "$72,715",
+        "Non-Instructional Support Salaries": "$59,782",
+        "Temp/Part-Time/Sub": "$35",
+        "Benefits": "$125,161",
+        "Discretionary Budget": "$25,150"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$161,550",
+        "Instructional Salaries": "$1,034,444",
+        "Instructional Support Salaries": "$110,598",
+        "Non-Instructional Support Salaries": "$129,395",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$677,968",
+        "Discretionary Budget": "$28,750"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$359",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$12,487",
+        "Non-Instructional Support Salaries": "$61,851",
+        "Temp/Part-Time/Sub": "$40",
+        "Benefits": "$38,851",
+        "Discretionary Budget": "$44,807"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$92,134",
+        "Instructional Salaries": "$731,662",
+        "Instructional Support Salaries": "$103,524",
+        "Non-Instructional Support Salaries": "$124,505",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$522,421",
+        "Discretionary Budget": "$28,509"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$216",
+        "Temp/Part-Time/Sub": "$24",
+        "Benefits": "$62,435"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$175,401",
+        "Instructional Salaries": "$872,935",
+        "Instructional Support Salaries": "$140,641",
+        "Non-Instructional Support Salaries": "$160,119",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$645,294",
+        "Discretionary Budget": "$39,820"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$367",
+        "Instructional Salaries": "$95,517",
+        "Instructional Support Salaries": "$90,173",
+        "Non-Instructional Support Salaries": "$64,004",
+        "Temp/Part-Time/Sub": "$41",
+        "Benefits": "$138,887",
+        "Discretionary Budget": "$2,750"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$85,268",
+        "Instructional Salaries": "$491,188",
+        "Instructional Support Salaries": "$108,457",
+        "Non-Instructional Support Salaries": "$123,733",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$420,143",
+        "Discretionary Budget": "$20,207"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$126",
+        "Instructional Salaries": "$99,395",
+        "Instructional Support Salaries": "$91,205",
+        "Non-Instructional Support Salaries": "$62,979",
+        "Temp/Part-Time/Sub": "$14",
+        "Benefits": "$132,817",
+        "Discretionary Budget": "$310"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$161,418",
+        "Instructional Salaries": "$1,294,184",
+        "Instructional Support Salaries": "$116,511",
+        "Non-Instructional Support Salaries": "$158,550",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$771,989",
+        "Discretionary Budget": "$44,955"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$402",
+        "Instructional Salaries": "$100,303",
+        "Instructional Support Salaries": "$70,556",
+        "Non-Instructional Support Salaries": "$63,695",
+        "Temp/Part-Time/Sub": "$44",
+        "Benefits": "$129,685",
+        "Discretionary Budget": "$9,533"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$87,613",
+        "Instructional Salaries": "$537,436",
+        "Instructional Support Salaries": "$86,909",
+        "Non-Instructional Support Salaries": "$92,626",
+        "Temp/Part-Time/Sub": "$17,500",
+        "Benefits": "$394,423",
+        "Discretionary Budget": "$19,956"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$121",
+        "Instructional Salaries": "$54,524",
+        "Instructional Support Salaries": "$16,187",
+        "Non-Instructional Support Salaries": "$61,814",
+        "Temp/Part-Time/Sub": "$13",
+        "Benefits": "$65,975",
+        "Discretionary Budget": "$117"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$100,669",
+        "Instructional Salaries": "$811,978",
+        "Instructional Support Salaries": "$117,801",
+        "Non-Instructional Support Salaries": "$106,752",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$565,908",
+        "Discretionary Budget": "$26,375"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$177",
+        "Instructional Salaries": "$41,685",
+        "Instructional Support Salaries": "$49,747",
+        "Non-Instructional Support Salaries": "$62,372",
+        "Temp/Part-Time/Sub": "$20",
+        "Benefits": "$86,999",
+        "Discretionary Budget": "$1,933"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$168,757",
+        "Instructional Salaries": "$1,293,960",
+        "Instructional Support Salaries": "$333,268",
+        "Non-Instructional Support Salaries": "$157,262",
+        "Temp/Part-Time/Sub": "$52,500",
+        "Benefits": "$939,363",
+        "Discretionary Budget": "$52,600"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$293",
+        "Instructional Salaries": "$110,804",
+        "Instructional Support Salaries": "$52,236",
+        "Non-Instructional Support Salaries": "$71,435",
+        "Temp/Part-Time/Sub": "$32",
+        "Benefits": "$130,772",
+        "Discretionary Budget": "$28,416"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$91,722",
+        "Instructional Salaries": "$592,433",
+        "Instructional Support Salaries": "$39,852",
+        "Non-Instructional Support Salaries": "$130,298",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$393,216",
+        "Discretionary Budget": "$21,625"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$198",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$9,775",
+        "Non-Instructional Support Salaries": "$59,937",
+        "Temp/Part-Time/Sub": "$22",
+        "Benefits": "$33,805",
+        "Discretionary Budget": "$1,934"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$152,955",
+        "Instructional Salaries": "$694,938",
+        "Instructional Support Salaries": "$93,990",
+        "Non-Instructional Support Salaries": "$180,000",
+        "Temp/Part-Time/Sub": "$0",
+        "Benefits": "$550,283",
+        "Discretionary Budget": "$40,367"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$246",
+        "Temp/Part-Time/Sub": "$27",
+        "Benefits": "$107,678"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$90,023",
+        "Instructional Salaries": "$709,988",
+        "Instructional Support Salaries": "$150,398",
+        "Non-Instructional Support Salaries": "$127,107",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$541,298",
+        "Discretionary Budget": "$32,187"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$63",
+        "Instructional Salaries": "$72,433",
+        "Instructional Support Salaries": "$53,230",
+        "Non-Instructional Support Salaries": "$0",
+        "Temp/Part-Time/Sub": "$0",
+        "Benefits": "$86,819",
+        "Discretionary Budget": "$0"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$171,875",
+        "Instructional Salaries": "$1,433,938",
+        "Instructional Support Salaries": "$254,784",
+        "Non-Instructional Support Salaries": "$192,213",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$955,983",
+        "Discretionary Budget": "$50,409"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$375",
+        "Instructional Salaries": "$0",
+        "Instructional Support Salaries": "$21,373",
+        "Non-Instructional Support Salaries": "$56,576",
+        "Temp/Part-Time/Sub": "$41",
+        "Benefits": "$45,151",
+        "Discretionary Budget": "$54,420"
+      }
+    },
+    {
+      "name": "unknown",
+      "type": "ES",
+      "non-grant-operating-budget": {
+        "Administrative Salaries": "$98,940",
+        "Instructional Salaries": "$1,056,445",
+        "Instructional Support Salaries": "$41,257",
+        "Non-Instructional Support Salaries": "$158,094",
+        "Temp/Part-Time/Sub": "$35,000",
+        "Benefits": "$610,639",
+        "Discretionary Budget": "$35,500"
+      },
+      "grant-operating-budget": {
+        "Administrative Salaries": "$272",
+        "Instructional Salaries": "$75,997",
+        "Instructional Support Salaries": "$34,896",
+        "Non-Instructional Support Salaries": "$58,273",
+        "Temp/Part-Time/Sub": "$30",
+        "Benefits": "$87,586",
+        "Discretionary Budget": "$20,183"
+      }
+    }
+  ]

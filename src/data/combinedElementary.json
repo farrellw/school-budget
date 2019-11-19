@@ -1,0 +1,994 @@
+[
+    {
+        "name": "Adams Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$93,420",
+            "Instructional Salaries": "$751,689",
+            "Instructional Support Salaries": "$92,227",
+            "Non-Instructional Support Salaries": "$131,209",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$498,834",
+            "Discretionary Budget": "$29,082"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$259",
+            "Instructional Salaries": "$119,625",
+            "Instructional Support Salaries": "$146,603",
+            "Non-Instructional Support Salaries": "$63,332",
+            "Temp/Part-Time/Sub": "$46",
+            "Benefits": "$192,097",
+            "Discretionary Budget": "$205,245"
+        }
+    },
+    {
+        "name": "Ashland Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$90,023",
+            "Instructional Salaries": "$663,973",
+            "Instructional Support Salaries": "$114,089",
+            "Non-Instructional Support Salaries": "$135,100",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$517,148",
+            "Discretionary Budget": "$21,550"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$164",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$21,319",
+            "Non-Instructional Support Salaries": "$82,865",
+            "Temp/Part-Time/Sub": "$26",
+            "Benefits": "$48,701",
+            "Discretionary Budget": "$396"
+        }
+    },
+    {
+        "name": "Bryan Hill Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$98,583",
+            "Instructional Salaries": "$507,776",
+            "Instructional Support Salaries": "$117,960",
+            "Non-Instructional Support Salaries": "$125,246",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$433,788",
+            "Discretionary Budget": "$18,203"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$108",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$0",
+            "Non-Instructional Support Salaries": "$63,823",
+            "Temp/Part-Time/Sub": "$17",
+            "Benefits": "$27,547",
+            "Discretionary Budget": "$4,143"
+        }
+    },
+    {
+        "name": "Buder Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$159,109",
+            "Instructional Salaries": "$1,121,122",
+            "Instructional Support Salaries": "$187,505",
+            "Non-Instructional Support Salaries": "$146,164",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$782,463",
+            "Discretionary Budget": "$37,900"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$309",
+            "Temp/Part-Time/Sub": "$34",
+            "Benefits": "$104,700"
+        }
+    },
+    {
+        "name": "AESM @ Carver Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$85,268",
+            "Instructional Salaries": "$550,367",
+            "Instructional Support Salaries": "$39,462",
+            "Non-Instructional Support Salaries": "$145,487",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$427,746",
+            "Discretionary Budget": "$20,375"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$227",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$20,096",
+            "Non-Instructional Support Salaries": "$63,477",
+            "Temp/Part-Time/Sub": "$25",
+            "Benefits": "$42,699",
+            "Discretionary Budget": "$5,201"
+        }
+    },
+    {
+        "name": "Ames VPA Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$180,147",
+            "Instructional Salaries": "$1,029,783",
+            "Instructional Support Salaries": "$111,652",
+            "Non-Instructional Support Salaries": "$129,785",
+            "Temp/Part-Time/Sub": "$52,500",
+            "Benefits": "$675,160",
+            "Discretionary Budget": "$38,951"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$337",
+            "Instructional Salaries": "$49,930",
+            "Instructional Support Salaries": "$21,911",
+            "Non-Instructional Support Salaries": "$67,904",
+            "Temp/Part-Time/Sub": "$37",
+            "Benefits": "$73,890",
+            "Discretionary Budget": "$16,334"
+        }
+    },
+    {
+        "name": "Clay Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$89,290",
+            "Instructional Salaries": "$382,002",
+            "Instructional Support Salaries": "$100,783",
+            "Non-Instructional Support Salaries": "$103,307",
+            "Temp/Part-Time/Sub": "$0",
+            "Benefits": "$350,264",
+            "Discretionary Budget": "$17,950"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$117",
+            "Instructional Salaries": "$77,358",
+            "Instructional Support Salaries": "$45,130",
+            "Non-Instructional Support Salaries": "$56,728",
+            "Temp/Part-Time/Sub": "$13",
+            "Benefits": "$98,895",
+            "Discretionary Budget": "$427"
+        }
+    },
+    {
+        "name": "Columbia Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$90,022",
+            "Instructional Salaries": "$673,859",
+            "Instructional Support Salaries": "$91,205",
+            "Non-Instructional Support Salaries": "$143,865",
+            "Temp/Part-Time/Sub": "$0",
+            "Benefits": "$477,037",
+            "Discretionary Budget": "$25,600"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$173",
+            "Instructional Salaries": "$62,304",
+            "Instructional Support Salaries": "$21,142",
+            "Non-Instructional Support Salaries": "$62,377",
+            "Temp/Part-Time/Sub": "$19",
+            "Benefits": "$68,337",
+            "Discretionary Budget": "$571"
+        }
+    },
+    {
+        "name": "Dewey Int'L Study Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$176,038",
+            "Instructional Salaries": "$1,390,041",
+            "Instructional Support Salaries": "$81,107",
+            "Non-Instructional Support Salaries": "$161,265",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$825,879",
+            "Discretionary Budget": "$48,300"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$396",
+            "Instructional Salaries": "$41,844",
+            "Instructional Support Salaries": "$43,240",
+            "Non-Instructional Support Salaries": "$66,451",
+            "Temp/Part-Time/Sub": "$44",
+            "Benefits": "$80,344",
+            "Discretionary Budget": "$53,816"
+        }
+    },
+    {
+        "name": "Dunbar Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$90,023",
+            "Instructional Salaries": "$486,016",
+            "Instructional Support Salaries": "$86,370",
+            "Non-Instructional Support Salaries": "$76,941",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$369,118",
+            "Discretionary Budget": "$16,182"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$112",
+            "Instructional Salaries": "$62,304",
+            "Instructional Support Salaries": "$26,206",
+            "Non-Instructional Support Salaries": "$62,386",
+            "Temp/Part-Time/Sub": "$12",
+            "Benefits": "$69,648",
+            "Discretionary Budget": "$395"
+        }
+    },
+    {
+        "name": "Farragut Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$94,269",
+            "Instructional Salaries": "$421,778",
+            "Instructional Support Salaries": "$101,722",
+            "Non-Instructional Support Salaries": "$129,739",
+            "Temp/Part-Time/Sub": "$27,500",
+            "Benefits": "$383,222",
+            "Discretionary Budget": "$14,850"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$125",
+            "Instructional Salaries": "$91,955",
+            "Instructional Support Salaries": "$69,200",
+            "Non-Instructional Support Salaries": "$12,029",
+            "Temp/Part-Time/Sub": "$14",
+            "Benefits": "$100,389",
+            "Discretionary Budget": "$263"
+        }
+    },
+    {
+        "name": "Ford Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$95,879",
+            "Instructional Salaries": "$611,277",
+            "Instructional Support Salaries": "$96,540",
+            "Non-Instructional Support Salaries": "$167,694",
+            "Temp/Part-Time/Sub": "$27,500",
+            "Benefits": "$448,809",
+            "Discretionary Budget": "$20,855"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$228",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$109,156",
+            "Non-Instructional Support Salaries": "$70,354",
+            "Temp/Part-Time/Sub": "$32",
+            "Benefits": "$77,362",
+            "Discretionary Budget": "$148,228"
+        }
+    },
+    {
+        "name": "Froebel Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$102,762",
+            "Instructional Salaries": "$691,575",
+            "Instructional Support Salaries": "$83,757",
+            "Non-Instructional Support Salaries": "$121,932",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$472,596",
+            "Discretionary Budget": "$18,448"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$184",
+            "Instructional Salaries": "$40,899",
+            "Instructional Support Salaries": "$28,284",
+            "Non-Instructional Support Salaries": "$65,300",
+            "Temp/Part-Time/Sub": "$20",
+            "Benefits": "$71,360",
+            "Discretionary Budget": "$3"
+        }
+    },
+    {
+        "name": "Gateway Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$108,092",
+            "Instructional Salaries": "$1,649,605",
+            "Instructional Support Salaries": "$136,486",
+            "Non-Instructional Support Salaries": "$283,662",
+            "Temp/Part-Time/Sub": "$52,500",
+            "Benefits": "$991,887",
+            "Discretionary Budget": "$63,812"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$530",
+            "Instructional Salaries": "$49,723",
+            "Instructional Support Salaries": "$18,358",
+            "Non-Instructional Support Salaries": "$111,976",
+            "Temp/Part-Time/Sub": "$59",
+            "Benefits": "$87,498",
+            "Discretionary Budget": "$34,282"
+        }
+    },
+    {
+        "name": "Gateway Michael Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$116,871",
+            "Instructional Salaries": "$305,444",
+            "Instructional Support Salaries": "$289,923",
+            "Non-Instructional Support Salaries": "$221,418",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$501,866",
+            "Discretionary Budget": "$7,600"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$49",
+            "Instructional Salaries": "$103,263",
+            "Instructional Support Salaries": "$78,319",
+            "Non-Instructional Support Salaries": "$0",
+            "Temp/Part-Time/Sub": "$5",
+            "Benefits": "$98,801",
+            "Discretionary Budget": "$10,001"
+        }
+    },
+    {
+        "name": "Hamilton Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$93,589",
+            "Instructional Salaries": "$755,284",
+            "Instructional Support Salaries": "$112,484",
+            "Non-Instructional Support Salaries": "$195,121",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$561,248",
+            "Discretionary Budget": "$31,175"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$304",
+            "Instructional Salaries": "$59,344",
+            "Instructional Support Salaries": "$60,213",
+            "Non-Instructional Support Salaries": "$93,288",
+            "Temp/Part-Time/Sub": "$34",
+            "Benefits": "$117,069",
+            "Discretionary Budget": "$59,069"
+        }
+    },
+    {
+        "name": "Henry Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$91,722",
+            "Instructional Salaries": "$777,020",
+            "Instructional Support Salaries": "$174,994",
+            "Non-Instructional Support Salaries": "$231,019",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$621,758",
+            "Discretionary Budget": "$29,175"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$268",
+            "Instructional Salaries": "$48,712",
+            "Instructional Support Salaries": "$48,713",
+            "Non-Instructional Support Salaries": "$59,467",
+            "Temp/Part-Time/Sub": "$30",
+            "Benefits": "$83,096",
+            "Discretionary Budget": "$18,836"
+        }
+    },
+    {
+        "name": "Herzog Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$85,670",
+            "Instructional Salaries": "$689,411",
+            "Instructional Support Salaries": "$77,431",
+            "Non-Instructional Support Salaries": "$179,722",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$503,984",
+            "Discretionary Budget": "$25,228"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$284",
+            "Instructional Salaries": "$69,204",
+            "Instructional Support Salaries": "$41,681",
+            "Non-Instructional Support Salaries": "$79,262",
+            "Temp/Part-Time/Sub": "$31",
+            "Benefits": "$95,799",
+            "Discretionary Budget": "$4,730"
+        }
+    },
+    {
+        "name": "Hickey Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$90,023",
+            "Instructional Salaries": "$626,202",
+            "Instructional Support Salaries": "$92,516",
+            "Non-Instructional Support Salaries": "$100,610",
+            "Temp/Part-Time/Sub": "$0",
+            "Benefits": "$436,942",
+            "Discretionary Budget": "$20,350"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$183",
+            "Instructional Salaries": "$60,308",
+            "Instructional Support Salaries": "$34,128",
+            "Non-Instructional Support Salaries": "$61,257",
+            "Temp/Part-Time/Sub": "$20",
+            "Benefits": "$76,522",
+            "Discretionary Budget": "$456"
+        }
+    },
+    {
+        "name": "Hodgen Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$85,268",
+            "Instructional Salaries": "$801,070",
+            "Instructional Support Salaries": "$189,131",
+            "Non-Instructional Support Salaries": "$124,965",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$594,078",
+            "Discretionary Budget": "$27,640"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$182",
+            "Instructional Salaries": "$102,419",
+            "Instructional Support Salaries": "$35,612",
+            "Non-Instructional Support Salaries": "$58,299",
+            "Temp/Part-Time/Sub": "$20",
+            "Benefits": "$103,674",
+            "Discretionary Budget": "$708"
+        }
+    },
+    {
+        "name": "Humboldt Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$90,023",
+            "Instructional Salaries": "$614,223",
+            "Instructional Support Salaries": "$154,415",
+            "Non-Instructional Support Salaries": "$103,153",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$501,358",
+            "Discretionary Budget": "$17,279"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$224",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$0",
+            "Non-Instructional Support Salaries": "$60,013",
+            "Temp/Part-Time/Sub": "$25",
+            "Benefits": "$26,288",
+            "Discretionary Budget": "$1,367"
+        }
+    },
+    {
+        "name": "Jefferson Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$92,134",
+            "Instructional Salaries": "$450,834",
+            "Instructional Support Salaries": "$64,014",
+            "Non-Instructional Support Salaries": "$184,191",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$406,667",
+            "Discretionary Budget": "$19,550"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$242",
+            "Instructional Salaries": "$69,000",
+            "Instructional Support Salaries": "$35,000",
+            "Non-Instructional Support Salaries": "$62,292",
+            "Temp/Part-Time/Sub": "$34",
+            "Benefits": "$89,814",
+            "Discretionary Budget": "$234,987"
+        }
+    },
+    {
+        "name": "Kennard Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$101,579",
+            "Instructional Salaries": "$1,137,248",
+            "Instructional Support Salaries": "$49,240",
+            "Non-Instructional Support Salaries": "$249,879",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$681,550",
+            "Discretionary Budget": "$36,564"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$107",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$0",
+            "Non-Instructional Support Salaries": "$0",
+            "Temp/Part-Time/Sub": "$0",
+            "Benefits": "$65",
+            "Discretionary Budget": "$0"
+        }
+    },
+    {
+        "name": "Laclede Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$95,117",
+            "Instructional Salaries": "$516,274",
+            "Instructional Support Salaries": "$64,431",
+            "Non-Instructional Support Salaries": "$120,182",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$400,315",
+            "Discretionary Budget": "$26,275"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$170",
+            "Instructional Salaries": "$45,421",
+            "Instructional Support Salaries": "$15,187",
+            "Non-Instructional Support Salaries": "$62,904",
+            "Temp/Part-Time/Sub": "$19",
+            "Benefits": "$65,443",
+            "Discretionary Budget": "$82"
+        }
+    },
+    {
+        "name": "Lexington Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$165,375",
+            "Instructional Salaries": "$1,054,832",
+            "Instructional Support Salaries": "$141,521",
+            "Non-Instructional Support Salaries": "$109,456",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$662,995",
+            "Discretionary Budget": "$36,478"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$330",
+            "Instructional Salaries": "$81,187",
+            "Instructional Support Salaries": "$69,883",
+            "Non-Instructional Support Salaries": "$86,395",
+            "Temp/Part-Time/Sub": "$37",
+            "Benefits": "$123,820",
+            "Discretionary Budget": "$43,009"
+        }
+    },
+    {
+        "name": "Lyon Acad Basic Inst @ Blow El",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$167,028",
+            "Instructional Salaries": "$904,204",
+            "Instructional Support Salaries": "$146,597",
+            "Non-Instructional Support Salaries": "$88,360",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$651,666",
+            "Discretionary Budget": "$25,011"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$339",
+            "Temp/Part-Time/Sub": "$37",
+            "Benefits": "$97,699"
+        }
+    },
+    {
+        "name": "Mallinckrodt Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$90,023",
+            "Instructional Salaries": "$857,876",
+            "Instructional Support Salaries": "$65,962",
+            "Non-Instructional Support Salaries": "$133,156",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$563,390",
+            "Discretionary Budget": "$32,450"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$84",
+            "Temp/Part-Time/Sub": "$0",
+            "Benefits": "$52"
+        }
+    },
+    {
+        "name": "Mann Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$92,022",
+            "Instructional Salaries": "$1,045,328",
+            "Instructional Support Salaries": "$189,395",
+            "Non-Instructional Support Salaries": "$118,026",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$688,417",
+            "Discretionary Budget": "$34,900"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$271",
+            "Instructional Salaries": "$64,240",
+            "Instructional Support Salaries": "$35,075",
+            "Non-Instructional Support Salaries": "$63,447",
+            "Temp/Part-Time/Sub": "$30",
+            "Benefits": "$83,179",
+            "Discretionary Budget": "$2,804"
+        }
+    },
+    {
+        "name": "Mason Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$166,960",
+            "Instructional Salaries": "$1,404,199",
+            "Instructional Support Salaries": "$240,736",
+            "Non-Instructional Support Salaries": "$149,971",
+            "Temp/Part-Time/Sub": "$52,500",
+            "Benefits": "$908,995",
+            "Discretionary Budget": "$55,450"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$353",
+            "Instructional Salaries": "$104,500",
+            "Instructional Support Salaries": "$101,702",
+            "Non-Instructional Support Salaries": "$40,635",
+            "Temp/Part-Time/Sub": "$39",
+            "Benefits": "$150,931",
+            "Discretionary Budget": "$64,617"
+        }
+    },
+    {
+        "name": "Meramec Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$87,613",
+            "Instructional Salaries": "$588,576",
+            "Instructional Support Salaries": "$105,802",
+            "Non-Instructional Support Salaries": "$115,199",
+            "Temp/Part-Time/Sub": "$0",
+            "Benefits": "$441,813",
+            "Discretionary Budget": "$20,587"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$194",
+            "Instructional Salaries": "$55,625",
+            "Instructional Support Salaries": "$28,674",
+            "Non-Instructional Support Salaries": "$60,408",
+            "Temp/Part-Time/Sub": "$21",
+            "Benefits": "$81,767",
+            "Discretionary Budget": "$5,546"
+        }
+    },
+    {
+        "name": "Monroe Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$102,762",
+            "Instructional Salaries": "$767,688",
+            "Instructional Support Salaries": "$138,416",
+            "Non-Instructional Support Salaries": "$161,571",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$542,976",
+            "Discretionary Budget": "$29,980"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$298",
+            "Instructional Salaries": "$67,452",
+            "Instructional Support Salaries": "$108,283",
+            "Non-Instructional Support Salaries": "$44,322",
+            "Temp/Part-Time/Sub": "$42",
+            "Benefits": "$128,998",
+            "Discretionary Budget": "$133,414"
+        }
+    },
+    {
+        "name": "Mullanphy Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$155,950",
+            "Instructional Salaries": "$1,658,247",
+            "Instructional Support Salaries": "$302,737",
+            "Non-Instructional Support Salaries": "$222,356",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$1,132,736",
+            "Discretionary Budget": "$54,079"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$413",
+            "Instructional Salaries": "$139,835",
+            "Instructional Support Salaries": "$110,763",
+            "Non-Instructional Support Salaries": "$64,300",
+            "Temp/Part-Time/Sub": "$46",
+            "Benefits": "$158,943",
+            "Discretionary Budget": "$3,677"
+        }
+    },
+    {
+        "name": "Earl Nance Sr Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$85,670",
+            "Instructional Salaries": "$825,473",
+            "Instructional Support Salaries": "$62,886",
+            "Non-Instructional Support Salaries": "$167,751",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$551,993",
+            "Discretionary Budget": "$38,768"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$313",
+            "Instructional Salaries": "$90,474",
+            "Instructional Support Salaries": "$72,715",
+            "Non-Instructional Support Salaries": "$59,782",
+            "Temp/Part-Time/Sub": "$35",
+            "Benefits": "$125,161",
+            "Discretionary Budget": "$25,150"
+        }
+    },
+    {
+        "name": "New American Prep Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$161,550",
+            "Instructional Salaries": "$1,034,444",
+            "Instructional Support Salaries": "$110,598",
+            "Non-Instructional Support Salaries": "$129,395",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$677,968",
+            "Discretionary Budget": "$28,750"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$359",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$12,487",
+            "Non-Instructional Support Salaries": "$61,851",
+            "Temp/Part-Time/Sub": "$40",
+            "Benefits": "$38,851",
+            "Discretionary Budget": "$44,807"
+        }
+    },
+    {
+        "name": "Oak Hill Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$92,134",
+            "Instructional Salaries": "$731,662",
+            "Instructional Support Salaries": "$103,524",
+            "Non-Instructional Support Salaries": "$124,505",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$522,421",
+            "Discretionary Budget": "$28,509"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$216",
+            "Temp/Part-Time/Sub": "$24",
+            "Benefits": "$62,435"
+        }
+    },
+    {
+        "name": "Pamoja @ Cole Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$175,401",
+            "Instructional Salaries": "$872,935",
+            "Instructional Support Salaries": "$140,641",
+            "Non-Instructional Support Salaries": "$160,119",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$645,294",
+            "Discretionary Budget": "$39,820"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$367",
+            "Instructional Salaries": "$95,517",
+            "Instructional Support Salaries": "$90,173",
+            "Non-Instructional Support Salaries": "$64,004",
+            "Temp/Part-Time/Sub": "$41",
+            "Benefits": "$138,887",
+            "Discretionary Budget": "$2,750"
+        }
+    },
+    {
+        "name": "Peabody Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$85,268",
+            "Instructional Salaries": "$491,188",
+            "Instructional Support Salaries": "$108,457",
+            "Non-Instructional Support Salaries": "$123,733",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$420,143",
+            "Discretionary Budget": "$20,207"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$126",
+            "Instructional Salaries": "$99,395",
+            "Instructional Support Salaries": "$91,205",
+            "Non-Instructional Support Salaries": "$62,979",
+            "Temp/Part-Time/Sub": "$14",
+            "Benefits": "$132,817",
+            "Discretionary Budget": "$310"
+        }
+    },
+    {
+        "name": "Shaw VPA Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$161,418",
+            "Instructional Salaries": "$1,294,184",
+            "Instructional Support Salaries": "$116,511",
+            "Non-Instructional Support Salaries": "$158,550",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$771,989",
+            "Discretionary Budget": "$44,955"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$402",
+            "Instructional Salaries": "$100,303",
+            "Instructional Support Salaries": "$70,556",
+            "Non-Instructional Support Salaries": "$63,695",
+            "Temp/Part-Time/Sub": "$44",
+            "Benefits": "$129,685",
+            "Discretionary Budget": "$9,533"
+        }
+    },
+    {
+        "name": "Shenandoah Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$87,613",
+            "Instructional Salaries": "$537,436",
+            "Instructional Support Salaries": "$86,909",
+            "Non-Instructional Support Salaries": "$92,626",
+            "Temp/Part-Time/Sub": "$17,500",
+            "Benefits": "$394,423",
+            "Discretionary Budget": "$19,956"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$121",
+            "Instructional Salaries": "$54,524",
+            "Instructional Support Salaries": "$16,187",
+            "Non-Instructional Support Salaries": "$61,814",
+            "Temp/Part-Time/Sub": "$13",
+            "Benefits": "$65,975",
+            "Discretionary Budget": "$117"
+        }
+    },
+    {
+        "name": "Sigel Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$100,669",
+            "Instructional Salaries": "$811,978",
+            "Instructional Support Salaries": "$117,801",
+            "Non-Instructional Support Salaries": "$106,752",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$565,908",
+            "Discretionary Budget": "$26,375"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$177",
+            "Instructional Salaries": "$41,685",
+            "Instructional Support Salaries": "$49,747",
+            "Non-Instructional Support Salaries": "$62,372",
+            "Temp/Part-Time/Sub": "$20",
+            "Benefits": "$86,999",
+            "Discretionary Budget": "$1,933"
+        }
+    },
+    {
+        "name": "Stix Early Childhood",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$168,757",
+            "Instructional Salaries": "$1,293,960",
+            "Instructional Support Salaries": "$333,268",
+            "Non-Instructional Support Salaries": "$157,262",
+            "Temp/Part-Time/Sub": "$52,500",
+            "Benefits": "$939,363",
+            "Discretionary Budget": "$52,600"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$293",
+            "Instructional Salaries": "$110,804",
+            "Instructional Support Salaries": "$52,236",
+            "Non-Instructional Support Salaries": "$71,435",
+            "Temp/Part-Time/Sub": "$32",
+            "Benefits": "$130,772",
+            "Discretionary Budget": "$28,416"
+        }
+    },
+    {
+        "name": "Walbridge Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$91,722",
+            "Instructional Salaries": "$592,433",
+            "Instructional Support Salaries": "$39,852",
+            "Non-Instructional Support Salaries": "$130,298",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$393,216",
+            "Discretionary Budget": "$21,625"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$198",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$9,775",
+            "Non-Instructional Support Salaries": "$59,937",
+            "Temp/Part-Time/Sub": "$22",
+            "Benefits": "$33,805",
+            "Discretionary Budget": "$1,934"
+        }
+    },
+    {
+        "name": "Wash Montessori Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$152,955",
+            "Instructional Salaries": "$694,938",
+            "Instructional Support Salaries": "$93,990",
+            "Non-Instructional Support Salaries": "$180,000",
+            "Temp/Part-Time/Sub": "$0",
+            "Benefits": "$550,283",
+            "Discretionary Budget": "$40,367"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$246",
+            "Temp/Part-Time/Sub": "$27",
+            "Benefits": "$107,678"
+        }
+    },
+    {
+        "name": "Wilkinson Early Childhood",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$90,023",
+            "Instructional Salaries": "$709,988",
+            "Instructional Support Salaries": "$150,398",
+            "Non-Instructional Support Salaries": "$127,107",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$541,298",
+            "Discretionary Budget": "$32,187"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$63",
+            "Instructional Salaries": "$72,433",
+            "Instructional Support Salaries": "$53,230",
+            "Non-Instructional Support Salaries": "$0",
+            "Temp/Part-Time/Sub": "$0",
+            "Benefits": "$86,819",
+            "Discretionary Budget": "$0"
+        }
+    },
+    {
+        "name": "Woerner Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$171,875",
+            "Instructional Salaries": "$1,433,938",
+            "Instructional Support Salaries": "$254,784",
+            "Non-Instructional Support Salaries": "$192,213",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$955,983",
+            "Discretionary Budget": "$50,409"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$375",
+            "Instructional Salaries": "$0",
+            "Instructional Support Salaries": "$21,373",
+            "Non-Instructional Support Salaries": "$56,576",
+            "Temp/Part-Time/Sub": "$41",
+            "Benefits": "$45,151",
+            "Discretionary Budget": "$54,420"
+        }
+    },
+    {
+        "name": "Woodward Elementary",
+        "type": "ES",
+        "non-grant-operating-budget": {
+            "Administrative Salaries": "$98,940",
+            "Instructional Salaries": "$1,056,445",
+            "Instructional Support Salaries": "$41,257",
+            "Non-Instructional Support Salaries": "$158,094",
+            "Temp/Part-Time/Sub": "$35,000",
+            "Benefits": "$610,639",
+            "Discretionary Budget": "$35,500"
+        },
+        "grant-operating-budget": {
+            "Administrative Salaries": "$272",
+            "Instructional Salaries": "$75,997",
+            "Instructional Support Salaries": "$34,896",
+            "Non-Instructional Support Salaries": "$58,273",
+            "Temp/Part-Time/Sub": "$30",
+            "Benefits": "$87,586",
+            "Discretionary Budget": "$20,183"
+        }
+    }
+]

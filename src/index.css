@@ -10,7 +10,6 @@ body {
   font-family: "Open Sans", "Roboto", sans-serif;
 }
 
-
 .report {
   width: 100%;
   min-height: 100%;
@@ -29,7 +28,6 @@ body {
   width: 20em;
   margin: 10px 0 10px 0;
 }
-
 
 table {
   table-layout: fixed;
