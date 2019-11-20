@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
-import * as savedSchoolsJSON from "../data/savedSchools.json";
+import * as savedSchoolsJSON from "../data/allSchools.json";
+import { ITableData, SchoolExpenseDataKey } from 'src/models/Data.js';
 
 function ReportTable() {
     const [selected, setSelected] = useState("HighSchools ( All )");
@@ -12,11 +13,17 @@ function ReportTable() {
 
 
     // TODO use a better default
-    const formData = (savedSchoolsJSON.find((node) => {
+    const formData: ITableData = (savedSchoolsJSON.find((node) => {
         return node.name === selected;
     }) || savedSchoolsJSON[0]);
 
-    // Render the UI for your table
+    const getValue = (tabData: ITableData, field: SchoolExpenseDataKey) => {
+        return tabData[field];
+    }
+    
+
+    const 
+
     return (
         <section className="table-section">
             <select className="table-select" onChange={setSelection}>
