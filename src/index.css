@@ -24,9 +24,13 @@ body {
   align-items: center;
 }
 
+.selects-container{
+  display: flex;
+}
+
 .table-select {
-  width: 20em;
-  margin: 10px 0 10px 0;
+  /* width: 20em; */
+  margin: 10px 5px 10px 5px;
 }
 
 table {

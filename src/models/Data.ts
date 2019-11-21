@@ -11,6 +11,8 @@ export interface ITableData {
     "grant-operating-budget"?: ISchoolExpenseData
 }
 
+export type SchoolType = "HS" | "MS" | "ES";
+export type FilterType = "All" | SchoolType;
 
 export interface ISchoolExpenseData {
     "Administrative Salaries"?: string,

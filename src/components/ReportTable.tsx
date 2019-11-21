@@ -1,21 +1,39 @@
 import * as React from "react";
 import { useState } from "react";
-import * as savedSchoolsJSON from "../data/allSchools.json";
-import { ITableData, SchoolExpenseDataKey, ISchoolExpenseData } from 'src/models/Data.js';
+import * as allSchoolsJSON from "../data/allSchools.json";
+import { ITableData, SchoolExpenseDataKey, ISchoolExpenseData, FilterType } from 'src/models/Data.js';
 
 function ReportTable() {
-    const [selected, setSelected] = useState("HighSchools ( All )");
+    const [selected, setSelected] = useState("Clyde Miller Career Academy");
+    const [filter, setFiltered] = useState<FilterType>("All");
+
     // Use the state and functions returned from useTable to build your UI
 
     const setSelection = (event: React.FormEvent<HTMLSelectElement>) => {
         setSelected(event.currentTarget.value);
     }
 
+    const setFilter = (event: React.FormEvent<HTMLSelectElement>) => {
+        switch(event.currentTarget.value){
+            case "All":
+            case "HS":
+            case "MS":
+            case "ES":
+                setFiltered(event.currentTarget.value);
+            break;
+            default:
+                setFiltered("All"); 
+        }
+    }
 
-    // TODO use a better default
-    const formData: ITableData = (savedSchoolsJSON.find((node) => {
+    const filteredSchools: ITableData[] = allSchoolsJSON.filter((n) => {
+        if(filter === "All"){ return true }
+        return n.type === filter
+    });
+
+    const formData: ITableData = (filteredSchools.find((node) => {
         return node.name === selected;
-    }) || savedSchoolsJSON[0]);
+    }) || filteredSchools[0]);
 
     const getValue = (tabData: ITableData, grantOp: boolean, field: SchoolExpenseDataKey) => {
         if(grantOp){
@@ -35,14 +53,21 @@ function ReportTable() {
 
     return (
         <section className="table-section">
-            {/* TODO add another select here for all / hs / ms / elementary */}
-            <select className="table-select" onChange={setSelection}>
-                {savedSchoolsJSON.map((n, i: number) => {
-                    return (
-                        <option key={i} value={n.name} >{n.name}</option>
-                    )
-                })}
-            </select>
+            <div className="selects-container">
+                <select className="table-select" onChange={setFilter}>
+                    <option value={"All"} >All</option>
+                    <option value={"HS"} >High</option>
+                    <option value={"MS"} >Middle</option>
+                    <option value={"ES"} >Elementary</option>
+                </select>
+                <select className="table-select" onChange={setSelection}>
+                    {filteredSchools.map((n, i: number) => {
+                        return (
+                            <option key={i} value={n.name} >{n.name}</option>
+                        )
+                    })}
+                </select>
+            </div>
             <table>
                 <caption>{selected}</caption>
                 <thead>
