@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
-import * as savedSchoolsJSON from "../data/savedSchools.json";
+import * as savedSchoolsJSON from "../data/allSchools.json";
+import { ITableData, SchoolExpenseDataKey, ISchoolExpenseData } from 'src/models/Data.js';
 
 function ReportTable() {
     const [selected, setSelected] = useState("HighSchools ( All )");
@@ -12,11 +13,26 @@ function ReportTable() {
 
 
     // TODO use a better default
-    const formData = (savedSchoolsJSON.find((node) => {
+    const formData: ITableData = (savedSchoolsJSON.find((node) => {
         return node.name === selected;
     }) || savedSchoolsJSON[0]);
 
-    // Render the UI for your table
+    const getValue = (tabData: ITableData, grantOp: boolean, field: SchoolExpenseDataKey) => {
+        if(grantOp){
+            return subBudgetRetrieval(tabData["grant-operating-budget"], field);
+        } else {
+            return subBudgetRetrieval(tabData["non-grant-operating-budget"], field);
+        }
+    }
+    
+    const subBudgetRetrieval = (tabData: ISchoolExpenseData | undefined, field: SchoolExpenseDataKey) => {
+        if(tabData && tabData[field]){
+            return tabData[field];
+        } else {
+            return "";
+        }
+    }
+
     return (
         <section className="table-section">
             <select className="table-select" onChange={setSelection}>
@@ -38,38 +54,38 @@ function ReportTable() {
                 <tbody>
                     <tr>
                         <td>Administrative Salaries</td>
-                        <td>{formData["non-grant-operating-budget"]["Administrative Salaries"]}</td>
-                        <td>{formData["grant-operating-budget"]["Administrative Salaries"]}</td>
+                        <td>{getValue(formData, false, "Administrative Salaries")}</td>
+                        <td>{getValue(formData, true, "Administrative Salaries")}</td>
                     </tr>
                     <tr>
                         <td>Instructional Salaries</td>
-                        <td>{formData["non-grant-operating-budget"]["Instructional Salaries"]}</td>
-                        <td>{formData["grant-operating-budget"]["Instructional Salaries"]}</td>
+                        <td>{getValue(formData, false, "Instructional Salaries")}</td>
+                        <td>{getValue(formData, true, "Instructional Salaries")}</td>
                     </tr>
                     <tr>
                         <td>Instructional Support Salaries</td>
-                        <td>{formData["non-grant-operating-budget"]["Instructional Support Salaries"]}</td>
-                        <td>{formData["grant-operating-budget"]["Instructional Support Salaries"]}</td>
+                        <td>{getValue(formData, false, "Instructional Support Salaries")}</td>
+                        <td>{getValue(formData, true, "Instructional Support Salaries")}</td>
                     </tr>
                     <tr>
                         <td>Non-Instructional Support Salaries</td>
-                        <td>{formData["non-grant-operating-budget"]["Non-Instructional Support Salaries"]}</td>
-                        <td>{formData["grant-operating-budget"]["Non-Instructional Support Salaries"]}</td>
+                        <td>{getValue(formData, false, "Non-Instructional Support Salaries")}</td>
+                        <td>{getValue(formData, true, "Non-Instructional Support Salaries")}</td>
                     </tr>
                     <tr>
                         <td>Temp/Part-Time/Sub</td>
-                        <td>{formData["non-grant-operating-budget"]["Temp/Part-Time/Sub"]}</td>
-                        <td>{formData["grant-operating-budget"]["Temp/Part-Time/Sub"]}</td>
+                        <td>{getValue(formData, false, "Temp/Part-Time/Sub")}</td>
+                        <td>{getValue(formData, true, "Temp/Part-Time/Sub")}</td>
                     </tr>
                     <tr>
                         <td>Benefits</td>
-                        <td>{formData["non-grant-operating-budget"].Benefits}</td>
-                        <td>{formData["grant-operating-budget"].Benefits}</td>
+                        <td>{getValue(formData, false, "Benefits")}</td>
+                        <td>{getValue(formData, true, "Benefits")}</td>
                     </tr>
                     <tr>
                         <td>Discretionary Budget</td>
-                        <td>{formData["non-grant-operating-budget"]["Discretionary Budget"]}</td>
-                        <td>{formData["grant-operating-budget"]["Discretionary Budget"]}</td>
+                        <td>{getValue(formData, false, "Discretionary Budget")}</td>
+                        <td>{getValue(formData, true, "Discretionary Budget")}</td>
                     </tr>
                 </tbody>
             </table>
