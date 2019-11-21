@@ -35,6 +35,7 @@ function ReportTable() {
 
     return (
         <section className="table-section">
+            {/* TODO add another select here for all / hs / ms / elementary */}
             <select className="table-select" onChange={setSelection}>
                 {savedSchoolsJSON.map((n, i: number) => {
                     return (
