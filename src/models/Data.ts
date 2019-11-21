@@ -12,7 +12,7 @@ export interface ITableData {
 }
 
 
-interface ISchoolExpenseData {
+export interface ISchoolExpenseData {
     "Administrative Salaries"?: string,
     "Instructional Salaries"?: string,
     "Instructional Support Salaries"?: string,
