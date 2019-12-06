@@ -1,27 +1,22 @@
-export interface ITableData {
+export interface ISchoolExpense {
     name: string,
     type: string,
-    "non-grant-operating-budget"?: ISchoolExpenseData,
-    "grant-operating-budget"?: ISchoolExpenseData
+    projectedEnrollment: number,
+    administrativeSalaries: number,
+    instructionalSalaries: number,
+    instructionalSupportSalaries: number,
+    nonInstructionalSupportSalaries: number,
+    temp: number,
+    benefits: number,
+    transportation: number,
+    discretionary: number
 }
 
-export type SchoolType = "HS" | "MS" | "ES";
-export type FilterType = "All" | SchoolType;
+export type SchoolType = "H" | "M" | "E" | "A";
 
-export interface ISchoolExpenseData {
-    "Administrative Salaries"?: string,
-    "Instructional Salaries"?: string,
-    "Instructional Support Salaries"?: string,
-    "Non-Instructional Support Salaries"?: string,
-    "Temp/Part-Time/Sub"?: string,
-    "Benefits"?: string,
-    "Discretionary Budget"?: string
+export const SchoolTypeToTypeLabel = {
+    "H": "High",
+    "M": "Middle",
+    "E": "Elementary",
+    "A": "Alternative"
 }
-
-export type SchoolExpenseDataKey = "Administrative Salaries" |
-    "Instructional Salaries" |
-    "Instructional Support Salaries" |
-    "Non-Instructional Support Salaries" |
-    "Temp/Part-Time/Sub" |
-    "Benefits" |
-    "Discretionary Budget"
