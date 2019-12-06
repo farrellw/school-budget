@@ -1,54 +1,44 @@
 var xlsx = require("node-xlsx");
 var fs = require("fs");
-// Or var xlsx = require('node-xlsx').default;
 
 // Parse a buffer
 const workSheets = xlsx.parse(
-  fs.readFileSync(`${__dirname}/ElementaryTwo.xlsx`)
+  fs.readFileSync(`${__dirname}/SchoolExpenses.xlsx`)
 );
 
 const sheetOne = workSheets[0];
 const data = sheetOne.data;
 
-var json = [];
+var schools = [];
 
-var currentSchoolCount = -1;
-var grantLabel = "grant-operating-budget";
+function getNum(val) {
+  if (val) {
+    return Number(val);
+  } else {
+    return 0;
+  }
+}
 
 data.forEach(row => {
-  var rowName = row[6];
-  if (rowName && rowName.startsWith("Adm")) {
-    if (grantLabel === "grant-operating-budget") {
-      grantLabel = "non-grant-operating-budget";
-      currentSchoolCount += 1;
-      json[currentSchoolCount] = {
-        name: "unknown",
-        type: "ES"
-      };
-    } else {
-      grantLabel = "grant-operating-budget";
-    }
+  const schoolName = row[0];
 
-    json[currentSchoolCount][grantLabel] = {
-      "Administrative Salaries": row[8]
+  // Ignore First Row
+  if (schoolName !== "School Name") {
+    const individualSchool = {
+      name: row[0],
+      type: row[1],
+      projectedEnrollment: row[2],
+      administrativeSalaries: getNum(row[3]) + getNum(row[11]),
+      instructionalSalaries: getNum(row[4]) + getNum(row[12]),
+      instructionalSupportSalaries: getNum(row[5]) + getNum(row[13]),
+      nonInstructionalSupportSalaries: getNum(row[6]) + getNum(row[14]),
+      temp: getNum(row[7]) + getNum(row[15]),
+      benefits: getNum(row[8]) + getNum(row[16]),
+      transportation: getNum(row[9]) + getNum(row[17]),
+      discretionary: getNum(row[10]) + getNum(row[18])
     };
-  } else if (rowName === "Instruc!onal Salaries") {
-    json[currentSchoolCount][grantLabel]["Instructional Salaries"] = row[8];
-  } else if (rowName === "Instruc!onal Support Salaries") {
-    json[currentSchoolCount][grantLabel]["Instructional Support Salaries"] =
-      row[8];
-  } else if (rowName === "Non-Instruc!onal Support Salaries") {
-    json[currentSchoolCount][grantLabel]["Non-Instructional Support Salaries"] =
-      row[8];
-  } else if (rowName === "Temp/Part-Time/Sub") {
-    json[currentSchoolCount][grantLabel]["Temp/Part-Time/Sub"] = row[8];
-  } else if (rowName === "Benefits") {
-    json[currentSchoolCount][grantLabel]["Benefits"] = row[8];
-  } else if (rowName === "Transportation") {
-    json[currentSchoolCount][grantLabel]["Transportation"] = row[8];
-  } else if (rowName === "Discre!onary Budget") {
-    json[currentSchoolCount][grantLabel]["Discretionary Budget"] = row[8];
+    schools.push(individualSchool);
   }
 });
 
-fs.writeFileSync("elementaryTwo.json", JSON.stringify(json));
+fs.writeFileSync("SchoolExpenses.json", JSON.stringify(schools));
