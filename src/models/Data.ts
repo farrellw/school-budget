@@ -1,9 +1,3 @@
-interface IData {
-    color: string,
-    amount: number,
-    label: string
-}
-
 export interface ITableData {
     name: string,
     type: string,
@@ -31,5 +25,3 @@ export type SchoolExpenseDataKey = "Administrative Salaries" |
     "Temp/Part-Time/Sub" |
     "Benefits" |
     "Discretionary Budget"
-
-export default IData;

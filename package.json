@@ -5,8 +5,6 @@
   "homepage": "./",
   "dependencies": {
     "@types/react-table": "^6.8.5",
-    "chart.js": "^2.9.3",
-    "node-xlsx": "^0.15.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts-ts": "3.1.0",
@@ -20,7 +18,7 @@
     "buildForDeploy": "npm run build; rm -rf docs; mv build docs;"
   },
   "devDependencies": {
-    "@types/chart.js": "^2.9.0",
+    "node-xlsx": "^0.15.0",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.7",
     "@types/react": "^16.9.11",
