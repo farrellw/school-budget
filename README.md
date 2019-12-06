@@ -1,4 +1,4 @@
-# Mock School-Budget
+# WePower School-Budget
 
 ## Description
 Saint Louis Public School budget data. Open source initiative to provide expense and revenue data on a school level basis in an attempt to increase transparency and give advocacy tools to the community.
