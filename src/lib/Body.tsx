@@ -1,17 +1,13 @@
 import * as React from "react";
+import ExpenseSection from './ExpenseSection';
 // import { useState } from "react";
 
 function Body() {
-  const selectedIds = ["1", "2"];
+//   const selectedIds = ["1", "2"];
 
   return (
     <section>
-      <div>
-        <p>Table here</p>
-      </div>
-      <div>
-        <p>Chart here</p>
-      </div>
+        <ExpenseSection />
     </section>
   );
 }
