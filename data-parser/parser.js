@@ -19,12 +19,13 @@ function getNum(val) {
   }
 }
 
-data.forEach(row => {
+data.forEach((row, index) => {
   const schoolName = row[0];
 
   // Ignore First Row
   if (schoolName !== "School Name") {
     const individualSchool = {
+      id: String(index),
       name: row[0],
       type: row[1],
       projectedEnrollment: row[2],
