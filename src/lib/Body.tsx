@@ -4,59 +4,74 @@ import * as schoolExpenses from "../data/SchoolExpenses.json";
 import { IGeneralSchoolExpense } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import ExpenseTable from "./ExpenseTable";
-import { subCategoryExpenseData, subCategoryTableData } from '../models/FakeSubCategory';
+import {
+  subCategoryExpenseData,
+  subCategoryTableData
+} from "../models/FakeSubCategory";
 import Switch from "react-switch";
 
 function Body() {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState("Total");
   // TODO set these based on URL Parameters.
   const selectedIds: string[] = ["1", "2"];
   const selectedCat: string = "Administrative Salaries";
 
-  const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses.filter(school => {
-    return selectedIds.includes(school.id);
-  }).map(school => {
-    if(toggle){
-      school.administrativeSalaries = (school.administrativeSalaries / school.projectedEnrollment);
-      school.instructionalSalaries = school.instructionalSalaries / school.projectedEnrollment;
-      school.instructionalSupportSalaries = school.instructionalSupportSalaries / school.projectedEnrollment;
-      school.nonInstructionalSupportSalaries = school.nonInstructionalSupportSalaries / school.projectedEnrollment;
-      school.temp = school.temp / school.projectedEnrollment;
-      school.benefits = school.benefits / school.projectedEnrollment;
-      school.transportation = school.transportation / school.projectedEnrollment;
-      school.discretionary = school.discretionary / school.projectedEnrollment;
-      return school;
-    } else {
-      return school;
-    }
-  })
+  const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses
+    .filter(school => {
+      return selectedIds.includes(school.id);
+    })
+    .map(school => {
+      if (toggle !== "Total") {
+        const averagedSchool = {
+          ...school,
+          administrativeSalaries:
+            school.administrativeSalaries / school.projectedEnrollment,
+          instructionalSalaries:
+            school.instructionalSalaries / school.projectedEnrollment,
+          instructionalSupportSalaries:
+            school.instructionalSupportSalaries / school.projectedEnrollment,
+          nonInstructionalSupportSalaries:
+            school.nonInstructionalSupportSalaries / school.projectedEnrollment,
+          temp: school.temp / school.projectedEnrollment,
+          benefits: school.benefits / school.projectedEnrollment,
+          transportation: school.transportation / school.projectedEnrollment,
+          discretionary: school.discretionary / school.projectedEnrollment
+        };
+        return averagedSchool;
+      } else {
+        return school;
+      }
+    });
 
   const handleChange = () => {
-    setToggle(!toggle);
-  }
-
+    if(toggle === "Total"){
+      setToggle("Per Student")
+    } else {
+      setToggle("Total");
+    }
+  };
 
   return (
     <section className="body">
       <div>
-      <label>
-        <span>Total</span>
-        <Switch onChange={handleChange} checked={toggle} />
-        <span>Per Student</span>
-      </label>
+        <label>
+          <span>Total</span>
+          <Switch onChange={handleChange} checked={toggle === "Per Student"} uncheckedIcon={false} checkedIcon={false} offColor={"#34baeb"} onColor={"#a2eb34"}/>
+          <span>Per Student</span>
+        </label>
       </div>
       <ExpenseTable
         selectedSchools={selectedSchools}
         headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
         rows={rows}
-        caption="General Expenses"
+        caption={`General Expenses ( ${toggle} )` }
       />
       {selectedCat && selectedCat !== "" && (
         <ExpenseTable
-          selectedSchools={selectedIds.map((n) => subCategoryExpenseData)}
+          selectedSchools={selectedIds.map(n => subCategoryExpenseData)}
           headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
           rows={subCategoryTableData}
-          caption={selectedCat}
+          caption={`${selectedCat} ( ${toggle} )`}
         />
       )}
     </section>
