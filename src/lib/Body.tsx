@@ -6,6 +6,7 @@ import ExpenseTable from "./ExpenseTable";
 import { subCategoryExpenseData, subCategoryTableData } from '../models/FakeSubCategory';
 
 function Body() {
+  // TODO set these based on URL Parameters.
   const selectedIds: string[] = ["1", "2"];
   const selectedCat: string = "Administrative Salaries";
 
@@ -14,7 +15,7 @@ function Body() {
   });
 
   return (
-    <section className="expenses">
+    <section className="body">
       <ExpenseTable
         selectedSchools={selectedSchools}
         headers={["Field Name"].concat(selectedSchools.map(n => n.name))}

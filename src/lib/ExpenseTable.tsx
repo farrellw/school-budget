@@ -14,7 +14,7 @@ function ExpenseTable({ selectedSchools, headers, rows, caption }: IProps) {
   };
 
   return (
-    <section className="expense-table">
+    <section className="expense-section">
       <table>
         <caption>{caption}</caption>
         <thead>
