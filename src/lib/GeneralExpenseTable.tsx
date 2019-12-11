@@ -65,7 +65,7 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
             align: "right",
             verticalAlign: "top",
             x: -40,
-            y: 80,
+            y: 150,
             floating: true,
             borderWidth: 1,
             backgroundColor:

@@ -14,10 +14,14 @@ table {
 th, td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    word-wrap: wrap;
+    max-width: 140px;
+    text-align: right;
 }
   
-th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3) {
-    text-align: right;
+th:nth-child(1), td:nth-child(1) {
+    max-width: 180px;
+    text-align: left;
 }
 
 tbody tr:hover {
