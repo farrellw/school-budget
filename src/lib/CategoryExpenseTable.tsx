@@ -1,6 +1,8 @@
 import * as React from "react";
 import { ITableData, SchoolExpense, ITableRow } from "../models/Data";
 import * as Highcharts from "highcharts";
+import HC_exporting from 'highcharts/modules/exporting'
+HC_exporting(Highcharts)
 import HighchartsReact from "highcharts-react-official";
 import Table from './Table';
 
