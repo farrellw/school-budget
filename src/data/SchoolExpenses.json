@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "name": "Clyde Miller Academy",
         "type": "H",
         "projectedEnrollment": 545,
@@ -13,6 +14,7 @@
         "discretionary": 210995
     },
     {
+        "id": "2",
         "name": "Gateway STEM High",
         "type": "H",
         "projectedEnrollment": 1100,
@@ -26,6 +28,7 @@
         "discretionary": 272189
     },
     {
+        "id": "3",
         "name": "Nottingham CAJT High",
         "type": "H",
         "projectedEnrollment": 105,
@@ -39,6 +42,7 @@
         "discretionary": 50283
     },
     {
+        "id": "4",
         "name": "Cleveland NJROTC High",
         "type": "H",
         "projectedEnrollment": 290,
@@ -52,6 +56,7 @@
         "discretionary": 59836
     },
     {
+        "id": "5",
         "name": "Carnahan High",
         "type": "H",
         "projectedEnrollment": 282,
@@ -65,6 +70,7 @@
         "discretionary": 104831
     },
     {
+        "id": "6",
         "name": "Coll Schl of Med",
         "type": "H",
         "projectedEnrollment": 295,
@@ -78,6 +84,7 @@
         "discretionary": 38053
     },
     {
+        "id": "7",
         "name": "N.W. Transport & Law High",
         "type": "H",
         "projectedEnrollment": 213,
@@ -91,6 +98,7 @@
         "discretionary": 28507
     },
     {
+        "id": "8",
         "name": "Metro Academic Classic High",
         "type": "H",
         "projectedEnrollment": 375,
@@ -104,6 +112,7 @@
         "discretionary": 129045
     },
     {
+        "id": "9",
         "name": "McKinley CJA High",
         "type": "H",
         "projectedEnrollment": 276,
@@ -117,6 +126,7 @@
         "discretionary": 34845
     },
     {
+        "id": "10",
         "name": "Roosevelt High",
         "type": "H",
         "projectedEnrollment": 430,
@@ -130,6 +140,7 @@
         "discretionary": 120464
     },
     {
+        "id": "11",
         "name": "Soldan IS High",
         "type": "H",
         "projectedEnrollment": 545,
@@ -143,6 +154,7 @@
         "discretionary": 80088
     },
     {
+        "id": "12",
         "name": "Sumner High",
         "type": "H",
         "projectedEnrollment": 249,
@@ -156,6 +168,7 @@
         "discretionary": 66273
     },
     {
+        "id": "13",
         "name": "Vashon High",
         "type": "H",
         "projectedEnrollment": 410,
@@ -169,6 +182,7 @@
         "discretionary": 107486
     },
     {
+        "id": "14",
         "name": "Central VPA High",
         "type": "H",
         "projectedEnrollment": 400,
@@ -182,6 +196,7 @@
         "discretionary": 95496
     },
     {
+        "id": "15",
         "name": "Yeatman Middle",
         "type": "M",
         "projectedEnrollment": 392,
@@ -195,6 +210,7 @@
         "discretionary": 44999
     },
     {
+        "id": "16",
         "name": "Busch AAA Middle",
         "type": "M",
         "projectedEnrollment": 355,
@@ -208,6 +224,7 @@
         "discretionary": 43613
     },
     {
+        "id": "17",
         "name": "Carr Lane VPA Middle",
         "type": "M",
         "projectedEnrollment": 447,
@@ -221,6 +238,7 @@
         "discretionary": 64439
     },
     {
+        "id": "18",
         "name": "McKinley Leadership Academy",
         "type": "M",
         "projectedEnrollment": 367,
@@ -234,6 +252,7 @@
         "discretionary": 38893
     },
     {
+        "id": "19",
         "name": "Fanning Middle",
         "type": "M",
         "projectedEnrollment": 150,
@@ -247,6 +266,7 @@
         "discretionary": 200995
     },
     {
+        "id": "20",
         "name": "Gateway Middle",
         "type": "M",
         "projectedEnrollment": 504,
@@ -260,6 +280,7 @@
         "discretionary": 214042
     },
     {
+        "id": "21",
         "name": "AESM Middle",
         "type": "M",
         "projectedEnrollment": 350,
@@ -273,6 +294,7 @@
         "discretionary": 53327
     },
     {
+        "id": "22",
         "name": "Long Middle",
         "type": "M",
         "projectedEnrollment": 230,
@@ -286,6 +308,7 @@
         "discretionary": 27126
     },
     {
+        "id": "23",
         "name": "Compton Drew Middle",
         "type": "M",
         "projectedEnrollment": 497,
@@ -299,6 +322,7 @@
         "discretionary": 70485
     },
     {
+        "id": "24",
         "name": "Adams Elementary",
         "type": "E",
         "projectedEnrollment": 251,
@@ -312,6 +336,7 @@
         "discretionary": 234327
     },
     {
+        "id": "25",
         "name": "Ashland Elementary",
         "type": "E",
         "projectedEnrollment": 195,
@@ -325,6 +350,7 @@
         "discretionary": 21946
     },
     {
+        "id": "26",
         "name": "Bryan Hill Elementary",
         "type": "E",
         "projectedEnrollment": 170,
@@ -338,6 +364,7 @@
         "discretionary": 22346
     },
     {
+        "id": "27",
         "name": "Buder Elementary",
         "type": "E",
         "projectedEnrollment": 338,
@@ -351,6 +378,7 @@
         "discretionary": 94554
     },
     {
+        "id": "28",
         "name": "AESM @ Carver Elementary",
         "type": "E",
         "projectedEnrollment": 170,
@@ -364,6 +392,7 @@
         "discretionary": 25576
     },
     {
+        "id": "29",
         "name": "Ames VPA Elementary",
         "type": "E",
         "projectedEnrollment": 322,
@@ -377,6 +406,7 @@
         "discretionary": 55285
     },
     {
+        "id": "30",
         "name": "Clay Elementary",
         "type": "E",
         "projectedEnrollment": 149,
@@ -390,6 +420,7 @@
         "discretionary": 18377
     },
     {
+        "id": "31",
         "name": "Columbia Elementary",
         "type": "E",
         "projectedEnrollment": 228,
@@ -403,6 +434,7 @@
         "discretionary": 26171
     },
     {
+        "id": "32",
         "name": "Dewey Int'L Study Elementary",
         "type": "E",
         "projectedEnrollment": 413,
@@ -416,6 +448,7 @@
         "discretionary": 102116
     },
     {
+        "id": "33",
         "name": "Dunbar Elementary",
         "type": "E",
         "projectedEnrollment": 142,
@@ -429,6 +462,7 @@
         "discretionary": 16577
     },
     {
+        "id": "34",
         "name": "Farragut Elementary",
         "type": "E",
         "projectedEnrollment": 132,
@@ -442,6 +476,7 @@
         "discretionary": 15113
     },
     {
+        "id": "35",
         "name": "Ford Elementary",
         "type": "E",
         "projectedEnrollment": 200,
@@ -455,6 +490,7 @@
         "discretionary": 169083
     },
     {
+        "id": "36",
         "name": "Froebel Elementary",
         "type": "E",
         "projectedEnrollment": 179,
@@ -468,6 +504,7 @@
         "discretionary": 18451
     },
     {
+        "id": "37",
         "name": "Gateway Elementary",
         "type": "E",
         "projectedEnrollment": 527,
@@ -481,6 +518,7 @@
         "discretionary": 98094
     },
     {
+        "id": "38",
         "name": "Gateway Michael Elementary",
         "type": "E",
         "projectedEnrollment": 65,
@@ -494,6 +532,7 @@
         "discretionary": 17601
     },
     {
+        "id": "39",
         "name": "Hamilton Elementary",
         "type": "E",
         "projectedEnrollment": 282,
@@ -507,6 +546,7 @@
         "discretionary": 90244
     },
     {
+        "id": "40",
         "name": "Henry Elementary",
         "type": "E",
         "projectedEnrollment": 247,
@@ -520,6 +560,7 @@
         "discretionary": 48011
     },
     {
+        "id": "41",
         "name": "Herzog Elementary",
         "type": "E",
         "projectedEnrollment": 226,
@@ -533,6 +574,7 @@
         "discretionary": 29958
     },
     {
+        "id": "42",
         "name": "Hickey Elementary",
         "type": "E",
         "projectedEnrollment": 175,
@@ -546,6 +588,7 @@
         "discretionary": 20806
     },
     {
+        "id": "43",
         "name": "Hodgen Elementary",
         "type": "E",
         "projectedEnrollment": 240,
@@ -559,6 +602,7 @@
         "discretionary": 28348
     },
     {
+        "id": "44",
         "name": "Humbolt Elementary",
         "type": "E",
         "projectedEnrollment": 155,
@@ -572,6 +616,7 @@
         "discretionary": 18646
     },
     {
+        "id": "45",
         "name": "Jefferson Elementary",
         "type": "E",
         "projectedEnrollment": 165,
@@ -585,6 +630,7 @@
         "discretionary": 254537
     },
     {
+        "id": "46",
         "name": "Kennard Elementary",
         "type": "E",
         "projectedEnrollment": 313,
@@ -598,6 +644,7 @@
         "discretionary": 36564
     },
     {
+        "id": "47",
         "name": "Laclede Elementary",
         "type": "E",
         "projectedEnrollment": 216,
@@ -611,6 +658,7 @@
         "discretionary": 26357
     },
     {
+        "id": "48",
         "name": "Lexington Elementary",
         "type": "E",
         "projectedEnrollment": 350,
@@ -624,6 +672,7 @@
         "discretionary": 79487
     },
     {
+        "id": "49",
         "name": "Lyon Acad Basic Inst @ Blow El",
         "type": "E",
         "projectedEnrollment": 225,
@@ -637,6 +686,7 @@
         "discretionary": 25933
     },
     {
+        "id": "50",
         "name": "Mallinckrodt Elementary",
         "type": "E",
         "projectedEnrollment": 264,
@@ -650,6 +700,7 @@
         "discretionary": 32450
     },
     {
+        "id": "51",
         "name": "Mann Elementary",
         "type": "E",
         "projectedEnrollment": 296,
@@ -663,6 +714,7 @@
         "discretionary": 37704
     },
     {
+        "id": "52",
         "name": "Mason Elementary",
         "type": "E",
         "projectedEnrollment": 460,
@@ -676,6 +728,7 @@
         "discretionary": 120067
     },
     {
+        "id": "53",
         "name": "Meramec Elementary",
         "type": "E",
         "projectedEnrollment": 184,
@@ -689,6 +742,7 @@
         "discretionary": 26133
     },
     {
+        "id": "54",
         "name": "Monroe Elementary",
         "type": "E",
         "projectedEnrollment": 257,
@@ -702,6 +756,7 @@
         "discretionary": 163394
     },
     {
+        "id": "55",
         "name": "Mullanphy Elementary",
         "type": "E",
         "projectedEnrollment": 450,
@@ -715,6 +770,7 @@
         "discretionary": 57756
     },
     {
+        "id": "56",
         "name": "Earl Nance Sr Elementary",
         "type": "E",
         "projectedEnrollment": 332,
@@ -728,6 +784,7 @@
         "discretionary": 63918
     },
     {
+        "id": "57",
         "name": "New American Prep Elementary",
         "type": "E",
         "projectedEnrollment": 230,
@@ -741,6 +798,7 @@
         "discretionary": 73557
     },
     {
+        "id": "58",
         "name": "Oak Hill Elementary",
         "type": "E",
         "projectedEnrollment": 248,
@@ -754,6 +812,7 @@
         "discretionary": 29659
     },
     {
+        "id": "59",
         "name": "Pamoja @ Cole Elementary",
         "type": "E",
         "projectedEnrollment": 350,
@@ -767,6 +826,7 @@
         "discretionary": 42570
     },
     {
+        "id": "60",
         "name": "Peabody Elementary",
         "type": "E",
         "projectedEnrollment": 185,
@@ -780,6 +840,7 @@
         "discretionary": 20517
     },
     {
+        "id": "61",
         "name": "Shaw VPA Elementary",
         "type": "E",
         "projectedEnrollment": 385,
@@ -793,6 +854,7 @@
         "discretionary": 54488
     },
     {
+        "id": "62",
         "name": "Shenandoah Elementary",
         "type": "E",
         "projectedEnrollment": 200,
@@ -806,6 +868,7 @@
         "discretionary": 20073
     },
     {
+        "id": "63",
         "name": "Sigel Elementary",
         "type": "E",
         "projectedEnrollment": 237,
@@ -819,6 +882,7 @@
         "discretionary": 28308
     },
     {
+        "id": "64",
         "name": "Stix Early Childhood",
         "type": "E",
         "projectedEnrollment": 470,
@@ -832,6 +896,7 @@
         "discretionary": 81016
     },
     {
+        "id": "65",
         "name": "Walbridge Elementary",
         "type": "E",
         "projectedEnrollment": 195,
@@ -845,6 +910,7 @@
         "discretionary": 23559
     },
     {
+        "id": "66",
         "name": "Wash Montessori Elementary",
         "type": "E",
         "projectedEnrollment": 349,
@@ -858,6 +924,7 @@
         "discretionary": 42099
     },
     {
+        "id": "67",
         "name": "Wilkinson Early Childhood",
         "type": "E",
         "projectedEnrollment": 314,
@@ -871,6 +938,7 @@
         "discretionary": 32187
     },
     {
+        "id": "68",
         "name": "Woerner Elementary",
         "type": "E",
         "projectedEnrollment": 424,
@@ -884,6 +952,7 @@
         "discretionary": 104829
     },
     {
+        "id": "69",
         "name": "Woodward Elementary",
         "type": "E",
         "projectedEnrollment": 290,
@@ -897,6 +966,7 @@
         "discretionary": 55683
     },
     {
+        "id": "70",
         "name": "Beaumont High",
         "type": "A",
         "projectedEnrollment": 32,
@@ -910,6 +980,7 @@
         "discretionary": 8918
     },
     {
+        "id": "71",
         "name": "Fresh Start Alternative",
         "type": "A",
         "projectedEnrollment": 44,
@@ -923,6 +994,7 @@
         "discretionary": 9923
     },
     {
+        "id": "72",
         "name": "Griscom Alternative High",
         "type": "A",
         "projectedEnrollment": 14,
@@ -936,6 +1008,7 @@
         "discretionary": 9884
     },
     {
+        "id": "73",
         "name": "Innovative Concept Alternative",
         "type": "A",
         "projectedEnrollment": 27,
@@ -949,6 +1022,7 @@
         "discretionary": 9211
     },
     {
+        "id": "74",
         "name": "NCNAA @ Roosevelt Alternative",
         "type": "A",
         "projectedEnrollment": 84,
@@ -962,6 +1036,7 @@
         "discretionary": 7978
     },
     {
+        "id": "75",
         "name": "Therapeutic School Alternative",
         "type": "A",
         "projectedEnrollment": 53,

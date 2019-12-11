@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Body from "./lib/Body";
 import './App.css';
 
 
@@ -9,9 +10,7 @@ class App extends React.Component {
         <div>
           <p>Header Here</p>
         </div>
-        <div>
-          <p>Body Content Here</p>
-        </div>
+        <Body/>
       </section>
     )
   }
