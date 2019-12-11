@@ -1,4 +1,4 @@
-export interface ISchoolExpense {
+export interface IGeneralSchoolExpense {
     name: string,
     type: string,
     projectedEnrollment: number,
@@ -12,6 +12,10 @@ export interface ISchoolExpense {
     discretionary: number
 }
 
+export type SubCategorySchoolExpense = Map<string, number>;
+
+export type SchoolExpense = IGeneralSchoolExpense | SubCategorySchoolExpense;
+
 export type SchoolType = "H" | "M" | "E" | "A";
 
 export const SchoolTypeToTypeLabel = {
@@ -19,4 +23,9 @@ export const SchoolTypeToTypeLabel = {
     "M": "Middle",
     "E": "Elementary",
     "A": "Alternative"
+}
+
+export interface ITableData {
+    label: string,
+    key: string
 }
