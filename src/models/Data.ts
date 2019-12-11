@@ -29,3 +29,8 @@ export interface ITableData {
     label: string,
     key: string
 }
+
+export interface ITableRow {
+    label: string,
+    values: string[]
+}

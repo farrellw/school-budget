@@ -3,7 +3,8 @@ import { useState } from "react";
 import * as schoolExpenses from "../data/SchoolExpenses.json";
 import { IGeneralSchoolExpense } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
-import ExpenseTable from "./ExpenseTable";
+import GeneralExpenseTable from "./GeneralExpenseTable";
+import CategoryExpenseTable from './CategoryExpenseTable';
 import {
   subCategoryExpenseData,
   subCategoryTableData
@@ -44,7 +45,7 @@ function Body() {
     });
 
   const handleChange = () => {
-    if(toggle === "Total"){
+    if (toggle === "Total") {
       setToggle("Per Student")
     } else {
       setToggle("Total");
@@ -60,18 +61,16 @@ function Body() {
       <div>
         <label>
           <span>Total</span>
-          <Switch onChange={handleChange} checked={toggle === "Per Student"} uncheckedIcon={false} checkedIcon={false} offColor={"#34baeb"} onColor={"#a2eb34"}/>
+          <Switch onChange={handleChange} checked={toggle === "Per Student"} uncheckedIcon={false} checkedIcon={false} offColor={"#34baeb"} onColor={"#a2eb34"} />
           <span>Per Student</span>
         </label>
       </div>
-      <ExpenseTable
-        selectedSchools={selectedSchools}
+      <GeneralExpenseTable selectedSchools={selectedSchools}
         headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
         rows={rows}
-        caption={`General Expenses ( ${toggle} )`} clickHandler={clickEvent}
-      />
+        caption={`General Expenses ( ${toggle} )`} clickHandler={clickEvent} toggle={toggle} />
       {selectedCategory && selectedCategory !== "" && (
-        <ExpenseTable
+        <CategoryExpenseTable
           selectedSchools={selectedIds.map(n => subCategoryExpenseData)}
           headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
           rows={subCategoryTableData}
