@@ -12,7 +12,7 @@ interface IProps {
 
 function ExpenseTable({ selectedSchools, headers, rows, caption }: IProps) {
   const getValue = (val: number): string => {
-    return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return val.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
   const options: Highcharts.Options = {
@@ -69,9 +69,6 @@ function ExpenseTable({ selectedSchools, headers, rows, caption }: IProps) {
         )
     }}) 
   };
-
-  // tslint:disable-next-line:no-debugger
-  debugger;
 
   return (
     <section className="expense-section">
