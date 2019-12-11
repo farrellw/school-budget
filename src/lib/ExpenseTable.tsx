@@ -8,9 +8,10 @@ interface IProps {
   headers: string[];
   rows: ITableData[];
   caption: string;
+  clickHandler?: (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 }
 
-function ExpenseTable({ selectedSchools, headers, rows, caption }: IProps) {
+function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler }: IProps) {
   const getValue = (val: number): string => {
     return val.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
@@ -84,7 +85,7 @@ function ExpenseTable({ selectedSchools, headers, rows, caption }: IProps) {
         <tbody>
           {rows.map((row: ITableData, i: number) => {
             return (
-              <tr key={i}>
+              <tr key={i} onClick={clickHandler} id={row.label}>
                 <td>{row.label}</td>
                 {selectedSchools.map((n, j: number) => {
                   return <td key={j}>{getValue(n[row.key])}</td>;

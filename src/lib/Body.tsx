@@ -12,9 +12,9 @@ import Switch from "react-switch";
 
 function Body() {
   const [toggle, setToggle] = useState("Total");
+  const [selectedCategory, setSelectedCategory] = useState("");
   // TODO set these based on URL Parameters.
   const selectedIds: string[] = ["1", "2"];
-  const selectedCat: string = "Administrative Salaries";
 
   const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses
     .filter(school => {
@@ -51,6 +51,10 @@ function Body() {
     }
   };
 
+  const clickEvent = (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>): void => {
+    setSelectedCategory(event.currentTarget.id)
+  }
+
   return (
     <section className="body">
       <div>
@@ -64,14 +68,14 @@ function Body() {
         selectedSchools={selectedSchools}
         headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
         rows={rows}
-        caption={`General Expenses ( ${toggle} )` }
+        caption={`General Expenses ( ${toggle} )`} clickHandler={clickEvent}
       />
-      {selectedCat && selectedCat !== "" && (
+      {selectedCategory && selectedCategory !== "" && (
         <ExpenseTable
           selectedSchools={selectedIds.map(n => subCategoryExpenseData)}
           headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
           rows={subCategoryTableData}
-          caption={`${selectedCat} ( ${toggle} )`}
+          caption={`${selectedCategory} ( ${toggle} )`}
         />
       )}
     </section>
