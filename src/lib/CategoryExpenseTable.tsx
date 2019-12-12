@@ -6,6 +6,12 @@ HC_exporting(Highcharts)
 import HighchartsReact from "highcharts-react-official";
 import Table from './Table';
 
+Highcharts.setOptions({
+    lang: {
+        thousandsSep: ','
+    }
+})
+
 interface IProps {
     selectedSchools: SchoolExpense[];
     headers: string[];

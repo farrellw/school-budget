@@ -4,6 +4,11 @@ import * as Highcharts from "highcharts";
 import HC_exporting from 'highcharts/modules/exporting'
 HC_exporting(Highcharts)
 import HighchartsReact from "highcharts-react-official";
+Highcharts.setOptions({
+    lang: {
+        thousandsSep: ','
+    }
+})
 
 import Table from "./Table";
 
@@ -77,6 +82,9 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
         credits: {
             enabled: false
         },
+        tooltip: {
+            pointFormat: "Value: {point.y:,.2f} $",
+        },
         series: selectedSchools.map((s, i) => {
             return {
                 type: "bar",
@@ -87,6 +95,7 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
                 )
             }
         })
+
     };
 
     // Compute table data to display
