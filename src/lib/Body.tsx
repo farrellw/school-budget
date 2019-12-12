@@ -14,8 +14,13 @@ import Switch from "react-switch";
 function Body() {
   const [toggle, setToggle] = useState("Total");
   const [selectedCategory, setSelectedCategory] = useState("");
-  // TODO set these based on URL Parameters.
-  const selectedIds: string[] = ["1", "2"];
+
+  const retrieveIds = (location: Location): string[] => {
+    const searchParams = new URLSearchParams(location.search);
+    return searchParams.getAll("id") || [];
+  }
+
+  const selectedIds: string[] = retrieveIds(window.location)
 
   const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses
     .filter(school => {
