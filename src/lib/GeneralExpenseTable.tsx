@@ -29,7 +29,11 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
     })
 
     // Compute table data to display
-    const tableData: ITableRow[] = rows.map((row: ITableData, i: number): ITableRow => {
+    const enrollmentRow: ITableRow = {
+        label: "Enrollment",
+        values: selectedSchools.map(n => (n.projectedEnrollment).toString())
+    }
+    const tableData: ITableRow[] = [enrollmentRow].concat(rows.map((row: ITableData, i: number): ITableRow => {
         return {
             ...row,
             values: selectedSchools.map((n, j: number): string => {
@@ -40,7 +44,7 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
                 }
             })
         }
-    })
+    }))
 
     return (
         <section className="expense-section">
