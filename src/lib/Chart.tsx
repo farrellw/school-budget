@@ -63,7 +63,7 @@ function Chart({ caption, rows, series }: IProps) {
             enabled: false
         },
         tooltip: {
-            pointFormat: "Value: {point.y:.2f} $"
+            pointFormat: "Value: {point.y:,.2f} $"
         },
         series
     };
