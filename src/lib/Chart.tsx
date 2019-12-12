@@ -7,7 +7,7 @@ import HighchartsReact from "highcharts-react-official";
 
 Highcharts.setOptions({
     lang: {
-        thousandsSep: ','
+        thousandsSep: ',',
     }
 })
 
@@ -61,6 +61,9 @@ function Chart({ caption, rows, series }: IProps) {
         },
         credits: {
             enabled: false
+        },
+        tooltip: {
+            pointFormat: "Value: {point.y:.2f} $"
         },
         series
     };

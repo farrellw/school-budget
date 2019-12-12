@@ -22,7 +22,7 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
             type: "bar",
             name: headers[i + 1],
             data: rows.map(r => {
-                return s[r.key];
+                return Math.round(s[r.key] * 100) / 100;
             }
             )
         }
