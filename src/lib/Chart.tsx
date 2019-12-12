@@ -1,20 +1,23 @@
 import * as React from "react";
-import { ITableData, SchoolExpense, ITableRow } from "../models/Data";
 import * as Highcharts from "highcharts";
+import { ITableData } from "../models/Data";
 import HC_exporting from 'highcharts/modules/exporting'
 HC_exporting(Highcharts)
 import HighchartsReact from "highcharts-react-official";
-import Table from './Table';
+
+Highcharts.setOptions({
+    lang: {
+        thousandsSep: ',',
+    }
+})
 
 interface IProps {
-    selectedSchools: SchoolExpense[];
-    headers: string[];
+    caption: string
     rows: ITableData[];
-    caption: string;
-    clickHandler?: (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
+    series: Highcharts.SeriesOptionsType[];
 }
 
-function CategoryExpenseTable({ selectedSchools, headers, rows, caption, clickHandler }: IProps) {
+function Chart({ caption, rows, series }: IProps) {
     const options: Highcharts.Options = {
         chart: {
             type: "bar"
@@ -59,35 +62,17 @@ function CategoryExpenseTable({ selectedSchools, headers, rows, caption, clickHa
         credits: {
             enabled: false
         },
-        series: selectedSchools.map((s, i) => {
-            return {
-                type: "bar",
-                name: headers[i + 1],
-                data: rows.map(r => {
-                    return s[r.key];
-                }
-                )
-            }
-        })
+        tooltip: {
+            pointFormat: "Value: {point.y:.2f} $"
+        },
+        series
     };
 
-    const rowData: ITableRow[] = rows.map((row: ITableData) => {
-        return {
-            ...row,
-            values: selectedSchools.map((): string => {
-                return "????";
-            })
-        }
-    })
-
     return (
-        <section className="expense-section">
-            <Table headers={headers} caption={caption} clickHandler={clickHandler} rows={rowData} />
-            <div>
-                <HighchartsReact highcharts={Highcharts} options={options} />
-            </div>
-        </section>
-    );
+        <div>
+            <HighchartsReact highcharts={Highcharts} options={options} />
+        </div>
+    )
 }
 
-export default CategoryExpenseTable;
+export default Chart;
