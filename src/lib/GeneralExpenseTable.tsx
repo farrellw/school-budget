@@ -1,15 +1,7 @@
 import * as React from "react";
 import { ITableData, IGeneralSchoolExpense, ITableRow } from "../models/Data";
 import * as Highcharts from "highcharts";
-import HC_exporting from 'highcharts/modules/exporting'
-HC_exporting(Highcharts)
-import HighchartsReact from "highcharts-react-official";
-Highcharts.setOptions({
-    lang: {
-        thousandsSep: ','
-    }
-})
-
+import Chart from "./Chart";
 import Table from "./Table";
 
 interface IProps {
@@ -25,78 +17,16 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
     const getValue = (val: string): string => {
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
-
-    const options: Highcharts.Options = {
-        exporting: {
-            chartOptions: { // specific options for the exported image
-                plotOptions: {
-                    series: {
-                        dataLabels: {
-                            enabled: true
-                        }
-                    }
-                }
-            },
-            fallbackToExportServer: false
-        },
-        chart: {
-            type: "bar"
-        },
-        title: {
-            text: caption
-        },
-        xAxis: {
-            categories: rows.map(n => n.label)
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: "Dollars",
-                align: "high"
-            },
-            labels: {
-                overflow: "justify"
+    const series: Highcharts.SeriesOptionsType[] = selectedSchools.map((s, i) => {
+        return {
+            type: "bar",
+            name: headers[i + 1],
+            data: rows.map(r => {
+                return s[r.key];
             }
-        },
-        plotOptions: {
-            bar: {
-                dataLabels: {
-                    enabled: true
-                }
-            }
-        },
-        legend: {
-            layout: "vertical",
-            align: "right",
-            verticalAlign: "top",
-            x: -40,
-            y: 150,
-            floating: true,
-            borderWidth: 1,
-            backgroundColor:
-                (Highcharts.defaultOptions.legend &&
-                    Highcharts.defaultOptions.legend.backgroundColor) ||
-                "#FFFFFF",
-            shadow: true
-        },
-        credits: {
-            enabled: false
-        },
-        tooltip: {
-            pointFormat: "Value: {point.y:,.2f} $",
-        },
-        series: selectedSchools.map((s, i) => {
-            return {
-                type: "bar",
-                name: headers[i + 1],
-                data: rows.map(r => {
-                    return s[r.key];
-                }
-                )
-            }
-        })
-
-    };
+            )
+        }
+    })
 
     // Compute table data to display
     const tableData: ITableRow[] = rows.map((row: ITableData, i: number): ITableRow => {
@@ -115,9 +45,7 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
     return (
         <section className="expense-section">
             <Table headers={headers} clickHandler={clickHandler} caption={caption} rows={tableData} />
-            <div>
-                <HighchartsReact highcharts={Highcharts} options={options} />
-            </div>
+            <Chart rows={rows} series={series} caption={caption} />
         </section>
     );
 }
