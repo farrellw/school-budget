@@ -3,8 +3,8 @@ import { useState } from "react";
 import * as schoolExpenses from "../data/SchoolExpenses.json";
 import { IGeneralSchoolExpense } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
-import GeneralExpenseTable from "./GeneralExpenseTable";
-import CategoryExpenseTable from './CategoryExpenseTable';
+import GeneralExpense from "./GeneralExpense";
+import CategoryExpense from './CategoryExpense';
 import {
   subCategoryExpenseData,
   subCategoryTableData
@@ -70,12 +70,12 @@ function Body() {
           <span>Per Student</span>
         </label>
       </div>
-      <GeneralExpenseTable selectedSchools={selectedSchools}
+      <GeneralExpense selectedSchools={selectedSchools}
         headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
         rows={rows}
         caption={`General Expenses ( ${toggle} )`} clickHandler={clickEvent} toggle={toggle} />
       {selectedCategory && selectedCategory !== "" && (
-        <CategoryExpenseTable
+        <CategoryExpense
           selectedSchools={selectedIds.map(n => subCategoryExpenseData)}
           headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
           rows={subCategoryTableData}

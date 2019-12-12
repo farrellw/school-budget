@@ -18,7 +18,7 @@ interface IProps {
     clickHandler?: (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 }
 
-function CategoryExpenseTable({ selectedSchools, headers, rows, caption, clickHandler }: IProps) {
+function CategoryExpense({ selectedSchools, headers, rows, caption, clickHandler }: IProps) {
     const series: Highcharts.SeriesOptionsType[] = selectedSchools.map((s, i) => {
         return {
             type: "bar",
@@ -34,7 +34,7 @@ function CategoryExpenseTable({ selectedSchools, headers, rows, caption, clickHa
         return {
             ...row,
             values: selectedSchools.map((): string => {
-                return "????";
+                return "This Data Has Not Been Shared";
             })
         }
     })
@@ -47,4 +47,4 @@ function CategoryExpenseTable({ selectedSchools, headers, rows, caption, clickHa
     );
 }
 
-export default CategoryExpenseTable;
+export default CategoryExpense;

@@ -13,7 +13,7 @@ interface IProps {
     clickHandler?: (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 }
 
-function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, toggle }: IProps) {
+function Expense({ selectedSchools, headers, rows, caption, clickHandler, toggle }: IProps) {
     const getValue = (val: string): string => {
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
@@ -54,4 +54,4 @@ function ExpenseTable({ selectedSchools, headers, rows, caption, clickHandler, t
     );
 }
 
-export default ExpenseTable;
+export default Expense;
