@@ -32,5 +32,6 @@ export interface ITableData {
 
 export interface ITableRow {
     label: string,
-    values: string[]
+    values: string[],
+    selected?: boolean
 }

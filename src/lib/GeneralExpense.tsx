@@ -11,9 +11,10 @@ interface IProps {
     caption: string;
     toggle: string;
     clickHandler?: (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
+    category: string;
 }
 
-function Expense({ selectedSchools, headers, rows, caption, clickHandler, toggle }: IProps) {
+function Expense({ selectedSchools, headers, rows, caption, clickHandler, toggle, category }: IProps) {
     const getValue = (val: string): string => {
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
@@ -42,7 +43,8 @@ function Expense({ selectedSchools, headers, rows, caption, clickHandler, toggle
                 } else {
                     return getValue(n[row.key].toFixed(2))
                 }
-            })
+            }),
+            selected: row.label === category
         }
     }))
 

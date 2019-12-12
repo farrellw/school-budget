@@ -73,7 +73,7 @@ function Body() {
       <GeneralExpense selectedSchools={selectedSchools}
         headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
         rows={rows}
-        caption={`General Expenses ( ${toggle} )`} clickHandler={clickEvent} toggle={toggle} />
+        caption={`General Expenses ( ${toggle} )`} clickHandler={clickEvent} toggle={toggle} category={selectedCategory} />
       {selectedCategory && selectedCategory !== "" && (
         <CategoryExpense
           selectedSchools={selectedIds.map(n => subCategoryExpenseData)}
