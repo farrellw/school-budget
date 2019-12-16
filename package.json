@@ -4,14 +4,13 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "@types/react-autosuggest": "^9.3.13",
     "@types/react-table": "^6.8.5",
     "highcharts": "^8.0.0",
     "highcharts-react-official": "^2.2.2",
     "react": "^16.11.0",
-    "react-autosuggest": "^9.4.3",
     "react-dom": "^16.11.0",
     "react-scripts-ts": "3.1.0",
+    "react-select": "^3.0.8",
     "react-switch": "^5.0.1",
     "react-table": "^6.10.3"
   },
@@ -23,11 +22,12 @@
     "buildForDeploy": "npm run build; rm -rf docs; mv build docs;"
   },
   "devDependencies": {
-    "node-xlsx": "^0.15.0",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.7",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "@types/react-select": "^3.0.8",
+    "node-xlsx": "^0.15.0",
     "typescript": "^3.7.2"
   }
 }
