@@ -4,10 +4,12 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@types/react-autosuggest": "^9.3.13",
     "@types/react-table": "^6.8.5",
     "highcharts": "^8.0.0",
     "highcharts-react-official": "^2.2.2",
     "react": "^16.11.0",
+    "react-autosuggest": "^9.4.3",
     "react-dom": "^16.11.0",
     "react-scripts-ts": "3.1.0",
     "react-switch": "^5.0.1",
