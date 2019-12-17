@@ -17,6 +17,7 @@ function useQuery() {
 }
 function Body() {
   const [toggle, setToggle] = useState("Total");
+  const [compareWithAverage, setCompareWthAverage] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
   const query = useQuery();
 
@@ -57,6 +58,10 @@ function Body() {
     }
   };
 
+  const handleCompareWithAverageChange = () => {
+    setCompareWthAverage(!compareWithAverage);
+  }
+
   const clickEvent = (
     event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
   ): void => {
@@ -65,7 +70,7 @@ function Body() {
 
   return (
     <section className="body">
-      <div>
+      <div className="displayOptions">
         <label>
           <span>Total</span>
           <Switch
@@ -77,6 +82,13 @@ function Body() {
             onColor={"#a2eb34"}
           />
           <span>Per Student</span>
+        </label>
+        <label>
+          <Switch
+            onChange={handleCompareWithAverageChange}
+            checked={compareWithAverage}
+          />
+          <span>Compare Against Average</span>
         </label>
       </div>
       <GeneralExpense
