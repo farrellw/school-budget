@@ -2,6 +2,7 @@ import * as React from "react";
 import Select from "react-select";
 import schools from "../data/SchoolExpenses.json";
 import { IGeneralSchoolExpense } from "src/models/Data.js";
+import { useHistory } from "react-router-dom";
 
 interface IOption {
   value: string;
@@ -12,12 +13,13 @@ const options: IOption[] = schools.map((school: IGeneralSchoolExpense) => ({
   label: school.name
 }));
 
-function selectSchool(option: IOption) {
-  // TODO: use react router instead.
-  window.location.href = `/?id=${option.value}`;
-}
-
 function Search() {
+  const history = useHistory();
+
+  function selectSchool(option: IOption) {
+    history.push(`/?id=${option.value}`);
+  }
+
   return (
     <>
       <Select options={options} onChange={selectSchool} />
