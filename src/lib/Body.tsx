@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import * as schoolExpenses from "../data/SchoolExpenses.json";
+import * as averageExpenses from "../data/SchoolAverages.json";
 import { IGeneralSchoolExpense } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";
@@ -23,32 +24,51 @@ function Body() {
 
   const selectedIds: string[] = query.getAll("id");
 
+  const averageSchoolFunction = (school: IGeneralSchoolExpense) => {
+    const averagedSchool = {
+      ...school,
+      administrativeSalaries:
+        school.administrativeSalaries / school.projectedEnrollment,
+      instructionalSalaries:
+        school.instructionalSalaries / school.projectedEnrollment,
+      instructionalSupportSalaries:
+        school.instructionalSupportSalaries / school.projectedEnrollment,
+      nonInstructionalSupportSalaries:
+        school.nonInstructionalSupportSalaries / school.projectedEnrollment,
+      temp: school.temp / school.projectedEnrollment,
+      benefits: school.benefits / school.projectedEnrollment,
+      transportation: school.transportation / school.projectedEnrollment,
+      discretionary: school.discretionary / school.projectedEnrollment
+    };
+    return averagedSchool;
+  }
+
+
   const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses
     .filter(school => {
       return selectedIds.includes(school.id);
-    })
-    .map(school => {
+    }).map(school => {
       if (toggle !== "Total") {
-        const averagedSchool = {
-          ...school,
-          administrativeSalaries:
-            school.administrativeSalaries / school.projectedEnrollment,
-          instructionalSalaries:
-            school.instructionalSalaries / school.projectedEnrollment,
-          instructionalSupportSalaries:
-            school.instructionalSupportSalaries / school.projectedEnrollment,
-          nonInstructionalSupportSalaries:
-            school.nonInstructionalSupportSalaries / school.projectedEnrollment,
-          temp: school.temp / school.projectedEnrollment,
-          benefits: school.benefits / school.projectedEnrollment,
-          transportation: school.transportation / school.projectedEnrollment,
-          discretionary: school.discretionary / school.projectedEnrollment
-        };
+        const averagedSchool = averageSchoolFunction(school);
         return averagedSchool;
       } else {
         return school;
       }
     });
+
+  if (compareWithAverage) {
+    const selectedTypes = selectedSchools.map(s => s.type)
+    const selectedAverages = averageExpenses.filter(avgExp => {
+      return selectedTypes.includes(avgExp.type)
+    });
+    selectedAverages.forEach(selectedAverage => {
+      if (toggle !== "Total") {
+        selectedSchools.push(averageSchoolFunction(selectedAverage));
+      } else {
+        selectedSchools.push(selectedAverage);
+      }
+    })
+  }
 
   const handleChange = () => {
     if (toggle === "Total") {
