@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import * as schoolExpenses from "../data/SchoolExpenses.json";
 import * as averageExpenses from "../data/SchoolAverages.json";
-import { IGeneralSchoolExpense } from "../models/Data";
+import { IGeneralSchoolExpense, averageSchoolFunction, TotalOrAverage } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";
 import CategoryExpense from "./CategoryExpense";
@@ -17,32 +17,12 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 function Body() {
-  const [toggle, setToggle] = useState("Total");
+  const [toggle, setToggle] = useState<TotalOrAverage>("Total");
   const [compareWithAverage, setCompareWthAverage] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
   const query = useQuery();
 
   const selectedIds: string[] = query.getAll("id");
-
-  const averageSchoolFunction = (school: IGeneralSchoolExpense) => {
-    const averagedSchool = {
-      ...school,
-      administrativeSalaries:
-        school.administrativeSalaries / school.projectedEnrollment,
-      instructionalSalaries:
-        school.instructionalSalaries / school.projectedEnrollment,
-      instructionalSupportSalaries:
-        school.instructionalSupportSalaries / school.projectedEnrollment,
-      nonInstructionalSupportSalaries:
-        school.nonInstructionalSupportSalaries / school.projectedEnrollment,
-      temp: school.temp / school.projectedEnrollment,
-      benefits: school.benefits / school.projectedEnrollment,
-      transportation: school.transportation / school.projectedEnrollment,
-      discretionary: school.discretionary / school.projectedEnrollment
-    };
-    return averagedSchool;
-  }
-
 
   const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses
     .filter(school => {
