@@ -16,13 +16,21 @@ const options: IOption[] = schools.map((school: IGeneralSchoolExpense) => ({
 function Search() {
   const history = useHistory();
 
-  function selectSchool(option: IOption) {
-    history.push(`/?id=${option.value}`);
+  function selectSchool(selectedOptions: IOption[]) {
+    if(selectedOptions){
+      const queryString = selectedOptions.map(o => {
+        return `id=${o.value}`
+      }).join("&")
+  
+      history.push(`/?${queryString}`);
+    } else {
+      history.push("/")
+    }
   }
 
   return (
     <>
-      <Select options={options} onChange={selectSchool} />
+      <Select options={options} onChange={selectSchool} isMulti={true}/>
     </>
   );
 }
