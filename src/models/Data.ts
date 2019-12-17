@@ -57,4 +57,4 @@ export const averageSchoolFunction = (school: IGeneralSchoolExpense) => {
   return averagedSchool;
 }
 
-export type TotalOrAverage = "Total" | "Per Student";
+export type TotalOrPerStudent = "Total" | "Per Student";

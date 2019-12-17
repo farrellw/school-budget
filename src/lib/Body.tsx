@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import * as schoolExpenses from "../data/SchoolExpenses.json";
 import * as averageExpenses from "../data/SchoolAverages.json";
-import { IGeneralSchoolExpense, averageSchoolFunction, TotalOrAverage } from "../models/Data";
+import { IGeneralSchoolExpense, averageSchoolFunction, TotalOrPerStudent } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";
 import CategoryExpense from "./CategoryExpense";
@@ -17,7 +17,7 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 function Body() {
-  const [toggle, setToggle] = useState<TotalOrAverage>("Total");
+  const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
   const [compareWithAverage, setCompareWthAverage] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
   const query = useQuery();
