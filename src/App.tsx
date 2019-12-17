@@ -1,18 +1,21 @@
-import * as React from 'react';
+import * as React from "react";
 import Body from "./lib/Body";
-import './App.css';
-
+import Header from "./lib/Header";
+import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
   public render() {
     return (
-      <section>
-        <div>
-          <p>Header Here</p>
-        </div>
-        <Body/>
-      </section>
-    )
+      <Router>
+        <Route path="*">
+          <section>
+            <Header />
+            <Body />
+          </section>
+        </Route>
+      </Router>
+    );
   }
 }
 
