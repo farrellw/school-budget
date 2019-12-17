@@ -9,6 +9,7 @@
 table {
     table-layout: fixed;
     border: 3px solid black;
+    border-spacing: 5px;
   }
 
 th, td {
@@ -29,7 +30,7 @@ tbody tr:hover {
 }
 
 .selected {
-  background-color: #f5f5f5;
+  background-color: #BEBEBE;
 }
 
 .displayOptions {
