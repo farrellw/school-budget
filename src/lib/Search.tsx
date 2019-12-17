@@ -1,5 +1,5 @@
 import * as React from "react";
-import Select from "react-select";
+import Select, { ValueType } from "react-select";
 import schools from "../data/SchoolExpenses.json";
 import { IGeneralSchoolExpense } from "src/models/Data.js";
 import { useHistory } from "react-router-dom";
@@ -13,11 +13,17 @@ const options: IOption[] = schools.map((school: IGeneralSchoolExpense) => ({
   label: school.name
 }));
 
+function isOption(option: ValueType<IOption>): option is IOption {
+  return Boolean(option) && (option as IOption).value !== undefined;
+}
+
 function Search() {
   const history = useHistory();
 
-  function selectSchool(option: IOption) {
-    history.push(`/?id=${option.value}`);
+  function selectSchool(option: ValueType<IOption>) {
+    if (isOption(option)) {
+      history.push(`/?id=${option.value}`);
+    }
   }
 
   return (

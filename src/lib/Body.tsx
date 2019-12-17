@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import * as schoolExpenses from "../data/SchoolExpenses.json";
+import schoolExpenses from "../data/SchoolExpenses.json";
 import { IGeneralSchoolExpense } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";

@@ -4,7 +4,9 @@ import Search from "./Search";
 function Header() {
   return (
     <header>
-      <nav>This is the nav</nav>
+      <nav>
+        <h1>This is the nav</h1>
+      </nav>
       <Search />
     </header>
   );
