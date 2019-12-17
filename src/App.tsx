@@ -1,7 +1,7 @@
 import * as React from "react";
 import Body from "./lib/Body";
 import Header from "./lib/Header";
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
