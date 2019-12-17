@@ -19,12 +19,12 @@ function Search() {
   function selectSchool(selectedOptions: IOption[]) {
     if(selectedOptions){
       const queryString = selectedOptions.map(o => {
-        return `id=${o.value}`
-      }).join("&")
+        return `id=${o.value}`;
+      }).join("&");
   
       history.push(`/?${queryString}`);
     } else {
-      history.push("/")
+      history.push("/");
     }
   }
 
