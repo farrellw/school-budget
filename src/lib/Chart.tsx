@@ -2,7 +2,9 @@ import * as React from "react";
 import * as Highcharts from "highcharts";
 import { ITableData } from "../models/Data";
 import HC_exporting from 'highcharts/modules/exporting'
-HC_exporting(Highcharts)
+import HC_noDataToDisplay from 'highcharts/modules/no-data-to-display';
+HC_exporting(Highcharts);
+HC_noDataToDisplay(Highcharts);
 import HighchartsReact from "highcharts-react-official";
 
 Highcharts.setOptions({
@@ -50,7 +52,7 @@ function Chart({ caption, rows, series }: IProps) {
             align: "right",
             verticalAlign: "top",
             x: -40,
-            y: 150,
+            y: 120,
             floating: true,
             borderWidth: 1,
             backgroundColor:
@@ -65,7 +67,18 @@ function Chart({ caption, rows, series }: IProps) {
         tooltip: {
             pointFormat: "Value: {point.y:,.2f} $"
         },
-        series
+        lang: {
+            noData: "Chart Unavailable because data has not been released"
+        },
+        series,
+        noData: {
+            style: {
+                fontWeight: 'bold',
+                fontSize: '15px',
+                color: '#303030'
+            }
+            
+        }
     };
 
     return (

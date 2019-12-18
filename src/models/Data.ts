@@ -36,3 +36,25 @@ export interface ITableRow {
   values: string[];
   selected?: boolean;
 }
+
+
+export const averageSchoolFunction = (school: IGeneralSchoolExpense) => {
+  const averagedSchool = {
+    ...school,
+    administrativeSalaries:
+      school.administrativeSalaries / school.projectedEnrollment,
+    instructionalSalaries:
+      school.instructionalSalaries / school.projectedEnrollment,
+    instructionalSupportSalaries:
+      school.instructionalSupportSalaries / school.projectedEnrollment,
+    nonInstructionalSupportSalaries:
+      school.nonInstructionalSupportSalaries / school.projectedEnrollment,
+    temp: school.temp / school.projectedEnrollment,
+    benefits: school.benefits / school.projectedEnrollment,
+    transportation: school.transportation / school.projectedEnrollment,
+    discretionary: school.discretionary / school.projectedEnrollment
+  };
+  return averagedSchool;
+}
+
+export type TotalOrPerStudent = "Total" | "Per Student";
