@@ -1,14 +1,14 @@
 import * as React from "react";
 import Select from "react-select";
 import schools from "../data/SchoolExpenses.json";
-import { IGeneralSchoolExpense } from "src/models/Data.js";
+import { ISchool } from "src/models/Data.js";
 import { useHistory } from "react-router-dom";
 
 interface IOption {
   value: string;
   label: string;
 }
-const options: IOption[] = schools.map((school: IGeneralSchoolExpense) => ({
+const options: IOption[] = schools.map((school: ISchool) => ({
   value: school.id,
   label: school.name
 }));

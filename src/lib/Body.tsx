@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import * as schoolExpenses from "../data/SchoolExpenses.json";
 import * as averageExpenses from "../data/SchoolAverages.json";
-import { IGeneralSchoolExpense, averageSchoolFunction, TotalOrPerStudent } from "../models/Data";
+import { ISchool, averageSchoolFunction, TotalOrPerStudent } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";
 import CategoryExpense from "./CategoryExpense";
@@ -24,13 +24,13 @@ function Body() {
 
   const selectedIds: string[] = query.getAll("id");
 
-  const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses
+  const selectedSchools: ISchool[] = schoolExpenses
     .filter(school => {
       return selectedIds.includes(school.id);
     }).map(school => {
       if (toggle !== "Total") {
-        const averagedSchool = averageSchoolFunction(school);
-        return averagedSchool;
+        const averagedExpenses = averageSchoolFunction(school);
+        return averagedExpenses
       } else {
         return school;
       }
@@ -43,7 +43,8 @@ function Body() {
     });
     selectedAverages.forEach(selectedAverage => {
       if (toggle !== "Total") {
-        selectedSchools.push(averageSchoolFunction(selectedAverage));
+        const averagedExpenses = averageSchoolFunction(selectedAverage);
+        selectedSchools.push(averagedExpenses)
       } else {
         selectedSchools.push(selectedAverage);
       }
