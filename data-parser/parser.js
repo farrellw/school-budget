@@ -28,15 +28,20 @@ data.forEach((row, index) => {
       id: String(index),
       name: row[0],
       type: row[1],
+      address: "",
+      principal: "",
+      phone: "",
       projectedEnrollment: row[2],
-      administrativeSalaries: getNum(row[3]) + getNum(row[11]),
-      instructionalSalaries: getNum(row[4]) + getNum(row[12]),
-      instructionalSupportSalaries: getNum(row[5]) + getNum(row[13]),
-      nonInstructionalSupportSalaries: getNum(row[6]) + getNum(row[14]),
-      temp: getNum(row[7]) + getNum(row[15]),
-      benefits: getNum(row[8]) + getNum(row[16]),
-      transportation: getNum(row[9]) + getNum(row[17]),
-      discretionary: getNum(row[10]) + getNum(row[18])
+      expenses: {
+        administrativeSalaries: getNum(row[3]) + getNum(row[11]),
+        instructionalSalaries: getNum(row[4]) + getNum(row[12]),
+        instructionalSupportSalaries: getNum(row[5]) + getNum(row[13]),
+        nonInstructionalSupportSalaries: getNum(row[6]) + getNum(row[14]),
+        temp: getNum(row[7]) + getNum(row[15]),
+        benefits: getNum(row[8]) + getNum(row[16]),
+        transportation: getNum(row[9]) + getNum(row[17]),
+        discretionary: getNum(row[10]) + getNum(row[18])
+      }
     };
     schools.push(individualSchool);
   }
