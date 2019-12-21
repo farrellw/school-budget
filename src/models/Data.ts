@@ -10,7 +10,7 @@ export interface ISchool {
 }
 
 export interface IGeneralSchoolExpense {
-  total?: number;
+  total: number;
   administrativeSalaries: number;
   instructionalSalaries: number;
   instructionalSupportSalaries: number;
@@ -60,7 +60,8 @@ export const averageSchoolFunction = (school: ISchool) => {
       temp: school.expenses.temp / school.projectedEnrollment,
       benefits: school.expenses.benefits / school.projectedEnrollment,
       transportation: school.expenses.transportation / school.projectedEnrollment,
-      discretionary: school.expenses.discretionary / school.projectedEnrollment
+      discretionary: school.expenses.discretionary / school.projectedEnrollment,
+      total: school.expenses.total / school.projectedEnrollment
     },
   };
   return averagedSchool;
