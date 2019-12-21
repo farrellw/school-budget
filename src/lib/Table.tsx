@@ -8,11 +8,6 @@ interface IProps {
     clickHandler?: (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 }
 
-{/* <span className={classFromParent + " " + textWithIconClass}>
-        {text}
-        <img className="info-icon" data-tip={tooltip} src={infoIcon} alt="" />
-      </span> */}
-
 function Table({ headers, rows, caption, clickHandler }: IProps) {
 
     return (

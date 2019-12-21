@@ -1,17 +1,9 @@
 import * as React from "react";
 import { useState } from "react";
-import * as schoolExpenses from "../data/SchoolExpenses.json";
-import * as averageExpenses from "../data/SchoolAverages.json";
-import { ISchool, averageSchoolFunction, TotalOrPerStudent } from "../models/Data";
-import { rows } from "../models/GeneralExpenseConstants";
-import GeneralExpense from "./GeneralExpense";
-import CategoryExpense from "./CategoryExpense";
-import {
-  subCategoryExpenseData,
-  subCategoryTableData
-} from "../models/FakeSubCategory";
+import { TotalOrPerStudent } from "../models/Data";
 import Switch from "react-switch";
 import { useLocation } from "react-router-dom";
+import Expenses from "./Expenses";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -19,37 +11,9 @@ function useQuery() {
 function Body() {
   const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
   const [compareWithAverage, setCompareWthAverage] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  
   const query = useQuery();
-
   const selectedIds: string[] = query.getAll("id");
-
-  const selectedSchools: ISchool[] = schoolExpenses
-    .filter(school => {
-      return selectedIds.includes(school.id);
-    }).map(school => {
-      if (toggle !== "Total") {
-        const averagedExpenses = averageSchoolFunction(school);
-        return averagedExpenses
-      } else {
-        return school;
-      }
-    });
-
-  if (compareWithAverage) {
-    const selectedTypes = selectedSchools.map(s => s.type)
-    const selectedAverages = averageExpenses.filter(avgExp => {
-      return selectedTypes.includes(avgExp.type)
-    });
-    selectedAverages.forEach(selectedAverage => {
-      if (toggle !== "Total") {
-        const averagedExpenses = averageSchoolFunction(selectedAverage);
-        selectedSchools.push(averagedExpenses)
-      } else {
-        selectedSchools.push(selectedAverage);
-      }
-    })
-  }
 
   const handleChange = () => {
     if (toggle === "Total") {
@@ -62,12 +26,6 @@ function Body() {
   const handleCompareWithAverageChange = () => {
     setCompareWthAverage(!compareWithAverage);
   }
-
-  const clickEvent = (
-    event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
-  ): void => {
-    setSelectedCategory(event.currentTarget.id);
-  };
 
   return (
     <section className="body">
@@ -92,23 +50,7 @@ function Body() {
           <span>Compare Against Average</span>
         </label>
       </div>
-      <GeneralExpense
-        selectedSchools={selectedSchools}
-        headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
-        rows={rows}
-        caption={`General Expenses ( ${toggle} )`}
-        clickHandler={clickEvent}
-        toggle={toggle}
-        category={selectedCategory}
-      />
-      {selectedCategory && selectedCategory !== "" && (
-        <CategoryExpense
-          selectedSchools={selectedIds.map(n => subCategoryExpenseData)}
-          headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
-          rows={subCategoryTableData}
-          caption={`${selectedCategory} ( ${toggle} )`}
-        />
-      )}
+      <Expenses selectedIds={selectedIds} compareWithAverage={compareWithAverage} toggle={toggle}/>
     </section>
   );
 }

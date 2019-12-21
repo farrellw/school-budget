@@ -23,7 +23,7 @@ function Expense({ selectedSchools, headers, rows, caption, clickHandler, toggle
             type: "bar",
             name: headers[i + 1],
             data: rows.map(r => {
-                return Math.round(s[r.key] * 100) / 100;
+                return Math.round(s.expenses[r.key] * 100) / 100;
             }
             )
         }
