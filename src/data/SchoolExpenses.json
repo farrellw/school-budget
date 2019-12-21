@@ -15,7 +15,8 @@
             "temp": 70067,
             "benefits": 1259024,
             "transportation": 5000,
-            "discretionary": 210995
+            "discretionary": 210995,
+            "total": 4356511
         }
     },
     {
@@ -34,7 +35,8 @@
             "temp": 110118,
             "benefits": 2616794,
             "transportation": 0,
-            "discretionary": 272189
+            "discretionary": 272189,
+            "total": 8825929
         }
     },
     {
@@ -53,7 +55,8 @@
             "temp": 17514,
             "benefits": 863360,
             "transportation": 0,
-            "discretionary": 50283
+            "discretionary": 50283,
+            "total": 2672278
         }
     },
     {
@@ -72,7 +75,8 @@
             "temp": 35033,
             "benefits": 691124,
             "transportation": 5000,
-            "discretionary": 59836
+            "discretionary": 59836,
+            "total": 2314700
         }
     },
     {
@@ -91,7 +95,8 @@
             "temp": 35041,
             "benefits": 764782,
             "transportation": 1500,
-            "discretionary": 104831
+            "discretionary": 104831,
+            "total": 2578054
         }
     },
     {
@@ -110,7 +115,8 @@
             "temp": 53000,
             "benefits": 518807,
             "transportation": 4500,
-            "discretionary": 38053
+            "discretionary": 38053,
+            "total": 1735932
         }
     },
     {
@@ -129,7 +135,8 @@
             "temp": 35022,
             "benefits": 948047,
             "transportation": 3000,
-            "discretionary": 28507
+            "discretionary": 28507,
+            "total": 3112603
         }
     },
     {
@@ -148,7 +155,8 @@
             "temp": 35000,
             "benefits": 719666,
             "transportation": 0,
-            "discretionary": 129045
+            "discretionary": 129045,
+            "total": 2480104
         }
     },
     {
@@ -167,7 +175,8 @@
             "temp": 60500,
             "benefits": 141492,
             "transportation": 5000,
-            "discretionary": 34845
+            "discretionary": 34845,
+            "total": 2925910
         }
     },
     {
@@ -186,7 +195,8 @@
             "temp": 52540,
             "benefits": 1240167,
             "transportation": 8000,
-            "discretionary": 120464
+            "discretionary": 120464,
+            "total": 4111926
         }
     },
     {
@@ -205,7 +215,8 @@
             "temp": 52562,
             "benefits": 1153550,
             "transportation": 2000,
-            "discretionary": 80088
+            "discretionary": 80088,
+            "total": 3866323
         }
     },
     {
@@ -224,7 +235,8 @@
             "temp": 3527,
             "benefits": 840546,
             "transportation": 0,
-            "discretionary": 66273
+            "discretionary": 66273,
+            "total": 2778318
         }
     },
     {
@@ -243,7 +255,8 @@
             "temp": 70042,
             "benefits": 1257650,
             "transportation": 3380,
-            "discretionary": 107486
+            "discretionary": 107486,
+            "total": 4209107
         }
     },
     {
@@ -262,7 +275,8 @@
             "temp": 38046,
             "benefits": 909688,
             "transportation": 2500,
-            "discretionary": 95496
+            "discretionary": 95496,
+            "total": 3047320
         }
     },
     {
@@ -281,7 +295,8 @@
             "temp": 17530,
             "benefits": 688783,
             "transportation": 3000,
-            "discretionary": 44999
+            "discretionary": 44999,
+            "total": 2207632
         }
     },
     {
@@ -300,7 +315,8 @@
             "temp": 35038,
             "benefits": 782138,
             "transportation": 6000,
-            "discretionary": 43613
+            "discretionary": 43613,
+            "total": 2521232
         }
     },
     {
@@ -319,7 +335,8 @@
             "temp": 35063,
             "benefits": 995870,
             "transportation": 2000,
-            "discretionary": 64439
+            "discretionary": 64439,
+            "total": 3222637
         }
     },
     {
@@ -338,7 +355,8 @@
             "temp": 0,
             "benefits": 1485,
             "transportation": 5496,
-            "discretionary": 38893
+            "discretionary": 38893,
+            "total": 45874
         }
     },
     {
@@ -357,7 +375,8 @@
             "temp": 39840,
             "benefits": 582205,
             "transportation": 18580,
-            "discretionary": 200995
+            "discretionary": 200995,
+            "total": 2000924
         }
     },
     {
@@ -376,7 +395,8 @@
             "temp": 35064,
             "benefits": 1195379,
             "transportation": 2000,
-            "discretionary": 214042
+            "discretionary": 214042,
+            "total": 3881695
         }
     },
     {
@@ -395,7 +415,8 @@
             "temp": 29,
             "benefits": 728672,
             "transportation": 0,
-            "discretionary": 53327
+            "discretionary": 53327,
+            "total": 2310680
         }
     },
     {
@@ -414,7 +435,8 @@
             "temp": 17519,
             "benefits": 622144,
             "transportation": 1000,
-            "discretionary": 27126
+            "discretionary": 27126,
+            "total": 1978404
         }
     },
     {
@@ -433,7 +455,8 @@
             "temp": 35056,
             "benefits": 1067834,
             "transportation": 10000,
-            "discretionary": 70485
+            "discretionary": 70485,
+            "total": 3483192
         }
     },
     {
@@ -452,7 +475,8 @@
             "temp": 35046,
             "benefits": 690931,
             "transportation": 17380,
-            "discretionary": 234327
+            "discretionary": 234327,
+            "total": 2376048
         }
     },
     {
@@ -471,7 +495,8 @@
             "temp": 35026,
             "benefits": 565849,
             "transportation": 1200,
-            "discretionary": 21946
+            "discretionary": 21946,
+            "total": 1731554
         }
     },
     {
@@ -490,7 +515,8 @@
             "temp": 17517,
             "benefits": 461335,
             "transportation": 1500,
-            "discretionary": 22346
+            "discretionary": 22346,
+            "total": 1416194
         }
     },
     {
@@ -509,7 +535,8 @@
             "temp": 35034,
             "benefits": 887163,
             "transportation": 8594,
-            "discretionary": 94554
+            "discretionary": 94554,
+            "total": 2815527
         }
     },
     {
@@ -528,7 +555,8 @@
             "temp": 35025,
             "benefits": 470445,
             "transportation": 100,
-            "discretionary": 25576
+            "discretionary": 25576,
+            "total": 1435530
         }
     },
     {
@@ -547,7 +575,8 @@
             "temp": 52537,
             "benefits": 749050,
             "transportation": 0,
-            "discretionary": 55285
+            "discretionary": 55285,
+            "total": 2448321
         }
     },
     {
@@ -566,7 +595,8 @@
             "temp": 13,
             "benefits": 449159,
             "transportation": 9,
-            "discretionary": 18377
+            "discretionary": 18377,
+            "total": 1322273
         }
     },
     {
@@ -585,7 +615,8 @@
             "temp": 19,
             "benefits": 545374,
             "transportation": 2000,
-            "discretionary": 26171
+            "discretionary": 26171,
+            "total": 1718511
         }
     },
     {
@@ -604,7 +635,8 @@
             "temp": 35044,
             "benefits": 906223,
             "transportation": 2000,
-            "discretionary": 102116
+            "discretionary": 102116,
+            "total": 3005765
         }
     },
     {
@@ -623,7 +655,8 @@
             "temp": 17512,
             "benefits": 438766,
             "transportation": 700,
-            "discretionary": 16577
+            "discretionary": 16577,
+            "total": 1363913
         }
     },
     {
@@ -642,7 +675,8 @@
             "temp": 27514,
             "benefits": 483611,
             "transportation": 1000,
-            "discretionary": 15113
+            "discretionary": 15113,
+            "total": 1448055
         }
     },
     {
@@ -661,7 +695,8 @@
             "temp": 27532,
             "benefits": 526171,
             "transportation": 19157,
-            "discretionary": 169083
+            "discretionary": 169083,
+            "total": 1893071
         }
     },
     {
@@ -680,7 +715,8 @@
             "temp": 35020,
             "benefits": 543956,
             "transportation": 515,
-            "discretionary": 18451
+            "discretionary": 18451,
+            "total": 1732635
         }
     },
     {
@@ -699,7 +735,8 @@
             "temp": 52559,
             "benefits": 1079385,
             "transportation": 0,
-            "discretionary": 98094
+            "discretionary": 98094,
+            "total": 3588470
         }
     },
     {
@@ -718,7 +755,8 @@
             "temp": 17505,
             "benefits": 600667,
             "transportation": 0,
-            "discretionary": 17601
+            "discretionary": 17601,
+            "total": 1751060
         }
     },
     {
@@ -737,7 +775,8 @@
             "temp": 17534,
             "benefits": 678317,
             "transportation": 2500,
-            "discretionary": 90244
+            "discretionary": 90244,
+            "total": 2158222
         }
     },
     {
@@ -756,7 +795,8 @@
             "temp": 35030,
             "benefits": 704854,
             "transportation": 0,
-            "discretionary": 48011
+            "discretionary": 48011,
+            "total": 2219810
         }
     },
     {
@@ -775,7 +815,8 @@
             "temp": 17531,
             "benefits": 599783,
             "transportation": 2000,
-            "discretionary": 29958
+            "discretionary": 29958,
+            "total": 1871937
         }
     },
     {
@@ -794,7 +835,8 @@
             "temp": 20,
             "benefits": 513464,
             "transportation": 1000,
-            "discretionary": 20806
+            "discretionary": 20806,
+            "total": 1600517
         }
     },
     {
@@ -813,7 +855,8 @@
             "temp": 35020,
             "benefits": 697752,
             "transportation": 1000,
-            "discretionary": 28348
+            "discretionary": 28348,
+            "total": 2159066
         }
     },
     {
@@ -832,7 +875,8 @@
             "temp": 17525,
             "benefits": 527646,
             "transportation": 2000,
-            "discretionary": 18646
+            "discretionary": 18646,
+            "total": 1587868
         }
     },
     {
@@ -851,7 +895,8 @@
             "temp": 35034,
             "benefits": 496481,
             "transportation": 29814,
-            "discretionary": 254537
+            "discretionary": 254537,
+            "total": 1773573
         }
     },
     {
@@ -870,7 +915,8 @@
             "temp": 35000,
             "benefits": 681615,
             "transportation": 1500,
-            "discretionary": 36564
+            "discretionary": 36564,
+            "total": 2292732
         }
     },
     {
@@ -889,7 +935,8 @@
             "temp": 17519,
             "benefits": 465758,
             "transportation": 0,
-            "discretionary": 26357
+            "discretionary": 26357,
+            "total": 1429320
         }
     },
     {
@@ -908,7 +955,8 @@
             "temp": 35037,
             "benefits": 786815,
             "transportation": 2000,
-            "discretionary": 79487
+            "discretionary": 79487,
+            "total": 2612318
         }
     },
     {
@@ -927,7 +975,8 @@
             "temp": 17537,
             "benefits": 749365,
             "transportation": 0,
-            "discretionary": 25933
+            "discretionary": 25933,
+            "total": 2272218
         }
     },
     {
@@ -946,7 +995,8 @@
             "temp": 35000,
             "benefits": 563442,
             "transportation": 0,
-            "discretionary": 32450
+            "discretionary": 32450,
+            "total": 1777993
         }
     },
     {
@@ -965,7 +1015,8 @@
             "temp": 35030,
             "benefits": 771596,
             "transportation": 1000,
-            "discretionary": 37704
+            "discretionary": 37704,
+            "total": 2453134
         }
     },
     {
@@ -984,7 +1035,8 @@
             "temp": 52539,
             "benefits": 1059926,
             "transportation": 0,
-            "discretionary": 120067
+            "discretionary": 120067,
+            "total": 3441588
         }
     },
     {
@@ -1003,7 +1055,8 @@
             "temp": 21,
             "benefits": 523580,
             "transportation": 800,
-            "discretionary": 26133
+            "discretionary": 26133,
+            "total": 1592625
         }
     },
     {
@@ -1022,7 +1075,8 @@
             "temp": 35042,
             "benefits": 671974,
             "transportation": 5940,
-            "discretionary": 163394
+            "discretionary": 163394,
+            "total": 2267142
         }
     },
     {
@@ -1041,7 +1095,8 @@
             "temp": 35046,
             "benefits": 1291679,
             "transportation": 0,
-            "discretionary": 57756
+            "discretionary": 57756,
+            "total": 4039082
         }
     },
     {
@@ -1060,7 +1115,8 @@
             "temp": 35035,
             "benefits": 677154,
             "transportation": 1000,
-            "discretionary": 63918
+            "discretionary": 63918,
+            "total": 2142171
         }
     },
     {
@@ -1079,7 +1135,8 @@
             "temp": 35040,
             "benefits": 716819,
             "transportation": 0,
-            "discretionary": 73557
+            "discretionary": 73557,
+            "total": 2336100
         }
     },
     {
@@ -1098,7 +1155,8 @@
             "temp": 35024,
             "benefits": 584856,
             "transportation": 1000,
-            "discretionary": 29659
+            "discretionary": 29659,
+            "total": 1828471
         }
     },
     {
@@ -1117,7 +1175,8 @@
             "temp": 17541,
             "benefits": 784181,
             "transportation": 2500,
-            "discretionary": 42570
+            "discretionary": 42570,
+            "total": 2445949
         }
     },
     {
@@ -1136,7 +1195,8 @@
             "temp": 17514,
             "benefits": 552960,
             "transportation": 0,
-            "discretionary": 20517
+            "discretionary": 20517,
+            "total": 1653342
         }
     },
     {
@@ -1155,7 +1215,8 @@
             "temp": 17544,
             "benefits": 901674,
             "transportation": 1000,
-            "discretionary": 54488
+            "discretionary": 54488,
+            "total": 2940325
         }
     },
     {
@@ -1174,7 +1235,8 @@
             "temp": 17513,
             "benefits": 460398,
             "transportation": 600,
-            "discretionary": 20073
+            "discretionary": 20073,
+            "total": 1435814
         }
     },
     {
@@ -1193,7 +1255,8 @@
             "temp": 35020,
             "benefits": 652907,
             "transportation": 2500,
-            "discretionary": 28308
+            "discretionary": 28308,
+            "total": 2009916
         }
     },
     {
@@ -1212,7 +1275,8 @@
             "temp": 52532,
             "benefits": 1070135,
             "transportation": 1468,
-            "discretionary": 81016
+            "discretionary": 81016,
+            "total": 3393166
         }
     },
     {
@@ -1231,7 +1295,8 @@
             "temp": 35022,
             "benefits": 427021,
             "transportation": 2000,
-            "discretionary": 23559
+            "discretionary": 23559,
+            "total": 1411817
         }
     },
     {
@@ -1250,7 +1315,8 @@
             "temp": 27,
             "benefits": 657961,
             "transportation": 0,
-            "discretionary": 42099
+            "discretionary": 42099,
+            "total": 2024969
         }
     },
     {
@@ -1269,7 +1335,8 @@
             "temp": 35000,
             "benefits": 628117,
             "transportation": 0,
-            "discretionary": 32187
+            "discretionary": 32187,
+            "total": 1898546
         }
     },
     {
@@ -1288,7 +1355,8 @@
             "temp": 35041,
             "benefits": 1001134,
             "transportation": 1500,
-            "discretionary": 104829
+            "discretionary": 104829,
+            "total": 3273638
         }
     },
     {
@@ -1307,7 +1375,8 @@
             "temp": 35030,
             "benefits": 698225,
             "transportation": 0,
-            "discretionary": 55683
+            "discretionary": 55683,
+            "total": 2313112
         }
     },
     {
@@ -1326,7 +1395,8 @@
             "temp": 17500,
             "benefits": 188190,
             "transportation": 1000,
-            "discretionary": 8918
+            "discretionary": 8918,
+            "total": 641291
         }
     },
     {
@@ -1345,7 +1415,8 @@
             "temp": 17500,
             "benefits": 177451,
             "transportation": 0,
-            "discretionary": 9923
+            "discretionary": 9923,
+            "total": 590278
         }
     },
     {
@@ -1364,7 +1435,8 @@
             "temp": 0,
             "benefits": 188599,
             "transportation": 0,
-            "discretionary": 9884
+            "discretionary": 9884,
+            "total": 643939
         }
     },
     {
@@ -1383,7 +1455,8 @@
             "temp": 17500,
             "benefits": 376036,
             "transportation": 0,
-            "discretionary": 9211
+            "discretionary": 9211,
+            "total": 1217599
         }
     },
     {
@@ -1402,7 +1475,8 @@
             "temp": 17500,
             "benefits": 282504,
             "transportation": 1500,
-            "discretionary": 7978
+            "discretionary": 7978,
+            "total": 906288
         }
     },
     {
@@ -1421,7 +1495,8 @@
             "temp": 17500,
             "benefits": 655532,
             "transportation": 1000,
-            "discretionary": 20000
+            "discretionary": 20000,
+            "total": 1929475
         }
     }
 ]

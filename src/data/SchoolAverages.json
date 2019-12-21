@@ -12,7 +12,8 @@
             "temp": 47715.14,
             "benefits": 994621.21,
             "transportation": 2848.57,
-            "discretionary": 99885.07
+            "discretionary": 99885.07,
+            "total": null
         }
     },
     {
@@ -28,7 +29,8 @@
             "temp": 23904.33,
             "benefits": 740501.11,
             "transportation": 5341.78,
-            "discretionary": 84213.22
+            "discretionary": 84213.22,
+            "total": null
         }
     },
     {
@@ -44,7 +46,8 @@
             "temp": 27853.28,
             "benefits": 673819,
             "transportation": 2549.5,
-            "discretionary": 58792.93
+            "discretionary": 58792.93,
+            "total": null
         }
     },
     {
@@ -60,7 +63,8 @@
             "temp": 14583.33,
             "benefits": 311385.33,
             "transportation": 583.33,
-            "discretionary": 10985.67
+            "discretionary": 10985.67,
+            "total": null
         }
     }
 ]
