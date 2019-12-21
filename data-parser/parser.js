@@ -24,7 +24,7 @@ data.forEach((row, index) => {
 
   // Ignore First Row
   if (schoolName !== "School Name") {
-    const individualSchool = {
+    const school = {
       id: String(index),
       name: row[0],
       type: row[1],
@@ -43,7 +43,17 @@ data.forEach((row, index) => {
         discretionary: getNum(row[10]) + getNum(row[18])
       }
     };
-    schools.push(individualSchool);
+    school.expenses.total =
+      school.expenses.administrativeSalaries +
+      school.expenses.instructionalSalaries +
+      school.expenses.instructionalSupportSalaries +
+      school.expenses.nonInstructionalSupportSalaries +
+      school.expenses.temp +
+      school.expenses.benefits +
+      school.expenses.transportation +
+      school.expenses.discretionary;
+
+    schools.push(school);
   }
 });
 

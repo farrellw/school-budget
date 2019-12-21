@@ -114,7 +114,8 @@ function averageATotal(key) {
     "temp",
     "benefits",
     "transportation",
-    "discretionary"
+    "discretionary",
+    "total"
   ];
   expensesToRound.forEach(expense => {
     value.expenses[expense] = roundHundreths(value.expenses[expense] / divisor);
