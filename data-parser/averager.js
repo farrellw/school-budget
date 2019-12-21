@@ -95,31 +95,31 @@ schools.forEach(school => {
   schoolSubObject.expenses.discretionary += school.expenses.discretionary;
 });
 
+function roundHundreths(num) {
+  return Math.round(num * 100) / 100;
+}
 function averageATotal(key) {
   const value = totals[key];
-  value.projectedEnrollment =
-    Math.round((value.projectedEnrollment / count[key]) * 100) / 100;
-  value.expenses.administrativeSalaries =
-    Math.round((value.expenses.administrativeSalaries / count[key]) * 100) /
-    100;
-  value.expenses.instructionalSalaries =
-    Math.round((value.expenses.instructionalSalaries / count[key]) * 100) / 100;
-  value.expenses.instructionalSupportSalaries =
-    Math.round(
-      (value.expenses.instructionalSupportSalaries / count[key]) * 100
-    ) / 100;
-  value.expenses.nonInstructionalSupportSalaries =
-    Math.round(
-      (value.expenses.nonInstructionalSupportSalaries / count[key]) * 100
-    ) / 100;
-  value.expenses.temp =
-    Math.round((value.expenses.temp / count[key]) * 100) / 100;
-  value.expenses.benefits =
-    Math.round((value.expenses.benefits / count[key]) * 100) / 100;
-  value.expenses.transportation =
-    Math.round((value.expenses.transportation / count[key]) * 100) / 100;
-  value.expenses.discretionary =
-    Math.round((value.expenses.discretionary / count[key]) * 100) / 100;
+  const divisor = count[key];
+
+  value.projectedEnrollment = roundHundreths(
+    value.projectedEnrollment / divisor
+  );
+
+  const expensesToRound = [
+    "administrativeSalaries",
+    "instructionalSalaries",
+    "instructionalSupportSalaries",
+    "nonInstructionalSupportSalaries",
+    "temp",
+    "benefits",
+    "transportation",
+    "discretionary"
+  ];
+  expensesToRound.forEach(expense => {
+    value.expenses[expense] = roundHundreths(value.expenses[expense] / divisor);
+  });
+
   return value;
 }
 
