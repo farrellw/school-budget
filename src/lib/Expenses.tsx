@@ -9,10 +9,7 @@ import {
   subCategoryExpenseData,
   subCategoryTableData
 } from "../models/FakeSubCategory";
-import {
-  ISchool,
-  averageSchoolFunction
-} from "../models/Data";
+import { ISchool, averageSchoolFunction } from "../models/Data";
 
 interface IProps {
   selectedIds: string[];
@@ -23,33 +20,29 @@ interface IProps {
 function Expenses({ selectedIds, toggle, compareWithAverage }: IProps) {
   const [selectedCategory, setSelectedCategory] = useState("");
 
+  const avgOrTotal = (school: ISchool, tog: string): ISchool => {
+    if (tog !== "Total") {
+        return averageSchoolFunction(school);
+      } else {
+        return school;
+      }
+  };
+
   const selectedSchools: ISchool[] = schoolExpenses
     .filter(school => {
       return selectedIds.includes(school.id);
     })
-    .map(school => {
-      if (toggle !== "Total") {
-        const averagedSchool = averageSchoolFunction(school);
-        return averagedSchool;
-      } else {
-        return school;
-      }
-    });
+    .map(school => avgOrTotal(school, toggle));
 
-  if (compareWithAverage) {
-    const selectedTypes = selectedSchools.map(s => s.type);
-    const selectedAverages = averageExpenses.filter(avgExp => {
-      return selectedTypes.includes(avgExp.type);
-    });
-    selectedAverages.forEach(selectedAverage => {
-      if (toggle !== "Total") {
-        const averagedExpenses = averageSchoolFunction(selectedAverage);
-        selectedSchools.push(averagedExpenses);
-      } else {
-        selectedSchools.push(selectedAverage);
-      }
-    });
-  }
+  const selectedTypes = selectedSchools.map(s => s.type);
+
+  const selectedAverages = averageExpenses
+    .filter(avgExp => {
+      return compareWithAverage && selectedTypes.includes(avgExp.type);
+    })
+    .map(school => avgOrTotal(school, toggle));
+
+  const combinedSchoolsAndAverages = selectedSchools.concat(selectedAverages);
 
   const clickEvent = (
     event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
@@ -60,8 +53,10 @@ function Expenses({ selectedIds, toggle, compareWithAverage }: IProps) {
   return (
     <div>
       <GeneralExpense
-        selectedSchools={selectedSchools}
-        headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
+        selectedSchools={combinedSchoolsAndAverages}
+        headers={["Field Name"].concat(
+          combinedSchoolsAndAverages.map(n => n.name)
+        )}
         rows={rows}
         caption={`General Expenses ( ${toggle} )`}
         clickHandler={clickEvent}
