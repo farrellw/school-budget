@@ -23,7 +23,8 @@ const totals = {
       temp: 0,
       benefits: 0,
       transportation: 0,
-      discretionary: 0
+      discretionary: 0,
+      total: 0
     }
   },
   M: {
@@ -39,7 +40,8 @@ const totals = {
       temp: 0,
       benefits: 0,
       transportation: 0,
-      discretionary: 0
+      discretionary: 0,
+      total: 0
     }
   },
   E: {
@@ -55,7 +57,8 @@ const totals = {
       temp: 0,
       benefits: 0,
       transportation: 0,
-      discretionary: 0
+      discretionary: 0,
+      total: 0
     }
   },
   A: {
@@ -71,7 +74,8 @@ const totals = {
       temp: 0,
       benefits: 0,
       transportation: 0,
-      discretionary: 0
+      discretionary: 0,
+      total: 0
     }
   }
 };
@@ -93,6 +97,7 @@ schools.forEach(school => {
   schoolSubObject.expenses.benefits += school.expenses.benefits;
   schoolSubObject.expenses.transportation += school.expenses.transportation;
   schoolSubObject.expenses.discretionary += school.expenses.discretionary;
+  schoolSubObject.expenses.total += school.expenses.total;
 });
 
 function roundHundreths(num) {
