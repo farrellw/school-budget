@@ -20,19 +20,21 @@ interface IProps {
 function Expenses({ selectedIds, toggle, compareWithAverage }: IProps) {
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  const avgOrTotal = (school: ISchool, tog: string): ISchool => {
-    if (tog !== "Total") {
-        return averageSchoolFunction(school);
-      } else {
-        return school;
-      }
-  };
+  const avgOrTotal = (tog: string): (school: ISchool) => ISchool => {
+    return (school: ISchool) => {
+        if (tog !== "Total") {
+            return averageSchoolFunction(school);
+          } else {
+            return school;
+          }
+    }
+  }
 
   const selectedSchools: ISchool[] = schoolExpenses
     .filter(school => {
       return selectedIds.includes(school.id);
     })
-    .map(school => avgOrTotal(school, toggle));
+    .map(school => avgOrTotal(toggle)(school));
 
   const selectedTypes = selectedSchools.map(s => s.type);
 
@@ -40,7 +42,7 @@ function Expenses({ selectedIds, toggle, compareWithAverage }: IProps) {
     .filter(avgExp => {
       return compareWithAverage && selectedTypes.includes(avgExp.type);
     })
-    .map(school => avgOrTotal(school, toggle));
+    .map(school => avgOrTotal(toggle)(school));
 
   const combinedSchoolsAndAverages = selectedSchools.concat(selectedAverages);
 
