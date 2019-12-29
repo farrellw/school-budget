@@ -1,11 +1,12 @@
 import React from "react";
 import "./SchoolInformation.scss";
 import { IGeneralSchoolExpense } from "src/models/Data";
+import Card from "./Card";
 
 type Props = { school: IGeneralSchoolExpense };
 function SchoolInformation({ school }: Props) {
   return (
-    <div className="school-information">
+    <Card className="school-information">
       <h2>{school.name}</h2>
       <dl>
         <dt>Zip Code</dt>
@@ -15,7 +16,7 @@ function SchoolInformation({ school }: Props) {
         <dt>Vice Principal</dt>
         <dd>Dr. Seuss</dd>
       </dl>
-    </div>
+    </Card>
   );
 }
 
