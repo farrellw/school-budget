@@ -4,12 +4,6 @@ import * as Highcharts from "highcharts";
 import Table from './Table';
 import Chart from "./Chart";
 
-Highcharts.setOptions({
-    lang: {
-        thousandsSep: ','
-    }
-})
-
 interface IProps {
     selectedSchools: SchoolExpense[];
     headers: string[];
@@ -23,10 +17,7 @@ function CategoryExpense({ selectedSchools, headers, rows, caption, clickHandler
         return {
             type: "bar",
             name: headers[i + 1],
-            data: rows.map(r => {
-                return s[r.key];
-            }
-            )
+            data: []
         }
     })
 

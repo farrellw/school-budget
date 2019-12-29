@@ -1,7 +1,12 @@
 import * as React from "react";
 import { useState } from "react";
 import schoolExpenses from "../data/SchoolExpenses.json";
-import { IGeneralSchoolExpense } from "../models/Data";
+import averageExpenses from "../data/SchoolAverages.json";
+import {
+  IGeneralSchoolExpense,
+  averageSchoolFunction,
+  TotalOrPerStudent
+} from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";
 import CategoryExpense from "./CategoryExpense";
@@ -16,7 +21,8 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 function Body() {
-  const [toggle, setToggle] = useState("Total");
+  const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
+  const [compareWithAverage, setCompareWthAverage] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
   const query = useQuery();
 
@@ -28,26 +34,26 @@ function Body() {
     })
     .map(school => {
       if (toggle !== "Total") {
-        const averagedSchool = {
-          ...school,
-          administrativeSalaries:
-            school.administrativeSalaries / school.projectedEnrollment,
-          instructionalSalaries:
-            school.instructionalSalaries / school.projectedEnrollment,
-          instructionalSupportSalaries:
-            school.instructionalSupportSalaries / school.projectedEnrollment,
-          nonInstructionalSupportSalaries:
-            school.nonInstructionalSupportSalaries / school.projectedEnrollment,
-          temp: school.temp / school.projectedEnrollment,
-          benefits: school.benefits / school.projectedEnrollment,
-          transportation: school.transportation / school.projectedEnrollment,
-          discretionary: school.discretionary / school.projectedEnrollment
-        };
+        const averagedSchool = averageSchoolFunction(school);
         return averagedSchool;
       } else {
         return school;
       }
     });
+
+  if (compareWithAverage) {
+    const selectedTypes = selectedSchools.map(s => s.type);
+    const selectedAverages = averageExpenses.filter(avgExp => {
+      return selectedTypes.includes(avgExp.type);
+    });
+    selectedAverages.forEach(selectedAverage => {
+      if (toggle !== "Total") {
+        selectedSchools.push(averageSchoolFunction(selectedAverage));
+      } else {
+        selectedSchools.push(selectedAverage);
+      }
+    });
+  }
 
   const handleChange = () => {
     if (toggle === "Total") {
@@ -55,6 +61,10 @@ function Body() {
     } else {
       setToggle("Total");
     }
+  };
+
+  const handleCompareWithAverageChange = () => {
+    setCompareWthAverage(!compareWithAverage);
   };
 
   const clickEvent = (
@@ -65,7 +75,7 @@ function Body() {
 
   return (
     <section className="body">
-      <div>
+      <div className="displayOptions">
         <label>
           <span>Total</span>
           <Switch
@@ -77,6 +87,13 @@ function Body() {
             onColor={"#a2eb34"}
           />
           <span>Per Student</span>
+        </label>
+        <label>
+          <Switch
+            onChange={handleCompareWithAverageChange}
+            checked={compareWithAverage}
+          />
+          <span>Compare Against Average</span>
         </label>
       </div>
       <GeneralExpense

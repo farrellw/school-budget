@@ -17,18 +17,27 @@ function isOption(option: ValueType<IOption>): option is IOption {
   return Boolean(option) && (option as IOption).value !== undefined;
 }
 
+function isMultipleOptions(option: ValueType<IOption>): option is IOption[] {
+  return Boolean(option) && (option as IOption[]) !== undefined;
+}
+
 function Search() {
   const history = useHistory();
 
   function selectSchool(option: ValueType<IOption>) {
     if (isOption(option)) {
-      history.push(`/?id=${option.value}`);
+      history.push(`?id=${option.value}`);
+    } else if (isMultipleOptions(option)) {
+      const queryString = option.map(o => `id=${o.value}`).join("&");
+      history.push(`?${queryString}`);
+    } else {
+      history.push("");
     }
   }
 
   return (
     <>
-      <Select options={options} onChange={selectSchool} />
+      <Select options={options} onChange={selectSchool} isMulti={true} />
     </>
   );
 }
