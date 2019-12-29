@@ -16,6 +16,7 @@ import {
 } from "../models/FakeSubCategory";
 import Switch from "react-switch";
 import { useLocation } from "react-router-dom";
+import SchoolInformationSlider from "./SchoolInformationSlider";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -67,7 +68,7 @@ function Body() {
     setCompareWthAverage(!compareWithAverage);
   };
 
-  const clickEvent = (
+  const generalExpenseClickHandler = (
     event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
   ): void => {
     setSelectedCategory(event.currentTarget.id);
@@ -75,6 +76,7 @@ function Body() {
 
   return (
     <section className="body">
+      <SchoolInformationSlider schools={selectedSchools} />
       <div className="displayOptions">
         <label>
           <span>Total</span>
@@ -101,7 +103,7 @@ function Body() {
         headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
         rows={rows}
         caption={`General Expenses ( ${toggle} )`}
-        clickHandler={clickEvent}
+        clickHandler={generalExpenseClickHandler}
         toggle={toggle}
         category={selectedCategory}
       />
