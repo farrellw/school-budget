@@ -20,6 +20,7 @@ dl {
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "dt dd";
   grid-gap: 0.5em;
+  align-items: center;
   dt {
     font-weight: bold;
     grid-area: "dt";
