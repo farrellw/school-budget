@@ -37,7 +37,10 @@ function Search() {
 
   return (
     <>
-      <Select options={options} onChange={selectSchool} isMulti={true} />
+      <label>
+        Find your school:
+        <Select options={options} onChange={selectSchool} />
+      </label>
     </>
   );
 }
