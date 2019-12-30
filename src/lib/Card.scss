@@ -1,8 +1,23 @@
 .card {
-  padding: 1em;
+  position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
-  display: grid;
-  grid-gap: 1em;
   background-color: rgba(255, 255, 255, 1);
+  .header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content {
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
+  }
+  .close {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: 0;
+    top: 0;
+  }
 }

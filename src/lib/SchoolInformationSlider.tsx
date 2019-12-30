@@ -11,7 +11,7 @@ function SchoolInformationSlider({ schools }: Props) {
       <button type="button">Add school to compare</button>
       <div>
         {schools.map(school => (
-          <SchoolInformation school={school} />
+          <SchoolInformation school={school} schools={schools} />
         ))}
       </div>
     </div>

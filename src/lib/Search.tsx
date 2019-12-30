@@ -3,7 +3,7 @@ import Select, { ValueType } from "react-select";
 import schools from "../data/SchoolExpenses.json";
 import { IGeneralSchoolExpense } from "src/models/Data.js";
 import { useHistory } from "react-router-dom";
-import Card from "./Card";
+import { Card, CardContent } from "./Card";
 import "./Search.scss";
 
 interface IOption {
@@ -40,10 +40,12 @@ function Search() {
   return (
     <div className="search">
       <Card>
-        <label>
-          Find your school:
-          <Select options={options} onChange={selectSchool} />
-        </label>
+        <CardContent>
+          <label>
+            Find your school:
+            <Select options={options} onChange={selectSchool} />
+          </label>
+        </CardContent>
       </Card>
     </div>
   );
