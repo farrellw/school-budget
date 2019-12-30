@@ -6,7 +6,7 @@ type Props = {
   className?: string;
   type?: Type;
   title?: string;
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | (JSX.Element | string)[] | string;
   onClick?: () => void;
 };
 function Button({
