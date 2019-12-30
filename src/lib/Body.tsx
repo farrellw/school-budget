@@ -64,47 +64,53 @@ function Body({ schools }: Props) {
   };
 
   return (
-    <main className="body">
-      <SchoolInformationSlider schools={schoolExpenses} />
-      <div className="displayOptions">
-        <label>
-          <span>Total</span>
-          <Switch
-            onChange={handleChange}
-            checked={toggle === "Per Student"}
-            uncheckedIcon={false}
-            checkedIcon={false}
-            offColor={"#34baeb"}
-            onColor={"#a2eb34"}
+    <>
+      {schoolExpenses.length > 0 && (
+        <main className="body">
+          <SchoolInformationSlider schools={schools} />
+          <div className="displayOptions">
+            <label>
+              <span>Total</span>
+              <Switch
+                onChange={handleChange}
+                checked={toggle === "Per Student"}
+                uncheckedIcon={false}
+                checkedIcon={false}
+                offColor={"#34baeb"}
+                onColor={"#a2eb34"}
+              />
+              <span>Per Student</span>
+            </label>
+            <label>
+              <Switch
+                onChange={handleCompareWithAverageChange}
+                checked={compareWithAverage}
+              />
+              <span>Compare Against Average</span>
+            </label>
+          </div>
+          <GeneralExpense
+            selectedSchools={schoolExpenses}
+            headers={["Field Name"].concat(schoolExpenses.map(n => n.name))}
+            rows={rows}
+            caption={`General Expenses ( ${toggle} )`}
+            clickHandler={generalExpenseClickHandler}
+            toggle={toggle}
+            category={selectedCategory}
           />
-          <span>Per Student</span>
-        </label>
-        <label>
-          <Switch
-            onChange={handleCompareWithAverageChange}
-            checked={compareWithAverage}
-          />
-          <span>Compare Against Average</span>
-        </label>
-      </div>
-      <GeneralExpense
-        selectedSchools={schoolExpenses}
-        headers={["Field Name"].concat(schoolExpenses.map(n => n.name))}
-        rows={rows}
-        caption={`General Expenses ( ${toggle} )`}
-        clickHandler={generalExpenseClickHandler}
-        toggle={toggle}
-        category={selectedCategory}
-      />
-      {selectedCategory && selectedCategory !== "" && (
-        <CategoryExpense
-          selectedSchools={schoolExpenses.map(school => subCategoryExpenseData)}
-          headers={["Field Name"].concat(schoolExpenses.map(n => n.name))}
-          rows={subCategoryTableData}
-          caption={`${selectedCategory} ( ${toggle} )`}
-        />
+          {selectedCategory && selectedCategory !== "" && (
+            <CategoryExpense
+              selectedSchools={schoolExpenses.map(
+                school => subCategoryExpenseData
+              )}
+              headers={["Field Name"].concat(schoolExpenses.map(n => n.name))}
+              rows={subCategoryTableData}
+              caption={`${selectedCategory} ( ${toggle} )`}
+            />
+          )}
+        </main>
       )}
-    </main>
+    </>
   );
 }
 
