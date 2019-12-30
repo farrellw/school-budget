@@ -1,10 +1,12 @@
 import * as React from "react";
 import Search from "./Search";
+import "./Header.scss";
 
 function Header() {
   return (
-    <header>
-      <nav>This is the nav</nav>
+    <header className="sb-header">
+      <h1 className="sb-heading1">School Budget</h1>
+      <nav></nav>
       <Search />
     </header>
   );

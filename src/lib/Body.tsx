@@ -1,8 +1,12 @@
 import * as React from "react";
 import { useState } from "react";
-import * as schoolExpenses from "../data/SchoolExpenses.json";
-import * as averageExpenses from "../data/SchoolAverages.json";
-import { IGeneralSchoolExpense, averageSchoolFunction, TotalOrPerStudent } from "../models/Data";
+import schoolExpenses from "../data/SchoolExpenses.json";
+import averageExpenses from "../data/SchoolAverages.json";
+import {
+  IGeneralSchoolExpense,
+  averageSchoolFunction,
+  TotalOrPerStudent
+} from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";
 import CategoryExpense from "./CategoryExpense";
@@ -27,7 +31,8 @@ function Body() {
   const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses
     .filter(school => {
       return selectedIds.includes(school.id);
-    }).map(school => {
+    })
+    .map(school => {
       if (toggle !== "Total") {
         const averagedSchool = averageSchoolFunction(school);
         return averagedSchool;
@@ -37,9 +42,9 @@ function Body() {
     });
 
   if (compareWithAverage) {
-    const selectedTypes = selectedSchools.map(s => s.type)
+    const selectedTypes = selectedSchools.map(s => s.type);
     const selectedAverages = averageExpenses.filter(avgExp => {
-      return selectedTypes.includes(avgExp.type)
+      return selectedTypes.includes(avgExp.type);
     });
     selectedAverages.forEach(selectedAverage => {
       if (toggle !== "Total") {
@@ -47,7 +52,7 @@ function Body() {
       } else {
         selectedSchools.push(selectedAverage);
       }
-    })
+    });
   }
 
   const handleChange = () => {
@@ -60,7 +65,7 @@ function Body() {
 
   const handleCompareWithAverageChange = () => {
     setCompareWthAverage(!compareWithAverage);
-  }
+  };
 
   const clickEvent = (
     event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
