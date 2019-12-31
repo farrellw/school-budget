@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import * as schoolExpenses from "../data/SchoolExpenses.json";
-import * as averageExpenses from "../data/SchoolAverages.json";
+import averageExpenses from "../data/SchoolAverages.json";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";
 import CategoryExpense from "./CategoryExpense";
@@ -12,12 +11,12 @@ import {
 import { ISchool, averageSchoolFunction } from "../models/Data";
 
 interface IProps {
-  selectedIds: string[];
+  schools: ISchool[];
   toggle: string;
   compareWithAverage: boolean;
 }
 
-function Expenses({ selectedIds, toggle, compareWithAverage }: IProps) {
+function Expenses({ schools, toggle, compareWithAverage }: IProps) {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const avgOrTotal = (tog: string): (school: ISchool) => ISchool => {
@@ -30,10 +29,7 @@ function Expenses({ selectedIds, toggle, compareWithAverage }: IProps) {
     }
   }
 
-  const selectedSchools: ISchool[] = schoolExpenses
-    .filter(school => {
-      return selectedIds.includes(school.id);
-    })
+  const selectedSchools: ISchool[] = schools
     .map(school => avgOrTotal(toggle)(school));
 
   const selectedTypes = selectedSchools.map(s => s.type);
@@ -67,7 +63,7 @@ function Expenses({ selectedIds, toggle, compareWithAverage }: IProps) {
       />
       {selectedCategory && selectedCategory !== "" && (
         <CategoryExpense
-          selectedSchools={selectedIds.map(n => subCategoryExpenseData)}
+          selectedSchools={schools.map(n => subCategoryExpenseData)}
           headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
           rows={subCategoryTableData}
           caption={`${selectedCategory} ( ${toggle} )`}
