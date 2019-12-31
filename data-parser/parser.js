@@ -28,9 +28,9 @@ data.forEach((row, index) => {
       id: String(index),
       name: row[0],
       type: row[1],
-      address: "",
-      principal: "",
-      phone: "",
+      address: row[19],
+      principal: row[21],
+      phone: row[20],
       projectedEnrollment: row[2],
       expenses: {
         administrativeSalaries: getNum(row[3]) + getNum(row[11]),
