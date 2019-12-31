@@ -1,6 +1,7 @@
 import { ITableData } from './Data';
 
 export const rows: ITableData[] = [
+    { label: "Total", key: "total" },
     { label: "Administrative Salaries", key: "administrativeSalaries" },
     { label: "Instructional Salaries", key: "instructionalSalaries" },
     {
