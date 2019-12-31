@@ -1,8 +1,16 @@
-export interface IGeneralSchoolExpense {
+export interface ISchool {
   id: string;
   name: string;
   type: string;
+  address?: string;
+  principal?: string;
+  phone?: string;
   projectedEnrollment: number;
+  expenses: IGeneralSchoolExpense;
+}
+
+export interface IGeneralSchoolExpense {
+  total: number;
   administrativeSalaries: number;
   instructionalSalaries: number;
   instructionalSupportSalaries: number;
@@ -12,7 +20,6 @@ export interface IGeneralSchoolExpense {
   transportation: number;
   discretionary: number;
 }
-
 export type SubCategorySchoolExpense = Map<string, number>;
 
 export type SchoolExpense = IGeneralSchoolExpense | SubCategorySchoolExpense;
@@ -38,21 +45,24 @@ export interface ITableRow {
 }
 
 
-export const averageSchoolFunction = (school: IGeneralSchoolExpense) => {
+export const averageSchoolFunction = (school: ISchool) => {
   const averagedSchool = {
     ...school,
-    administrativeSalaries:
-      school.administrativeSalaries / school.projectedEnrollment,
-    instructionalSalaries:
-      school.instructionalSalaries / school.projectedEnrollment,
-    instructionalSupportSalaries:
-      school.instructionalSupportSalaries / school.projectedEnrollment,
-    nonInstructionalSupportSalaries:
-      school.nonInstructionalSupportSalaries / school.projectedEnrollment,
-    temp: school.temp / school.projectedEnrollment,
-    benefits: school.benefits / school.projectedEnrollment,
-    transportation: school.transportation / school.projectedEnrollment,
-    discretionary: school.discretionary / school.projectedEnrollment
+    expenses: {
+      administrativeSalaries:
+        school.expenses.administrativeSalaries / school.projectedEnrollment,
+      instructionalSalaries:
+        school.expenses.instructionalSalaries / school.projectedEnrollment,
+      instructionalSupportSalaries:
+        school.expenses.instructionalSupportSalaries / school.projectedEnrollment,
+      nonInstructionalSupportSalaries:
+        school.expenses.nonInstructionalSupportSalaries / school.projectedEnrollment,
+      temp: school.expenses.temp / school.projectedEnrollment,
+      benefits: school.expenses.benefits / school.projectedEnrollment,
+      transportation: school.expenses.transportation / school.projectedEnrollment,
+      discretionary: school.expenses.discretionary / school.projectedEnrollment,
+      total: school.expenses.total / school.projectedEnrollment
+    },
   };
   return averagedSchool;
 }

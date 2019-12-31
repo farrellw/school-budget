@@ -1,12 +1,12 @@
 import React from "react";
 import "./SchoolInformation.scss";
-import { IGeneralSchoolExpense } from "src/models/Data";
+import { ISchool } from "src/models/Data";
 import { Card, CardHeader, CardContent } from "./Card";
 import { useHistory } from "react-router-dom";
 
 type Props = {
-  school: IGeneralSchoolExpense;
-  schools: IGeneralSchoolExpense[];
+  school: ISchool;
+  schools: ISchool[];
 };
 function SchoolInformation({ school, schools }: Props) {
   const history = useHistory();

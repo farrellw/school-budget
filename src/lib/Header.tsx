@@ -1,9 +1,9 @@
 import * as React from "react";
 import Search from "./Search";
 import "./Header.scss";
-import { IGeneralSchoolExpense } from "src/models/Data";
+import { ISchool } from "src/models/Data";
 
-type Props = { schools: IGeneralSchoolExpense[] };
+type Props = { schools: ISchool[] };
 function Header({ schools }: Props) {
   return (
     <>

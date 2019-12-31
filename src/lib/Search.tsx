@@ -1,7 +1,7 @@
 import * as React from "react";
 import Select, { ValueType } from "react-select";
 import schools from "../data/SchoolExpenses.json";
-import { IGeneralSchoolExpense } from "src/models/Data.js";
+import { ISchool } from "src/models/Data.js";
 import { useHistory } from "react-router-dom";
 import { Card, CardContent } from "./Card";
 import "./Search.scss";
@@ -10,7 +10,7 @@ interface IOption {
   value: string;
   label: string;
 }
-const options: IOption[] = schools.map((school: IGeneralSchoolExpense) => ({
+const options: IOption[] = schools.map((school: ISchool) => ({
   value: school.id,
   label: school.name
 }));

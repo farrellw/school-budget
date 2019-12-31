@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./SchoolInformationSlider.scss";
 import SchoolInformation from "./SchoolInformation";
-import { IGeneralSchoolExpense } from "src/models/Data";
+import { ISchool } from "src/models/Data";
 import Button from "./Button";
 import Icon from "./Icon";
 import Search from "./Search";
 
-type Props = { schools: IGeneralSchoolExpense[] };
+type Props = { schools: ISchool[] };
 
 function SchoolInformationSlider({ schools }: Props) {
   const [showSearch, setShowSearch] = useState(false);

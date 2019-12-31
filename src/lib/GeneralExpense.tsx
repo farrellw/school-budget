@@ -1,11 +1,11 @@
 import * as React from "react";
-import { ITableData, IGeneralSchoolExpense, ITableRow } from "../models/Data";
+import { ITableData, ISchool, ITableRow } from "../models/Data";
 import * as Highcharts from "highcharts";
 import Chart from "./Chart";
 import Table from "./Table";
 
 interface IProps {
-    selectedSchools: IGeneralSchoolExpense[];
+    selectedSchools: ISchool[];
     headers: string[];
     rows: ITableData[];
     caption: string;
@@ -23,7 +23,7 @@ function Expense({ selectedSchools, headers, rows, caption, clickHandler, toggle
             type: "bar",
             name: headers[i + 1],
             data: rows.map(r => {
-                return Math.round(s[r.key] * 100) / 100;
+                return Math.round(s.expenses[r.key] * 100) / 100;
             }
             )
         }
@@ -39,9 +39,9 @@ function Expense({ selectedSchools, headers, rows, caption, clickHandler, toggle
             ...row,
             values: selectedSchools.map((n, j: number): string => {
                 if (toggle === "Total") {
-                    return getValue(n[row.key].toString())
+                    return getValue(n.expenses[row.key].toString())
                 } else {
-                    return getValue(n[row.key].toFixed(2))
+                    return getValue(n.expenses[row.key].toFixed(2))
                 }
             }),
             selected: row.label === category
