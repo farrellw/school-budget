@@ -1,0 +1,9 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.image {
+    background: none;
+    border: none;
+  }
+}

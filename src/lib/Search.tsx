@@ -1,8 +1,10 @@
 import * as React from "react";
-import Select from "react-select";
+import Select, { ValueType } from "react-select";
 import schools from "../data/SchoolExpenses.json";
 import { ISchool } from "src/models/Data.js";
 import { useHistory } from "react-router-dom";
+import { Card, CardContent } from "./Card";
+import "./Search.scss";
 
 interface IOption {
   value: string;
@@ -13,25 +15,39 @@ const options: IOption[] = schools.map((school: ISchool) => ({
   label: school.name
 }));
 
+function isOption(option: ValueType<IOption>): option is IOption {
+  return Boolean(option) && (option as IOption).value !== undefined;
+}
+
+function isMultipleOptions(option: ValueType<IOption>): option is IOption[] {
+  return Boolean(option) && (option as IOption[]) !== undefined;
+}
+
 function Search() {
   const history = useHistory();
 
-  function selectSchool(selectedOptions: IOption[]) {
-    if(selectedOptions){
-      const queryString = selectedOptions.map(o => {
-        return `id=${o.value}`;
-      }).join("&");
-  
-      history.push(`/?${queryString}`);
+  function selectSchool(option: ValueType<IOption>) {
+    if (isOption(option)) {
+      history.push(`?id=${option.value}`);
+    } else if (isMultipleOptions(option)) {
+      const queryString = option.map(o => `id=${o.value}`).join("&");
+      history.push(`?${queryString}`);
     } else {
-      history.push("/");
+      history.push("");
     }
   }
 
   return (
-    <>
-      <Select options={options} onChange={selectSchool} isMulti={true}/>
-    </>
+    <div className="search">
+      <Card>
+        <CardContent>
+          <label>
+            Find your school:
+            <Select options={options} onChange={selectSchool} />
+          </label>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
 
