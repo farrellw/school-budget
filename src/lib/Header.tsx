@@ -1,14 +1,17 @@
 import * as React from "react";
 import Search from "./Search";
 import "./Header.scss";
+import { IGeneralSchoolExpense } from "src/models/Data";
 
-function Header() {
+type Props = { schools: IGeneralSchoolExpense[] };
+function Header({ schools }: Props) {
   return (
-    <header className="sb-header">
-      <h1 className="sb-heading1">School Budget</h1>
-      <nav></nav>
-      <Search />
-    </header>
+    <>
+      <header className="header">
+        <h1>SLPS Budget</h1>
+      </header>
+      {schools.length <= 0 && <Search />}
+    </>
   );
 }
 

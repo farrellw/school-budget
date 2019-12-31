@@ -9,6 +9,7 @@
 table {
   table-layout: fixed;
   border: 3px solid black;
+  border-spacing: 5px;
 }
 
 th,
@@ -31,5 +32,12 @@ tbody tr:hover {
 }
 
 .selected {
-  background-color: #f5f5f5;
+  background-color: #bebebe;
+}
+
+.displayOptions {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 15px;
 }

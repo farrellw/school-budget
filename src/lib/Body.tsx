@@ -1,11 +1,10 @@
 import * as React from "react";
 import { useState } from "react";
-import schoolExpenses from "../data/SchoolExpenses.json";
 import averageExpenses from "../data/SchoolAverages.json";
 import {
-  IGeneralSchoolExpense,
   averageSchoolFunction,
-  TotalOrPerStudent
+  TotalOrPerStudent,
+  IGeneralSchoolExpense
 } from "../models/Data";
 import { rows } from "../models/GeneralExpenseConstants";
 import GeneralExpense from "./GeneralExpense";
@@ -15,42 +14,33 @@ import {
   subCategoryTableData
 } from "../models/FakeSubCategory";
 import Switch from "react-switch";
-import { useLocation } from "react-router-dom";
+import SchoolInformationSlider from "./SchoolInformationSlider";
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
-function Body() {
+type Props = { schools: IGeneralSchoolExpense[] };
+function Body({ schools }: Props) {
   const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
   const [compareWithAverage, setCompareWthAverage] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const query = useQuery();
 
-  const selectedIds: string[] = query.getAll("id");
-
-  const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses
-    .filter(school => {
-      return selectedIds.includes(school.id);
-    })
-    .map(school => {
-      if (toggle !== "Total") {
-        const averagedSchool = averageSchoolFunction(school);
-        return averagedSchool;
-      } else {
-        return school;
-      }
-    });
+  const schoolExpenses = schools.map(school => {
+    if (toggle !== "Total") {
+      const averagedSchool = averageSchoolFunction(school);
+      return averagedSchool;
+    } else {
+      return school;
+    }
+  });
 
   if (compareWithAverage) {
-    const selectedTypes = selectedSchools.map(s => s.type);
+    const selectedTypes = schoolExpenses.map(s => s.type);
     const selectedAverages = averageExpenses.filter(avgExp => {
       return selectedTypes.includes(avgExp.type);
     });
     selectedAverages.forEach(selectedAverage => {
       if (toggle !== "Total") {
-        selectedSchools.push(averageSchoolFunction(selectedAverage));
+        schoolExpenses.push(averageSchoolFunction(selectedAverage));
       } else {
-        selectedSchools.push(selectedAverage);
+        schoolExpenses.push(selectedAverage);
       }
     });
   }
@@ -67,53 +57,60 @@ function Body() {
     setCompareWthAverage(!compareWithAverage);
   };
 
-  const clickEvent = (
+  const generalExpenseClickHandler = (
     event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
   ): void => {
     setSelectedCategory(event.currentTarget.id);
   };
 
   return (
-    <section className="body">
-      <div className="displayOptions">
-        <label>
-          <span>Total</span>
-          <Switch
-            onChange={handleChange}
-            checked={toggle === "Per Student"}
-            uncheckedIcon={false}
-            checkedIcon={false}
-            offColor={"#34baeb"}
-            onColor={"#a2eb34"}
+    <>
+      {schoolExpenses.length > 0 && (
+        <main className="body">
+          <SchoolInformationSlider schools={schools} />
+          <div className="displayOptions">
+            <label>
+              <span>Total</span>
+              <Switch
+                onChange={handleChange}
+                checked={toggle === "Per Student"}
+                uncheckedIcon={false}
+                checkedIcon={false}
+                offColor={"#34baeb"}
+                onColor={"#a2eb34"}
+              />
+              <span>Per Student</span>
+            </label>
+            <label>
+              <Switch
+                onChange={handleCompareWithAverageChange}
+                checked={compareWithAverage}
+              />
+              <span>Compare Against Average</span>
+            </label>
+          </div>
+          <GeneralExpense
+            selectedSchools={schoolExpenses}
+            headers={["Field Name"].concat(schoolExpenses.map(n => n.name))}
+            rows={rows}
+            caption={`General Expenses ( ${toggle} )`}
+            clickHandler={generalExpenseClickHandler}
+            toggle={toggle}
+            category={selectedCategory}
           />
-          <span>Per Student</span>
-        </label>
-        <label>
-          <Switch
-            onChange={handleCompareWithAverageChange}
-            checked={compareWithAverage}
-          />
-          <span>Compare Against Average</span>
-        </label>
-      </div>
-      <GeneralExpense
-        selectedSchools={selectedSchools}
-        headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
-        rows={rows}
-        caption={`General Expenses ( ${toggle} )`}
-        clickHandler={clickEvent}
-        toggle={toggle}
-        category={selectedCategory}
-      />
-      {selectedCategory && selectedCategory !== "" && (
-        <CategoryExpense
-          selectedSchools={selectedIds.map(n => subCategoryExpenseData)}
-          headers={["Field Name"].concat(selectedSchools.map(n => n.name))}
-          rows={subCategoryTableData}
-          caption={`${selectedCategory} ( ${toggle} )`}
-        />
+          {selectedCategory && selectedCategory !== "" && (
+            <CategoryExpense
+              selectedSchools={schoolExpenses.map(
+                school => subCategoryExpenseData
+              )}
+              headers={["Field Name"].concat(schoolExpenses.map(n => n.name))}
+              rows={subCategoryTableData}
+              caption={`${selectedCategory} ( ${toggle} )`}
+            />
+          )}
+        </main>
       )}
-    </section>
+    </>
   );
 }
 

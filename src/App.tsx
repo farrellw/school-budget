@@ -2,21 +2,27 @@ import * as React from "react";
 import Body from "./lib/Body";
 import Header from "./lib/Header";
 import "./App.scss";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import schoolExpenses from "./data/SchoolExpenses.json";
+import { IGeneralSchoolExpense } from "./models/Data";
 
-class App extends React.Component {
-  public render() {
-    return (
-      <Router>
-        <Route path="*">
-          <section>
-            <Header />
-            <Body />
-          </section>
-        </Route>
-      </Router>
-    );
-  }
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
+function App() {
+  const query = useQuery();
+  const selectedIds: string[] = query.getAll("id");
+  const selectedSchools: IGeneralSchoolExpense[] = schoolExpenses.filter(
+    school => selectedIds.includes(school.id)
+  );
+
+  return (
+    <>
+      <Header schools={selectedSchools} />
+      <Body schools={selectedSchools} />
+    </>
+  );
 }
 
 export default App;
