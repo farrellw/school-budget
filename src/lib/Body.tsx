@@ -1,8 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import {
-  ISchool
-} from "../models/Data";
+import { ISchool } from "../models/Data";
 import SchoolInformationSlider from "./SchoolInformationSlider";
 import GeneralExpense from "./GeneralExpense";
 import CategoryExpense from "./CategoryExpense";
@@ -29,10 +27,7 @@ function Body({ schools }: Props) {
       </div>
       <div className="expense-panel">
         {selectedCategory && selectedCategory !== "" && (
-          <CategoryExpense
-          category={selectedCategory}
-            schools={schools}
-          />
+          <CategoryExpense category={selectedCategory} schools={schools} />
         )}
       </div>
     </main>
