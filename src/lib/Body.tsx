@@ -25,11 +25,11 @@ function Body({ schools }: Props) {
           category={selectedCategory}
         />
       </div>
-      <div className="expense-panel">
-        {selectedCategory && selectedCategory !== "" && (
+      {selectedCategory && selectedCategory !== "" && (
+        <div className="expense-panel">
           <CategoryExpense category={selectedCategory} schools={schools} />
-        )}
-      </div>
+        </div>
+      )}
     </main>
   );
 }
