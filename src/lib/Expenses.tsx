@@ -2,10 +2,6 @@ import * as React from "react";
 import { useState } from "react";
 import GeneralExpense from "./GeneralExpense";
 import CategoryExpense from "./CategoryExpense";
-import {
-  subCategoryExpenseData,
-  subCategoryTableData
-} from "../models/FakeSubCategory";
 import { ISchool } from "../models/Data";
 import "./Expenses.scss";
 
@@ -34,10 +30,8 @@ function Expenses({ schools }: IProps) {
       <div className="expense-panel">
         {selectedCategory && selectedCategory !== "" && (
           <CategoryExpense
-            selectedSchools={schools.map(n => subCategoryExpenseData)}
-            headers={["Field Name"].concat(schools.map(n => n.name))}
-            rows={subCategoryTableData}
-            caption={`${selectedCategory} ( potato )`}
+          category={selectedCategory}
+            schools={schools}
           />
         )}
       </div>

@@ -1,41 +1,87 @@
 import * as React from "react";
-import { ITableData, SchoolExpense, ITableRow } from "../models/Data";
+import { useState } from "react";
+import { ITableData, ISchool, ITableRow, TotalOrPerStudent } from "../models/Data";
 import * as Highcharts from "highcharts";
-import Table from './Table';
+import Table from "./Table";
 import Chart from "./Chart";
+import ViewOptions from "./ViewOptions";
+import {
+    subCategoryTableData
+  } from "../models/FakeSubCategory";
 
 interface IProps {
-    selectedSchools: SchoolExpense[];
-    headers: string[];
-    rows: ITableData[];
-    caption: string;
-    clickHandler?: (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
+  schools: ISchool[];
+  clickHandler?: (
+    event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
+  ) => void;
+  category: string;
 }
 
-function CategoryExpense({ selectedSchools, headers, rows, caption, clickHandler }: IProps) {
-    const series: Highcharts.SeriesOptionsType[] = selectedSchools.map((s, i) => {
-        return {
-            type: "bar",
-            name: headers[i + 1],
-            data: []
-        }
-    })
+function CategoryExpense({
+  schools,
+  clickHandler,
+  category
+}: IProps) {
+    const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
+  const [compareWithAverage, setCompareWthAverage] = useState(false);
 
-    const rowData: ITableRow[] = rows.map((row: ITableData) => {
-        return {
-            ...row,
-            values: selectedSchools.map((): string => {
-                return "This Data Has Not Been Shared";
-            })
-        }
-    })
+  const handleToggleChange = () => {
+    if (toggle === "Total") {
+      setToggle("Per Student");
+    } else {
+      setToggle("Total");
+    }
+  };
 
-    return (
-        <section className="expense-section">
-            <Table headers={headers} caption={caption} clickHandler={clickHandler} rows={rowData} />
-            <Chart series={series} rows={rows} caption={caption} />
-        </section>
-    );
+  const handleCompareWithAverageChange = () => {
+    setCompareWthAverage(!compareWithAverage);
+  };
+
+  const headers= ["Field Name"].concat(schools.map(n => n.name))
+const rows= subCategoryTableData
+const caption= `${category} ( ${toggle} )`
+
+
+  const series: Highcharts.SeriesOptionsType[] = schools.map((s, i) => {
+    return {
+      type: "bar",
+      name: headers[i + 1],
+      data: []
+    };
+  });
+
+  const rowData: ITableRow[] = rows.map((row: ITableData) => {
+    return {
+      ...row,
+      values: schools.map((): string => {
+        return "This Data Has Not Been Shared";
+      })
+    };
+  });
+
+
+
+  return (
+    <section className="card">
+      <div>
+        <ViewOptions
+          onCompareWithAverageChange={handleCompareWithAverageChange}
+          onToggleChange={handleToggleChange}
+          toggle={toggle}
+          compareWithAverage={compareWithAverage}
+        />
+      </div>
+      <div className="expense-section ">
+        <Table
+          headers={headers}
+          caption={caption}
+          clickHandler={clickHandler}
+          rows={rowData}
+        />
+        <Chart series={series} rows={rows} caption={caption} />
+      </div>
+    </section>
+  );
 }
 
 export default CategoryExpense;
