@@ -17,13 +17,13 @@ import { rows } from "../models/GeneralExpenseConstants";
 
 interface IProps {
   schools: ISchool[];
-  categoryClickHandler?: (
+  categoryClickHandler: (
     event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
   ) => void;
   category: string;
 }
 
-function Expense({ schools, categoryClickHandler, category }: IProps) {
+function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
   const [compareWithAverage, setCompareWthAverage] = useState(false);
 
@@ -112,20 +112,18 @@ function Expense({ schools, categoryClickHandler, category }: IProps) {
 
   return (
     <section className="card">
-      <div>
-        <ViewOptions
-          onCompareWithAverageChange={handleCompareWithAverageChange}
-          onToggleChange={handleToggleChange}
-          toggle={toggle}
-          compareWithAverage={compareWithAverage}
-        />
-      </div>
+      <ViewOptions
+        onCompareWithAverageChange={handleCompareWithAverageChange}
+        onToggleChange={handleToggleChange}
+        toggle={toggle}
+        compareWithAverage={compareWithAverage}
+      />
       <div className="expense-section">
         <Table
-            headers={headers}
-            clickHandler={categoryClickHandler}
-            caption={caption}
-            rows={tableData}
+          headers={headers}
+          clickHandler={categoryClickHandler}
+          caption={caption}
+          rows={tableData}
         />
         <Chart rows={rows} series={series} caption={caption} />
       </div>
@@ -133,4 +131,4 @@ function Expense({ schools, categoryClickHandler, category }: IProps) {
   );
 }
 
-export default Expense;
+export default GeneralExpense;
