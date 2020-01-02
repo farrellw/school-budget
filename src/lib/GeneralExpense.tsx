@@ -3,6 +3,7 @@ import { ITableData, ISchool, ITableRow } from "../models/Data";
 import * as Highcharts from "highcharts";
 import Chart from "./Chart";
 import Table from "./Table";
+import "./GeneralExpense.scss";
 
 interface IProps {
     selectedSchools: ISchool[];
@@ -49,7 +50,7 @@ function Expense({ selectedSchools, headers, rows, caption, clickHandler, toggle
     }))
 
     return (
-        <section className="expense-section">
+        <section className="expense-section card">
             <Table headers={headers} clickHandler={clickHandler} caption={caption} rows={tableData} />
             <Chart rows={rows} series={series} caption={caption} />
         </section>
