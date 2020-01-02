@@ -67,4 +67,4 @@ export const averageSchoolFunction = (school: ISchool) => {
   return averagedSchool;
 }
 
-export type TotalOrPerStudent = "Total" | "Per Student";
+export type ViewByOption = "Total" | "Per Student";

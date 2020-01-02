@@ -4,7 +4,7 @@ import {
   ITableData,
   ISchool,
   ITableRow,
-  TotalOrPerStudent
+  ViewByOption
 } from "../models/Data";
 import * as Highcharts from "highcharts";
 import Table from "./Table";
@@ -18,14 +18,14 @@ interface IProps {
 }
 
 function CategoryExpense({ schools, category }: IProps) {
-  const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
+  const [viewByOption, setViewByOption] = useState<ViewByOption>("Total");
   const [compareWithAverage, setCompareWthAverage] = useState(false);
 
-  const handleToggleChange = () => {
-    if (toggle === "Total") {
-      setToggle("Per Student");
+  const handleViewByOptionChange = () => {
+    if (viewByOption === "Total") {
+      setViewByOption("Per Student");
     } else {
-      setToggle("Total");
+      setViewByOption("Total");
     }
   };
 
@@ -35,7 +35,7 @@ function CategoryExpense({ schools, category }: IProps) {
 
   const headers = ["Field Name"].concat(schools.map(n => n.name));
   const rows = subCategoryTableData;
-  const caption = `${category} ( ${toggle} )`;
+  const caption = `${category} ( ${viewByOption} )`;
 
   const series: Highcharts.SeriesOptionsType[] = schools.map((s, i) => {
     return {
@@ -58,8 +58,8 @@ function CategoryExpense({ schools, category }: IProps) {
     <section className="card">
       <ViewOptions
         onCompareWithAverageChange={handleCompareWithAverageChange}
-        onToggleChange={handleToggleChange}
-        toggle={toggle}
+        onToggleChange={handleViewByOptionChange}
+        toggle={viewByOption}
         compareWithAverage={compareWithAverage}
       />
       <div className="expense-section ">

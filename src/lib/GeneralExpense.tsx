@@ -4,7 +4,7 @@ import {
   ITableData,
   ISchool,
   ITableRow,
-  TotalOrPerStudent,
+  ViewByOption,
   averageSchoolFunction
 } from "../models/Data";
 import * as Highcharts from "highcharts";
@@ -24,14 +24,14 @@ interface IProps {
 }
 
 function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
-  const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
+  const [viewByOption, setViewByOption] = useState<ViewByOption>("Total");
   const [compareWithAverage, setCompareWthAverage] = useState(false);
 
-  const handleToggleChange = () => {
-    if (toggle === "Total") {
-      setToggle("Per Student");
+  const handleViewByOptionChange = () => {
+    if (viewByOption === "Total") {
+      setViewByOption("Per Student");
     } else {
-      setToggle("Total");
+      setViewByOption("Total");
     }
   };
 
@@ -50,7 +50,7 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   };
 
   const selectedSchools: ISchool[] = schools.map(school =>
-    avgOrTotal(toggle)(school)
+    avgOrTotal(viewByOption)(school)
   );
 
   const selectedTypes = selectedSchools.map(s => s.type);
@@ -59,7 +59,7 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
     .filter(avgExp => {
       return compareWithAverage && selectedTypes.includes(avgExp.type);
     })
-    .map(school => avgOrTotal(toggle)(school));
+    .map(school => avgOrTotal(viewByOption)(school));
 
   const combinedSchoolsAndAverages = selectedSchools.concat(selectedAverages);
 
@@ -71,6 +71,7 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
     combinedSchoolsAndAverages.map(n => n.name)
   );
 
+  // Compute chart data to display
   const series: Highcharts.SeriesOptionsType[] = combinedSchoolsAndAverages.map(
     (s, i) => {
       return {
@@ -84,19 +85,15 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   );
 
   // Compute table data to display
-  const enrollmentRow: ITableRow = {
-    label: "Enrollment",
-    values: combinedSchoolsAndAverages.map(n =>
-      n.projectedEnrollment.toString()
-    )
-  };
-  const tableData: ITableRow[] = [enrollmentRow].concat(
+  const caption = `General Expenses ( ${viewByOption} )`;
+
+  const tableData: ITableRow[] = 
     rows.map(
       (row: ITableData, i: number): ITableRow => {
         return {
           ...row,
           values: combinedSchoolsAndAverages.map((n, j: number): string => {
-            if (toggle === "Total") {
+            if (viewByOption === "Total") {
               return getValue(n.expenses[row.key].toString());
             } else {
               return getValue(n.expenses[row.key].toFixed(2));
@@ -106,16 +103,13 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
         };
       }
     )
-  );
-
-  const caption = `General Expenses ( ${toggle} )`;
 
   return (
     <section className="card">
       <ViewOptions
         onCompareWithAverageChange={handleCompareWithAverageChange}
-        onToggleChange={handleToggleChange}
-        toggle={toggle}
+        onToggleChange={handleViewByOptionChange}
+        toggle={viewByOption}
         compareWithAverage={compareWithAverage}
       />
       <div className="expense-section">
