@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap-reverse;
+  padding: .5em;
 }
 
 table {
@@ -33,13 +34,6 @@ tbody tr:hover {
 
 .selected {
   background-color: #bebebe;
-}
-
-.displayOptions {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 15px;
 }
 
 .expense-panel {
