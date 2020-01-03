@@ -7,7 +7,7 @@ import {
   ViewByOption,
   averageSchoolFunction
 } from "../models/Data";
-import * as Highcharts from "highcharts";
+import { SeriesOptionsType } from "highcharts";
 import Chart from "./Chart";
 import Table from "./Table";
 import "./GeneralExpense.scss";
@@ -72,37 +72,34 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   );
 
   // Compute chart data to display
-  const series: Highcharts.SeriesOptionsType[] = combinedSchoolsAndAverages.map(
-    (s, i) => {
-      return {
-        type: "bar",
-        name: headers[i + 1],
-        data: rows.map(r => {
-          return Math.round(s.expenses[r.key] * 100) / 100;
-        })
-      };
-    }
-  );
+  const series: SeriesOptionsType[] = combinedSchoolsAndAverages.map((s, i) => {
+    return {
+      type: "bar",
+      name: headers[i + 1],
+      data: rows.map(r => {
+        return Math.round(s.expenses[r.key] * 100) / 100;
+      })
+    };
+  });
 
   // Compute table data to display
   const caption = `General Expenses ( ${viewByOption} )`;
 
-  const tableData: ITableRow[] = 
-    rows.map(
-      (row: ITableData, i: number): ITableRow => {
-        return {
-          ...row,
-          values: combinedSchoolsAndAverages.map((n, j: number): string => {
-            if (viewByOption === "Total") {
-              return getValue(n.expenses[row.key].toString());
-            } else {
-              return getValue(n.expenses[row.key].toFixed(2));
-            }
-          }),
-          selected: row.label === category
-        };
-      }
-    )
+  const tableData: ITableRow[] = rows.map(
+    (row: ITableData, i: number): ITableRow => {
+      return {
+        ...row,
+        values: combinedSchoolsAndAverages.map((n, j: number): string => {
+          if (viewByOption === "Total") {
+            return getValue(n.expenses[row.key].toString());
+          } else {
+            return getValue(n.expenses[row.key].toFixed(2));
+          }
+        }),
+        selected: row.label === category
+      };
+    }
+  );
 
   return (
     <section className="card">
@@ -119,7 +116,9 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
           caption={caption}
           rows={tableData}
         />
-        <Chart rows={rows} series={series} caption={caption} />
+        <div className="chart-container">
+          <Chart rows={rows} series={series} caption={caption} />
+        </div>
       </div>
     </section>
   );

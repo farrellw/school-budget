@@ -81,9 +81,7 @@ function Chart({ caption, rows, series }: IProps) {
   };
 
   return (
-    <div className="chart-container">
       <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
   );
 }
 

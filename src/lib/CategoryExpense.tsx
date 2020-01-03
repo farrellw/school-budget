@@ -6,7 +6,7 @@ import {
   ITableRow,
   ViewByOption
 } from "../models/Data";
-import * as Highcharts from "highcharts";
+import { SeriesOptionsType } from "highcharts";
 import Table from "./Table";
 import Chart from "./Chart";
 import ViewOptions from "./ViewOptions";
@@ -37,7 +37,7 @@ function CategoryExpense({ schools, category }: IProps) {
   const rows = subCategoryTableData;
   const caption = `${category} ( ${viewByOption} )`;
 
-  const series: Highcharts.SeriesOptionsType[] = schools.map((s, i) => {
+  const series: SeriesOptionsType[] = schools.map((s, i) => {
     return {
       type: "bar",
       name: headers[i + 1],
@@ -64,7 +64,9 @@ function CategoryExpense({ schools, category }: IProps) {
       />
       <div className="expense-section ">
         <Table headers={headers} caption={caption} rows={rowData} />
-        <Chart series={series} rows={rows} caption={caption} />
+        <div className="chart-container">
+          <Chart series={series} rows={rows} caption={caption} />
+        </div>
       </div>
     </section>
   );
