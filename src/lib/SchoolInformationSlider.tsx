@@ -11,7 +11,7 @@ type Props = { schools: ISchool[] };
 function SchoolInformationSlider({ schools }: Props) {
   const [showSearch, setShowSearch] = useState(false);
   return (
-    <div className="school-information-panel">
+    <div className="school-information-slider">
       {schools.length > 0 && (
         <Button
           type="default"
@@ -23,12 +23,10 @@ function SchoolInformationSlider({ schools }: Props) {
           Add school to compare
         </Button>
       )}
-      <div>
-        {showSearch && <Search></Search>}
-        {schools.map(school => (
-          <SchoolInformation school={school} schools={schools} />
-        ))}
-      </div>
+      {showSearch && <Search></Search>}
+      {schools.map(school => (
+        <SchoolInformation school={school} schools={schools} />
+      ))}
     </div>
   );
 }
