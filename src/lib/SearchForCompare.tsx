@@ -1,8 +1,6 @@
 import * as React from "react";
 import Select, { ValueType } from "react-select";
-import schools from "../data/SchoolExpenses.json";
 import { ISchool } from "src/models/Data.js";
-import { useHistory } from "react-router-dom";
 import { Card, CardContent } from "./Card";
 import "./Search.scss";
 
@@ -10,30 +8,33 @@ interface IOption {
   value: string;
   label: string;
 }
-const options: IOption[] = schools.map((school: ISchool) => ({
-  value: school.id,
-  label: school.name
-}));
 
 function isOption(option: ValueType<IOption>): option is IOption {
   return Boolean(option) && (option as IOption).value !== undefined;
 }
 
-function Search() {
-  const history = useHistory();
-
+type Props = {
+  schools: ISchool[];
+  onSchoolSelected: (id: string) => void;
+};
+function SearchForCompare({ schools, onSchoolSelected }: Props) {
   function selectSchool(option: ValueType<IOption>) {
     if (isOption(option)) {
-      history.push(`?id=${option.value}`);
+      onSchoolSelected(option.value);
     }
   }
+
+  const options: IOption[] = schools.map((school: ISchool) => ({
+    value: school.id,
+    label: school.name
+  }));
 
   return (
     <div className="search">
       <Card>
         <CardContent>
           <label>
-            Find your school:
+            Find the school to compare:
             <Select options={options} onChange={selectSchool} />
           </label>
         </CardContent>
@@ -42,4 +43,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default SearchForCompare;

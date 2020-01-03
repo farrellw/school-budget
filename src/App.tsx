@@ -10,11 +10,16 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
+const schoolExpensesDictionary = {};
+schoolExpenses.forEach(school => {
+  schoolExpensesDictionary[school.id] = school;
+});
+
 function App() {
   const query = useQuery();
   const selectedIds: string[] = query.getAll("id");
-  const selectedSchools: ISchool[] = schoolExpenses.filter(
-    school => selectedIds.includes(school.id)
+  const selectedSchools: ISchool[] = selectedIds.map(
+    id => schoolExpensesDictionary[id]
   );
 
   return (
