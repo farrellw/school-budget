@@ -11,3 +11,7 @@ export function addId(ids: string[], id: string): string[] {
     return [id].concat(ids);
   }
 }
+
+export function removeId(ids: string[], id: string): string[] {
+  return ids.filter(id_ => id_ !== id);
+}

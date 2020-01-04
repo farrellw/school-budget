@@ -2,26 +2,15 @@ import React from "react";
 import "./SchoolInformation.scss";
 import { ISchool } from "src/models/Data";
 import { Card, CardHeader, CardContent } from "./Card";
-import { useHistory } from "react-router-dom";
 
 type Props = {
   school: ISchool;
   schools: ISchool[];
+  onClose: (id: string) => void;
 };
-function SchoolInformation({ school, schools }: Props) {
-  const history = useHistory();
+function SchoolInformation({ onClose, school, schools }: Props) {
   return (
-    <Card
-      className="school-information"
-      onClose={() => {
-        const schoolIds = schools
-          .map(s => s.id)
-          .filter(id => id !== school.id)
-          .map(id => `id=${id}`)
-          .join("&");
-        history.push(`?${schoolIds}`);
-      }}
-    >
+    <Card className="school-information" onClose={() => onClose(school.id)}>
       <CardHeader className="header">
         <h2>{school.name}</h2>
       </CardHeader>

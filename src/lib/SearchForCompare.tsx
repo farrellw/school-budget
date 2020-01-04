@@ -16,8 +16,9 @@ function isOption(option: ValueType<IOption>): option is IOption {
 type Props = {
   schools: ISchool[];
   onSchoolSelected: (id: string) => void;
+  onClose: () => void;
 };
-function SearchForCompare({ schools, onSchoolSelected }: Props) {
+function SearchForCompare({ onClose, schools, onSchoolSelected }: Props) {
   function selectSchool(option: ValueType<IOption>) {
     if (isOption(option)) {
       onSchoolSelected(option.value);
@@ -31,7 +32,7 @@ function SearchForCompare({ schools, onSchoolSelected }: Props) {
 
   return (
     <div className="search">
-      <Card>
+      <Card onClose={onClose}>
         <CardContent>
           <label>
             Find the school to compare:

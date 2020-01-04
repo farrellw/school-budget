@@ -28,6 +28,18 @@ function SchoolInformationSlider({ schools }: Props) {
     setShowSearch(false);
   }
 
+  function onSchoolClose(schoolId: string) {
+    const schoolIds = Url.removeId(
+      schools.map(s => s.id),
+      schoolId
+    );
+    if (schoolIds.length <= 0) {
+      setShowSearch(false);
+    }
+    const queryString = Url.toQueryString(schoolIds);
+    history.push(`?${queryString}`);
+  }
+
   const schoolsForComparison: ISchool[] = allSchools.filter(notAlreadySelected);
 
   return (
@@ -47,10 +59,15 @@ function SchoolInformationSlider({ schools }: Props) {
         <SearchForCompare
           schools={schoolsForComparison}
           onSchoolSelected={onSchoolSelected}
+          onClose={() => setShowSearch(false)}
         />
       )}
       {schools.map(school => (
-        <SchoolInformation school={school} schools={schools} />
+        <SchoolInformation
+          school={school}
+          schools={schools}
+          onClose={onSchoolClose}
+        />
       ))}
     </div>
   );
