@@ -1,35 +1,46 @@
 import * as React from "react";
-import Switch from "react-switch";
+import "./ViewOptions.scss";
 
 interface IProps {
-    toggle: string;
-    compareWithAverage: boolean;
-    onToggleChange: () => void
-    onCompareWithAverageChange: () => void
+  toggle: string;
+  compareWithAverage: boolean;
+  onToggleChange: () => void;
+  onCompareWithAverageChange: () => void;
 }
 
-
-function ViewOptions({toggle, compareWithAverage, onToggleChange, onCompareWithAverageChange}: IProps) {
+function ViewOptions({
+  toggle,
+  compareWithAverage,
+  onToggleChange,
+  onCompareWithAverageChange
+}: IProps) {
   return (
     <div className="displayOptions">
       <label>
-        <span>Total</span>
-        <Switch
+        <input
+          type="radio"
+          value="Total"
+          checked={toggle === "Total"}
           onChange={onToggleChange}
-          checked={toggle === "Per Student"}
-          uncheckedIcon={false}
-          checkedIcon={false}
-          offColor={"#34baeb"}
-          onColor={"#a2eb34"}
         />
-        <span>Per Student</span>
+        Total
       </label>
       <label>
-        <Switch
-          onChange={onCompareWithAverageChange}
-          checked={compareWithAverage}
+        <input
+          type="radio"
+          value="Per Student"
+          checked={toggle === "Per Student"}
+          onChange={onToggleChange}
         />
-        <span>Compare Against Average</span>
+        Per Student
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={compareWithAverage}
+          onChange={onCompareWithAverageChange}
+        />
+        Compare against Average
       </label>
     </div>
   );

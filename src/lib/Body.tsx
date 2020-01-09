@@ -1,44 +1,34 @@
 import * as React from "react";
 import { useState } from "react";
-import Expenses from "./Expenses";
-import ViewOptions from "./ViewOptions";
-import { TotalOrPerStudent, ISchool } from "../models/Data";
+import { ISchool } from "../models/Data";
 import SchoolInformationSlider from "./SchoolInformationSlider";
+import GeneralExpense from "./GeneralExpense";
+import CategoryExpense from "./CategoryExpense";
 
 type Props = { schools: ISchool[] };
 function Body({ schools }: Props) {
-  const [toggle, setToggle] = useState<TotalOrPerStudent>("Total");
-  const [compareWithAverage, setCompareWthAverage] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
-  const handleToggleChange = () => {
-    if (toggle === "Total") {
-      setToggle("Per Student");
-    } else {
-      setToggle("Total");
-    }
-  };
-
-  const handleCompareWithAverageChange = () => {
-    setCompareWthAverage(!compareWithAverage);
+  const categoryClickEvent = (
+    event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
+  ): void => {
+    setSelectedCategory(event.currentTarget.id);
   };
 
   return (
     <main className="body">
       <SchoolInformationSlider schools={schools} />
-      {false && (
-        <ViewOptions
-          onCompareWithAverageChange={handleCompareWithAverageChange}
-          onToggleChange={handleToggleChange}
-          toggle={toggle}
-          compareWithAverage={compareWithAverage}
-        />
-      )}
-      {false && (
-        <Expenses
+      <div className="expense-panel">
+        <GeneralExpense
           schools={schools}
-          compareWithAverage={compareWithAverage}
-          toggle={toggle}
+          categoryClickHandler={categoryClickEvent}
+          category={selectedCategory}
         />
+      </div>
+      {selectedCategory && selectedCategory !== "" && (
+        <div className="expense-panel">
+          <CategoryExpense category={selectedCategory} schools={schools} />
+        </div>
       )}
     </main>
   );

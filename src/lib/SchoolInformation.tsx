@@ -19,7 +19,7 @@ function SchoolInformation({ onClose, school, schools }: Props) {
           <dt>Zip Code</dt>
           <dd>63108</dd>
           <dt>Principal</dt>
-          <dd>Dr. Rick Marshall</dd>
+          <dd>{school.principal}</dd>
           <dt>Vice Principal</dt>
           <dd>Dr. Seuss</dd>
         </dl>
