@@ -29,3 +29,9 @@ dl {
     grid-area: "dd";
   }
 }
+
+#root {
+  padding: 1em;
+  display: grid;
+  grid-gap: 1em;
+}
