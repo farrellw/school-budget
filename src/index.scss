@@ -8,6 +8,10 @@ html {
   color: var(--dark);
 }
 
+body {
+  min-height: 100vh;
+}
+
 h1 {
   font-size: 1.5em;
   font-weight: bold;
@@ -34,6 +38,8 @@ dl {
 }
 
 #root {
+  min-height: 100vh;
   display: grid;
-  grid-gap: 1em;
+  grid-gap: 30px;
+  grid-template-rows: auto 1fr;
 }

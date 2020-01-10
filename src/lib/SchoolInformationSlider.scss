@@ -1,13 +1,13 @@
 .school-information-slider {
-  // display: grid;
-  // grid-gap: 1em;
   width: 100vw;
+  overflow: hidden;
+  min-height: 100%;
   .glide__track,
   .glide__slides {
     overflow: visible;
   }
 
   .add-school-button {
-    margin: 25px;
+    margin: 0 25px 25px;
   }
 }
