@@ -2,7 +2,7 @@ import * as React from "react";
 import Select, { ValueType } from "react-select";
 import { ISchool } from "src/models/Data.js";
 import { Card, CardContent } from "./Card";
-import "./Search.scss";
+import "./SearchForCompare.scss";
 
 interface IOption {
   value: string;
@@ -31,7 +31,7 @@ function SearchForCompare({ onClose, schools, onSchoolSelected }: Props) {
   }));
 
   return (
-    <div className="search">
+    <div className="search-for-compare">
       <Card onClose={onClose}>
         <CardContent>
           <label>

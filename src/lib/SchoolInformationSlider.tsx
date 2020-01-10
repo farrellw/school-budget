@@ -73,6 +73,7 @@ function SchoolInformationSlider({ schools }: Props) {
     <div className="school-information-slider">
       {schools.length > 0 && (
         <Button
+          className="add-school-button"
           type="default"
           onClick={() => {
             setShowSearch(true);

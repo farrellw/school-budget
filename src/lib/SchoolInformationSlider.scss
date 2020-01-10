@@ -6,10 +6,8 @@
   .glide__slides {
     overflow: visible;
   }
-}
 
-.school-information-container {
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  .add-school-button {
+    margin: 25px;
+  }
 }

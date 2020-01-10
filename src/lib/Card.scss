@@ -1,23 +1,32 @@
+@import "../mixins.scss";
+
 .card {
   position: relative;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 2px;
+  @include box-shadow-narrow;
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
   .header {
-    padding: 1em;
+    padding: 30px 30px 0;
     display: flex;
     justify-content: space-between;
   }
   .content {
-    padding: 1em;
+    padding: 30px;
     display: grid;
     grid-gap: 1em;
   }
   .close {
     position: absolute;
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     right: 0;
     top: 0;
+    padding: 0;
+    margin: 10px;
+    opacity: 0.5;
+    .icon {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
