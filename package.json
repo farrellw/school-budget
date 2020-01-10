@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.1.2",
@@ -17,6 +18,7 @@
     "highcharts": "^8.0.0",
     "highcharts-react-official": "^2.2.2",
     "node-sass": "^4.13.0",
+    "node-xlsx": "^0.15.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -24,8 +26,7 @@
     "react-select": "^3.0.8",
     "react-switch": "^5.0.1",
     "react-table": "^6.10.3",
-    "typescript": "^3.7.3",
-    "node-xlsx": "^0.15.0"
+    "typescript": "^3.7.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,5 +49,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
