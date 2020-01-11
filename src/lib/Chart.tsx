@@ -4,13 +4,15 @@ import { ITableData } from "../models/Data";
 import HC_exporting from "highcharts/modules/exporting";
 import HC_noDataToDisplay from "highcharts/modules/no-data-to-display";
 import HighchartsReact from "highcharts-react-official";
+import { colors } from 'src/models/GeneralExpenseConstants';
 
 HC_exporting(Highcharts);
 HC_noDataToDisplay(Highcharts);
 Highcharts.setOptions({
   lang: {
     thousandsSep: ","
-  }
+  },
+  colors: colors
 });
 
 interface IProps {
@@ -38,8 +40,7 @@ function Chart({ caption, rows, series }: IProps) {
       },
       labels: {
         overflow: "justify"
-      },
-      
+      }
     },
     plotOptions: {
       bar: {

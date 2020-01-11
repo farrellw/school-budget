@@ -7,13 +7,13 @@ import {
   ViewByOption,
   averageSchoolFunction
 } from "../models/Data";
-import { SeriesOptionsType } from "highcharts";
+import { SeriesBarOptions } from "highcharts";
 import Chart from "./Chart";
 import Table from "./Table";
 import "./GeneralExpense.scss";
 import averageExpenses from "../data/SchoolAverages.json";
 import ViewOptions from "./ViewOptions";
-import { rows } from "../models/GeneralExpenseConstants";
+import { rows, colors } from "../models/GeneralExpenseConstants";
 
 interface IProps {
   schools: ISchool[];
@@ -72,13 +72,14 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   );
 
   // Compute chart data to display
-  const series: SeriesOptionsType[] = combinedSchoolsAndAverages.map((s, i) => {
+  const series: SeriesBarOptions[] = combinedSchoolsAndAverages.map((s, i) => {
     return {
       type: "bar",
       name: headers[i + 1],
       data: rows.map(r => {
-        return Math.round(s.expenses[r.key] * 100) / 100;
-      })
+        return (Math.round(s.expenses[r.key] * 100) / 100)
+      }),
+      color: colors[i]
     };
   });
 
@@ -86,10 +87,10 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   const caption = `General Expenses`;
 
   const tableData: ITableRow[] = rows.map(
-    (row: ITableData, i: number): ITableRow => {
+    (row: ITableData): ITableRow => {
       return {
         ...row,
-        values: combinedSchoolsAndAverages.map((n, j: number): string => {
+        values: combinedSchoolsAndAverages.map((n): string => {
           if (viewByOption === "Total") {
             return getValue(n.expenses[row.key].toString());
           } else {
@@ -119,7 +120,6 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
             toggle={viewByOption}
             compareWithAverage={compareWithAverage}
           />
-
           <Chart rows={rows} series={series} caption={caption} />
         </div>
       </div>
