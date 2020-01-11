@@ -31,7 +31,6 @@ const getValue = (val: number): string => {
   }
 };
 
-
 function Chart({ caption, rows, series }: IProps) {
   const options: Highcharts.Options = {
     chart: {
