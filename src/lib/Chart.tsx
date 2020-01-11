@@ -21,10 +21,24 @@ interface IProps {
   series: Highcharts.SeriesOptionsType[];
 }
 
+
+
+const getValue = (val: number): string => {
+  if(val > 1000) { 
+    return "$ " +  (Math.floor(val / 1000) + "k").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    return "$ " + val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+};
+
+
 function Chart({ caption, rows, series }: IProps) {
   const options: Highcharts.Options = {
     chart: {
-      type: "bar"
+      type: "bar",
+      numberFormatter: (number) => {
+        return getValue(number);
+      }
     },
     title: {
       text: caption + " (Graph View)"
