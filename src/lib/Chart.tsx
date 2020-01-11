@@ -25,7 +25,7 @@ function Chart({ caption, rows, series }: IProps) {
       type: "bar"
     },
     title: {
-      text: caption
+      text: caption + " (Graph View)"
     },
     xAxis: {
       categories: rows.map(n => n.label)
@@ -38,7 +38,8 @@ function Chart({ caption, rows, series }: IProps) {
       },
       labels: {
         overflow: "justify"
-      }
+      },
+      
     },
     plotOptions: {
       bar: {

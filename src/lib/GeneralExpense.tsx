@@ -67,7 +67,7 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
     return "$ " + val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
-  const headers = ["Field Name"].concat(
+  const headers = ["Category"].concat(
     combinedSchoolsAndAverages.map(n => n.name)
   );
 
@@ -83,7 +83,7 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   });
 
   // Compute table data to display
-  const caption = `General Expenses ( ${viewByOption} )`;
+  const caption = `General Expenses`;
 
   const tableData: ITableRow[] = rows.map(
     (row: ITableData, i: number): ITableRow => {
@@ -102,23 +102,34 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   );
 
   return (
-    <section className="card">
-      <ViewOptions
-        onCompareWithAverageChange={handleCompareWithAverageChange}
-        onToggleChange={handleViewByOptionChange}
-        toggle={viewByOption}
-        compareWithAverage={compareWithAverage}
-      />
-      <div className="expense-section">
+    <section>
+      <div className="panel">
+        <div className="card key">
+          <h3>Key</h3>
+          <ul>
+            {schools.map((n, j: number) => {
+              return <li key={j}>{n.name}</li>;
+            })}
+          </ul>
+        </div>
+        <div className="chart-container card">
+          <ViewOptions
+            onCompareWithAverageChange={handleCompareWithAverageChange}
+            onToggleChange={handleViewByOptionChange}
+            toggle={viewByOption}
+            compareWithAverage={compareWithAverage}
+          />
+
+          <Chart rows={rows} series={series} caption={caption} />
+        </div>
+      </div>
+      <div className="panel">
         <Table
           headers={headers}
           clickHandler={categoryClickHandler}
           caption={caption}
           rows={tableData}
         />
-        <div className="chart-container">
-          <Chart rows={rows} series={series} caption={caption} />
-        </div>
       </div>
     </section>
   );
