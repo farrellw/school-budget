@@ -4,7 +4,7 @@ import { ITableData } from "../models/Data";
 import HC_exporting from "highcharts/modules/exporting";
 import HC_noDataToDisplay from "highcharts/modules/no-data-to-display";
 import HighchartsReact from "highcharts-react-official";
-import { colors } from 'src/models/GeneralExpenseConstants';
+import { colors } from "src/models/GeneralExpenseConstants";
 
 HC_exporting(Highcharts);
 HC_noDataToDisplay(Highcharts);
@@ -21,10 +21,23 @@ interface IProps {
   series: Highcharts.SeriesOptionsType[];
 }
 
+
+
+const getValue = (val: number): string => {
+  if(val > 1000) { 
+    return "$ " +  (Math.floor(val / 1000) + "k").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    return "$ " + val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+};
+
 function Chart({ caption, rows, series }: IProps) {
   const options: Highcharts.Options = {
     chart: {
-      type: "bar"
+      type: "bar",
+      numberFormatter: (number) => {
+        return getValue(number);
+      }
     },
     title: {
       text: caption + " (Graph View)"
@@ -50,18 +63,18 @@ function Chart({ caption, rows, series }: IProps) {
       }
     },
     legend: {
-      layout: "vertical",
       align: "right",
       verticalAlign: "top",
-      x: -40,
-      y: 120,
-      floating: true,
+      layout: "vertical",
+      x: 0,
+      y: 100,
       borderWidth: 1,
       backgroundColor:
         (Highcharts.defaultOptions.legend &&
           Highcharts.defaultOptions.legend.backgroundColor) ||
         "#FFFFFF",
-      shadow: true
+      shadow: true,
+      enabled: false
     },
     credits: {
       enabled: false
@@ -82,9 +95,7 @@ function Chart({ caption, rows, series }: IProps) {
     }
   };
 
-  return (
-      <HighchartsReact highcharts={Highcharts} options={options} />
-  );
+  return <HighchartsReact highcharts={Highcharts} options={options} />;
 }
 
 export default Chart;

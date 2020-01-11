@@ -14,14 +14,9 @@ import "./GeneralExpense.scss";
 import averageExpenses from "../data/SchoolAverages.json";
 import ViewOptions from "./ViewOptions";
 import { rows, colors } from "../models/GeneralExpenseConstants";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  library
-} from '@fortawesome/fontawesome-svg-core';
-import {
-  faCircle
-} from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faCircle);
 
@@ -87,15 +82,22 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
       type: "bar",
       name: headers[i + 1],
       data: rows.map(r => {
-        return (Math.round(s.expenses[r.key] * 100) / 100)
+        return Math.round(s.expenses[r.key] * 100) / 100;
       }),
       color: colors[i]
     };
   });
 
-  // Compute table data to display
-  const caption = `General Expenses`;
+  const buildCaption = (viewByOption: ViewByOption) => {
+    if(viewByOption === "Total"){
+      return `Total Dollars Spent`
+    } else {
+      return `Total Dollars Spent per Student`
+    }
+  }
 
+  const caption = buildCaption(viewByOption);
+  
   const tableData: ITableRow[] = rows.map(
     (row: ITableData): ITableRow => {
       return {
@@ -117,11 +119,31 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
       <div className="panel">
         <div className="card key">
           <h3>Key</h3>
-          <ul>
-            {schools.map((n, j: number) => {
-              return <li key={j}><FontAwesomeIcon icon="circle" color={colors[j]} />{n.name}</li>;
-            })}
-          </ul>
+          <div className="school-list">
+            <ul>
+              {schools.map((n, j: number) => {
+                return (
+                  <li key={j}>
+                    <FontAwesomeIcon icon="circle" color={colors[j]} />
+                    {n.name}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="category-list">
+            <ul>
+              {
+                rows.map((n, j: number) => {
+                  return (
+                    <li key={j}>
+                      {n.label}
+                    </li>
+                  )
+                })
+              }
+            </ul>
+          </div>
         </div>
         <div className="chart-container card">
           <ViewOptions
