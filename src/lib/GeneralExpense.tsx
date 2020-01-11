@@ -14,6 +14,16 @@ import "./GeneralExpense.scss";
 import averageExpenses from "../data/SchoolAverages.json";
 import ViewOptions from "./ViewOptions";
 import { rows, colors } from "../models/GeneralExpenseConstants";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  library
+} from '@fortawesome/fontawesome-svg-core';
+import {
+  faCircle
+} from '@fortawesome/free-solid-svg-icons';
+
+
+library.add(faCircle);
 
 interface IProps {
   schools: ISchool[];
@@ -109,7 +119,7 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
           <h3>Key</h3>
           <ul>
             {schools.map((n, j: number) => {
-              return <li key={j}>{n.name}</li>;
+              return <li key={j}><FontAwesomeIcon icon="circle" color={colors[j]} />{n.name}</li>;
             })}
           </ul>
         </div>
