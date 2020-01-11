@@ -64,7 +64,7 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   const combinedSchoolsAndAverages = selectedSchools.concat(selectedAverages);
 
   const getValue = (val: string): string => {
-    return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return "$ " + val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
   const headers = ["Field Name"].concat(
