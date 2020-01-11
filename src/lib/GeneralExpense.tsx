@@ -88,9 +88,16 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
     };
   });
 
-  // Compute table data to display
-  const caption = `General Expenses`;
+  const buildCaption = (viewByOption: ViewByOption) => {
+    if(viewByOption === "Total"){
+      return `Total Dollars Spent`
+    } else {
+      return `Total Dollars Spent per Student`
+    }
+  }
 
+  const caption = buildCaption(viewByOption);
+  
   const tableData: ITableRow[] = rows.map(
     (row: ITableData): ITableRow => {
       return {
