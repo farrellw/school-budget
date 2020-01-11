@@ -18,13 +18,13 @@ function Body({ schools }: Props) {
   return (
     <main className="body">
       <SchoolInformationSlider schools={schools} />
-      <div className="expense-panel">
+      {schools.length > 0 && (
         <GeneralExpense
           schools={schools}
           categoryClickHandler={categoryClickEvent}
           category={selectedCategory}
         />
-      </div>
+      )}
       {selectedCategory && selectedCategory !== "" && (
         <div className="expense-panel">
           <CategoryExpense category={selectedCategory} schools={schools} />
