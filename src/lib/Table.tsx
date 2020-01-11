@@ -1,6 +1,18 @@
 import * as React from "react";
 import { ITableRow } from "../models/Data";
 import "./Table.scss";
+import { colors } from "../models/GeneralExpenseConstants";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  library
+} from '@fortawesome/fontawesome-svg-core';
+import {
+  faCircle
+} from '@fortawesome/free-solid-svg-icons';
+
+
+library.add(faCircle);
 
 interface IProps {
   headers: string[];
@@ -19,7 +31,11 @@ function Table({ headers, rows, caption, clickHandler }: IProps) {
         <thead>
           <tr>
             {headers.map((n, i) => {
-              return <th key={i}>{n}</th>;
+              if(i !== 0){
+                return <th key={i}><FontAwesomeIcon icon="circle" color={colors[i - 1]} /><div>{n}</div></th>;
+              } else {
+                return <th key={i}><div>{n}</div></th>;
+              }
             })}
           </tr>
         </thead>
