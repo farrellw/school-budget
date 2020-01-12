@@ -48,7 +48,26 @@ function SchoolInformationSlider({ schools }: Props) {
     return new Glide(".glide", options);
   }
 
-  const glideOptions: GlideOptions = { peek: 25, rewind: false };
+  const glideOptions: GlideOptions = {
+    peek: 25,
+    rewind: false,
+    bound: true,
+    perView: Math.min(5, schools.length),
+    breakpoints: {
+      512: {
+        perView: 1
+      },
+      768: {
+        perView: 2
+      },
+      1024: {
+        perView: Math.min(3, schools.length)
+      },
+      1224: {
+        perView: Math.min(4, schools.length)
+      }
+    }
+  };
   const [glide, setGlide] = useState(createGlide(glideOptions));
 
   useEffect(() => {
