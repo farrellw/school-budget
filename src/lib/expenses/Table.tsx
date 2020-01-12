@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ITableRow } from "../models/Data";
+import { ITableRow } from "../../models/Data";
 import "./Table.scss";
-import { colors } from "../models/GeneralExpenseConstants";
+import { colors } from "../../models/GeneralExpenseConstants";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

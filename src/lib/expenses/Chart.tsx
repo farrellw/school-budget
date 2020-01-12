@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as Highcharts from "highcharts";
-import { ITableData } from "../models/Data";
+import { ITableData } from "../../models/Data";
 import HC_exporting from "highcharts/modules/exporting";
 import HC_noDataToDisplay from "highcharts/modules/no-data-to-display";
 import HighchartsReact from "highcharts-react-official";

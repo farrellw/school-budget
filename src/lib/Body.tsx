@@ -2,8 +2,8 @@ import * as React from "react";
 import { useState } from "react";
 import { ISchool } from "../models/Data";
 import SchoolInformationSlider from "./SchoolInformationSlider";
-import GeneralExpense from "./GeneralExpense";
-import CategoryExpense from "./CategoryExpense";
+import GeneralExpense from "./expenses/GeneralExpense";
+import CategoryExpense from "./expenses/CategoryExpense";
 
 type Props = { schools: ISchool[] };
 function Body({ schools }: Props) {

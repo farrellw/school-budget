@@ -6,14 +6,14 @@ import {
   ITableRow,
   ViewByOption,
   averageSchoolFunction
-} from "../models/Data";
+} from "../../models/Data";
 import { SeriesBarOptions } from "highcharts";
 import Chart from "./Chart";
 import Table from "./Table";
 import "./GeneralExpense.scss";
-import averageExpenses from "../data/SchoolAverages.json";
+import averageExpenses from "../../data/SchoolAverages.json";
 import ViewOptions from "./ViewOptions";
-import { rows, colors } from "../models/GeneralExpenseConstants";
+import { rows, colors } from "../../models/GeneralExpenseConstants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";

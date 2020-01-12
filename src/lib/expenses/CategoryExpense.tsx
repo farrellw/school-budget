@@ -5,12 +5,12 @@ import {
   ISchool,
   ITableRow,
   ViewByOption
-} from "../models/Data";
+} from "../../models/Data";
 import { SeriesOptionsType } from "highcharts";
 import Table from "./Table";
 import Chart from "./Chart";
 import ViewOptions from "./ViewOptions";
-import { subCategoryTableData } from "../models/FakeSubCategory";
+import { subCategoryTableData } from "../../models/FakeSubCategory";
 
 interface IProps {
   schools: ISchool[];
