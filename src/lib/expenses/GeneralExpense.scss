@@ -1,0 +1,21 @@
+.panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
+.key {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+table {
+  margin: 0.5em;
+}
+
+.chart-container {
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 800px;
+}
