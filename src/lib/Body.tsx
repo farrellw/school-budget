@@ -25,21 +25,21 @@ function Body({ schools }: Props) {
   return (
     <main className="body">
       <SchoolInformationSlider schools={schools} />
-      {false && (
+      {
         <ViewOptions
           onCompareWithAverageChange={handleCompareWithAverageChange}
           onToggleChange={handleToggleChange}
           toggle={toggle}
           compareWithAverage={compareWithAverage}
         />
-      )}
-      {false && (
+      }
+      {
         <Expenses
           schools={schools}
           compareWithAverage={compareWithAverage}
           toggle={toggle}
         />
-      )}
+      }
     </main>
   );
 }

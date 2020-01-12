@@ -2,6 +2,9 @@
   width: 100vw;
   overflow: hidden;
   min-height: 100%;
+  .glide {
+    margin-bottom: 5px;
+  }
   .glide__track,
   .glide__slides {
     overflow: visible;
