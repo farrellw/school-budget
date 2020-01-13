@@ -1,7 +1,8 @@
 .school-information-slider {
   width: 100vw;
-  overflow: hidden;
-  min-height: 100%;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
   .glide {
     margin-bottom: 5px;
   }
