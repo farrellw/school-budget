@@ -89,15 +89,15 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   });
 
   const buildCaption = (viewByOption: ViewByOption) => {
-    if(viewByOption === "Total"){
-      return `Total Dollars Spent`
+    if (viewByOption === "Total") {
+      return `Total Dollars Spent`;
     } else {
-      return `Total Dollars Spent per Student`
+      return `Total Dollars Spent per Student`;
     }
-  }
+  };
 
   const caption = buildCaption(viewByOption);
-  
+
   const tableData: ITableRow[] = rows.map(
     (row: ITableData): ITableRow => {
       return {
@@ -115,7 +115,7 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   );
 
   return (
-    <section>
+    <section className="general-expense">
       <div className="panel">
         <div className="card key">
           <h3>Key</h3>
@@ -133,15 +133,9 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
           </div>
           <div className="category-list">
             <ul>
-              {
-                rows.map((n, j: number) => {
-                  return (
-                    <li key={j}>
-                      {n.label}
-                    </li>
-                  )
-                })
-              }
+              {rows.map((n, j: number) => {
+                return <li key={j}>{n.label}</li>;
+              })}
             </ul>
           </div>
         </div>

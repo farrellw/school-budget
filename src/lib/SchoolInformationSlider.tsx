@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SchoolInformationSlider.scss";
 import SchoolInformation from "./SchoolInformation";
 import { ISchool } from "src/models/Data";
@@ -8,6 +8,8 @@ import SearchForCompare from "./SearchForCompare";
 import allSchools from "../data/SchoolExpenses.json";
 import * as Url from "../utils/Url";
 import { useHistory } from "react-router-dom";
+import Glide from "@glidejs/glide";
+import { GlideOptions } from "@glidejs/glide/dist/glide.modular.esm";
 
 type Props = { schools: ISchool[] };
 
@@ -42,10 +44,55 @@ function SchoolInformationSlider({ schools }: Props) {
 
   const schoolsForComparison: ISchool[] = allSchools.filter(notAlreadySelected);
 
+  function createGlide(options: GlideOptions): Glide {
+    return new Glide(".glide", options);
+  }
+
+  const glideOptions: GlideOptions = {
+    peek: 25,
+    rewind: false,
+    bound: true,
+    perView: Math.min(5, schools.length),
+    breakpoints: {
+      512: {
+        perView: 1
+      },
+      768: {
+        perView: 2
+      },
+      1024: {
+        perView: Math.min(3, schools.length)
+      },
+      1224: {
+        perView: Math.min(4, schools.length)
+      }
+    }
+  };
+  const [glide, setGlide] = useState(createGlide(glideOptions));
+
+  useEffect(() => {
+    glide.mount();
+  }, [glide]);
+
+  useEffect(() => {
+    const startAt = showSearch ? 0 : Math.max(glide.index - 1, 0);
+    setGlide(
+      createGlide({
+        ...glideOptions,
+        startAt
+      })
+    );
+
+    if (glide) {
+      glide.destroy();
+    }
+  }, [showSearch, schools]);
+
   return (
     <div className="school-information-slider">
       {schools.length > 0 && (
         <Button
+          className="add-school-button"
           type="default"
           onClick={() => {
             setShowSearch(true);
@@ -55,20 +102,28 @@ function SchoolInformationSlider({ schools }: Props) {
           Add school to compare
         </Button>
       )}
-      {showSearch && (
-        <SearchForCompare
-          schools={schoolsForComparison}
-          onSchoolSelected={onSchoolSelected}
-          onClose={() => setShowSearch(false)}
-        />
-      )}
-      {schools.map(school => (
-        <SchoolInformation
-          school={school}
-          schools={schools}
-          onClose={onSchoolClose}
-        />
-      ))}
+      <div className="glide">
+        <div className="glide__track" data-glide-el="track">
+          <ul className="glide__slides">
+            {showSearch && (
+              <SearchForCompare
+                schools={schoolsForComparison}
+                onSchoolSelected={onSchoolSelected}
+                onClose={() => setShowSearch(false)}
+              />
+            )}
+            {schools.map(school => (
+              <li className="glide__slide" key={school.id}>
+                <SchoolInformation
+                  school={school}
+                  schools={schools}
+                  onClose={onSchoolClose}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
