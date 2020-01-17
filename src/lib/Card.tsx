@@ -9,7 +9,7 @@ type Props = {
 };
 
 export function CardHeader({ children, className = "" }: Props) {
-  return <div className={`${className} header`}>{children}</div>;
+  return <div className={`${className}`}>{children}</div>;
 }
 
 export function CardContent({ children, className = "" }: Props) {
