@@ -116,7 +116,7 @@ function GeneralExpense({ schools }: IProps) {
           <h3>Key</h3>
           <div className="school-list">
             <ul>
-              {schools.map((n, j: number) => {
+              {series.map((n, j: number) => {
                 return (
                   <li key={j}>
                     <FontAwesomeIcon icon="circle" color={colors[j]} />
