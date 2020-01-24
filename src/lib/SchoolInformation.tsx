@@ -26,10 +26,6 @@ function SchoolInformation({ onClose, school, schools, className }: Props) {
           <dd>{school.principal}</dd>
         </dl>
         <dl>
-          <dt>Vice Principal</dt>
-          <dd>Dr. Seuss</dd>
-        </dl>
-        <dl>
           <dt>Enrollment</dt>
           <dd>{school.projectedEnrollment}</dd>
         </dl>
