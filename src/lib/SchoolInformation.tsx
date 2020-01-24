@@ -13,7 +13,6 @@ function SchoolInformation({ onClose, school, schools, className }: Props) {
   return (
     <Card
       className={`school-information ${className}`}
-      onClose={() => onClose(school.id)}
     >
       <CardHeader className="header">
         <h2>{school.name}</h2>
