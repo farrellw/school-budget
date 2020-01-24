@@ -40,7 +40,7 @@ function Chart({ caption, rows, series }: IProps) {
       }
     },
     title: {
-      text: caption + " (Graph View)"
+      text: caption
     },
     xAxis: {
       categories: rows.map(n => n.label)

@@ -84,13 +84,11 @@ function GeneralExpense({ schools }: IProps) {
     };
   });
 
-  console.log(series);
-
   const buildCaption = (viewByOption: ViewByOption) => {
     if (viewByOption === "Total") {
-      return `Total Dollars Spent`;
+      return `Dollars Spent Per Category`;
     } else {
-      return `Total Dollars Spent per Student`;
+      return `Dollars Spent Per Category ( Per Student )`;
     }
   };
 

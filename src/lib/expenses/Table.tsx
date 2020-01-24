@@ -24,7 +24,7 @@ function Table({ headers, rows, caption }: IProps) {
   return (
     <div className="card">
       <table>
-        <caption>{caption} ( Table View )</caption>
+        <caption>{caption}</caption>
         <thead>
           <tr>
             {headers.map((n, i) => {
