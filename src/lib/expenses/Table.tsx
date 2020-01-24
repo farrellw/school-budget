@@ -18,12 +18,9 @@ interface IProps {
   headers: string[];
   rows: ITableRow[];
   caption: string;
-  clickHandler?: (
-    event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
-  ) => void;
 }
 
-function Table({ headers, rows, caption, clickHandler }: IProps) {
+function Table({ headers, rows, caption }: IProps) {
   return (
     <div className="card">
       <table>
@@ -44,9 +41,7 @@ function Table({ headers, rows, caption, clickHandler }: IProps) {
             return (
               <tr
                 key={i}
-                onClick={clickHandler}
                 id={row.label}
-                className={row.selected ? "selected" : ""}
               >
                 <td>{row.label}</td>
 
