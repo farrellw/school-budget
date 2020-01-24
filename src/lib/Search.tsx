@@ -22,7 +22,12 @@ interface IProps {
 function Search({ selectedSchools }: IProps) {
   const history = useHistory();
 
-  const selectedIds = selectedSchools.map(s => s.id);
+  const selectedIds = selectedSchools.map(s => {
+    return {
+      value: s.id, label: s.name
+    }
+  }
+  );
 
   function notAlreadySelected(school: any): boolean {
     return !selectedIds.find(schoolId => schoolId === school.id);
@@ -51,14 +56,19 @@ function Search({ selectedSchools }: IProps) {
     }
   }
 
+  function resetAll() {
+    selectSchool([])
+  }
+
   return (
     <div className="search">
       <Card>
         <CardContent>
           <label>
-            Find your school:
-            <Select options={options} onChange={selectSchool} isMulti={true} />
+            Select a school ( Maximum of 5):
+            <Select options={options} onChange={selectSchool} isMulti={true} isClearable={false} value={selectedIds} />
           </label>
+          <button onClick={resetAll}>Reset All</button>
         </CardContent>
       </Card>
     </div>
