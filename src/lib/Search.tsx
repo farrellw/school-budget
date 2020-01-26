@@ -12,7 +12,6 @@ interface IOption {
   label: string;
 }
 
-
 function isOption(option: ValueType<IOption>): option is IOption {
   return Boolean(option) && (option as IOption).value !== undefined;
 }
@@ -30,31 +29,31 @@ function Search({selectedSchools}: IProps) {
     return !selectedIds.find(schoolId => schoolId === school.id);
   }
 
-  function onSchoolSelected(id: string) {
-    const updatedSelectedIds = Url.addId(selectedIds, id);
-    const queryString = Url.toQueryString(updatedSelectedIds);
-    history.push(`?${queryString}`);
-  }
-
   const schoolsForComparison: ISchool[] = schools.filter(notAlreadySelected);
   const options: IOption[] = schoolsForComparison.map((school: ISchool) => ({
     value: school.id,
     label: school.name
   }));
 
-  function selectSchool(option: ValueType<IOption>) {
-    if (isOption(option)) {
-      onSchoolSelected(option.value);
+  // TODO how to get any out of this function
+  function selectSchool(selectedOptions: any) {
+    if(selectedOptions){
+      const selectedIds = selectedOptions.filter((o: IOption) => isOption(o)).map((o: IOption) => o.value);
+      const queryString = Url.toQueryString(selectedIds);
+      
+      history.push(`?${queryString}`);
+    } else {
+      history.push("/")
     }
   }
-
+  
   return (
     <div className="search">
       <Card>
         <CardContent>
           <label>
             Find your school:
-            <Select options={options} onChange={selectSchool} />
+            <Select options={options} onChange={selectSchool} isMulti={true} />
           </label>
         </CardContent>
       </Card>
