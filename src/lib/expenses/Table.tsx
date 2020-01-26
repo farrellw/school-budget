@@ -38,10 +38,12 @@ function Table({ headers, rows, caption }: IProps) {
         </thead>
         <tbody>
           {rows.map((row: ITableRow, i: number) => {
+            const className = row.label === "Total" ? "total" : ""
             return (
               <tr
                 key={i}
                 id={row.label}
+                className={className}
               >
                 <td>{row.label}</td>
 
