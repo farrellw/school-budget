@@ -18,4 +18,4 @@ export const rows: ITableData[] = [
     { label: "Discretionary", key: "discretionary" }
 ];
 
-export const colors = ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'];
+export const colors = ['#003f5c', '#444e86', '#955196', '#dd5182', '#ff6e54', '#ffa600']
