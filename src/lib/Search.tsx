@@ -4,6 +4,7 @@ import schools from "../data/SchoolExpenses.json";
 import { ISchool } from "src/models/Data.js";
 import { useHistory } from "react-router-dom";
 import { Card, CardContent } from "./Card";
+import * as Url from "../utils/Url";
 import "./Search.scss";
 
 interface IOption {
@@ -24,10 +25,14 @@ function Search({ selectedSchools }: IProps) {
 
   const selectedIds = selectedSchools.map(s => {
     return {
-      value: s.id, label: s.name
-    }
-  }
-  );
+      value: s.id,
+      label: s.name
+    };
+  });
+
+  const isDisabled = () => {
+    return selectedIds.length >= 5;
+  };
 
   function notAlreadySelected(school: any): boolean {
     return !selectedIds.find(schoolId => schoolId === school.id);
@@ -41,23 +46,25 @@ function Search({ selectedSchools }: IProps) {
 
   // TODO how to get any out of this function
   function selectSchool(selectedOptions: any) {
-    if(selectedOptions){
-      const selectedIds = selectedOptions.filter((o: IOption) => isOption(o)).map((o: IOption) => o.value);
+    if (selectedOptions) {
+      const selectedIds = selectedOptions
+        .filter((o: IOption) => isOption(o))
+        .map((o: IOption) => o.value);
       const queryString = Url.toQueryString(selectedIds);
-      
+
       history.push(`?${queryString}`);
     } else {
-      history.push("/")
+      history.push("");
     }
   }
-  
+
   return (
     <div className="search">
       <Card>
         <CardContent>
           <label>
             Select a school ( Maximum of 5):
-            <Select options={options} onChange={selectSchool} isMulti={true} />
+            <Select options={options} onChange={selectSchool} isMulti={true} isOptionDisabled={isDisabled}/>
           </label>
           {/* <button onClick={resetAll}>Reset All</button> */}
         </CardContent>
