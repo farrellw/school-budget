@@ -13,7 +13,11 @@ import Table from "./Table";
 import "./GeneralExpense.scss";
 import averageExpenses from "../../data/SchoolAverages.json";
 import ViewOptions from "./ViewOptions";
-import { rows, colors } from "../../models/GeneralExpenseConstants";
+import {
+  rows,
+  colors,
+  descriptions
+} from "../../models/GeneralExpenseConstants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
@@ -22,13 +26,9 @@ library.add(faCircle);
 
 interface IProps {
   schools: ISchool[];
-  categoryClickHandler: (
-    event: React.MouseEvent<HTMLTableRowElement, MouseEvent>
-  ) => void;
-  category: string;
 }
 
-function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
+function GeneralExpense({ schools }: IProps) {
   const [viewByOption, setViewByOption] = useState<ViewByOption>("Total");
   const [compareWithAverage, setCompareWthAverage] = useState(false);
 
@@ -80,24 +80,28 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
   const series: SeriesBarOptions[] = combinedSchoolsAndAverages.map((s, i) => {
     return {
       type: "bar",
-      name: headers[i + 1],
-      data: rows.map(r => {
-        return Math.round(s.expenses[r.key] * 100) / 100;
-      }),
+      name: s.name,
+      data: rows
+        .filter(r => {
+          return r.label !== "Total";
+        })
+        .map(r => {
+          return Math.round(s.expenses[r.key] * 100) / 100;
+        }),
       color: colors[i]
     };
   });
 
   const buildCaption = (viewByOption: ViewByOption) => {
-    if(viewByOption === "Total"){
-      return `Total Dollars Spent`
+    if (viewByOption === "Total") {
+      return `Dollars Spent Per Category`;
     } else {
-      return `Total Dollars Spent per Student`
+      return `Dollars Spent Per Category ( Per Student )`;
     }
-  }
+  };
 
   const caption = buildCaption(viewByOption);
-  
+
   const tableData: ITableRow[] = rows.map(
     (row: ITableData): ITableRow => {
       return {
@@ -108,41 +112,40 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
           } else {
             return getValue(n.expenses[row.key].toFixed(2));
           }
-        }),
-        selected: row.label === category
+        })
       };
     }
   );
 
   return (
-    <section>
+    <section className="general-expense">
       <div className="panel">
         <div className="card key">
-          <h3>Key</h3>
+          <h3 className="school-list-header">Key</h3>
           <div className="school-list">
             <ul>
-              {schools.map((n, j: number) => {
+              {series.map((n, j: number) => {
                 return (
-                  <li key={j}>
+                  <li key={j} className="school-list-item">
                     <FontAwesomeIcon icon="circle" color={colors[j]} />
-                    {n.name}
+                    <span>{n.name}</span>
                   </li>
                 );
               })}
             </ul>
           </div>
           <div className="category-list">
-            <ul>
-              {
-                rows.map((n, j: number) => {
-                  return (
-                    <li key={j}>
-                      {n.label}
-                    </li>
-                  )
-                })
-              }
-            </ul>
+            {rows.filter(r => r.label !== "Total").map((n, j: number) => {
+              
+              const description = (descriptions.find(d => d.label === n.label))
+
+              return (
+                <div className="category-description-container" key={j}>
+                  <h4 className="category-description-header">{n.label}:</h4>
+                  <span>{description ? description.description : ""}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="chart-container card">
@@ -152,16 +155,17 @@ function GeneralExpense({ schools, categoryClickHandler, category }: IProps) {
             toggle={viewByOption}
             compareWithAverage={compareWithAverage}
           />
-          <Chart rows={rows} series={series} caption={caption} />
+          <Chart
+            rows={rows.filter(x => {
+              return x.label !== "Total";
+            })}
+            series={series}
+            caption={caption}
+          />
         </div>
       </div>
       <div className="panel">
-        <Table
-          headers={headers}
-          clickHandler={categoryClickHandler}
-          caption={caption}
-          rows={tableData}
-        />
+        <Table headers={headers} caption={caption} rows={tableData} />
       </div>
     </section>
   );

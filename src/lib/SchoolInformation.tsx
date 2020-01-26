@@ -7,21 +7,26 @@ type Props = {
   school: ISchool;
   schools: ISchool[];
   onClose: (id: string) => void;
+  className?: String;
 };
-function SchoolInformation({ onClose, school, schools }: Props) {
+function SchoolInformation({ school, className }: Props) {
   return (
-    <Card className="school-information" onClose={() => onClose(school.id)}>
+    <Card
+      className={`school-information ${className}`}
+    >
       <CardHeader className="header">
         <h2>{school.name}</h2>
       </CardHeader>
       <CardContent>
+        <span>{school.address}</span>
+        <span>{school.phone}</span>
         <dl>
-          <dt>Zip Code</dt>
-          <dd>63108</dd>
           <dt>Principal</dt>
           <dd>{school.principal}</dd>
-          <dt>Vice Principal</dt>
-          <dd>Dr. Seuss</dd>
+        </dl>
+        <dl>
+          <dt>Enrollment</dt>
+          <dd>{school.projectedEnrollment}</dd>
         </dl>
       </CardContent>
     </Card>

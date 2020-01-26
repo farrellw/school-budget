@@ -22,7 +22,7 @@ export function Card({ children, className = "", onClose }: CardProps) {
     <div className={`${className} card`}>
       {onClose && (
         <Button type="image" title="Close" className="close" onClick={onClose}>
-          <Icon type="close" />
+          <Icon type="delete" />
         </Button>
       )}
       {children}

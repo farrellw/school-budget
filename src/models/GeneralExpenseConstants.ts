@@ -1,5 +1,44 @@
 import { ITableData } from './Data';
 
+interface IDescription {
+    label: string;
+    description: string;
+}
+
+export const descriptions: IDescription[] = [{
+    "label": "Administrative Salaries",
+    "description": "dafadsfdseadsfadsfdasfasd"
+},
+{
+    "label": "Instructional Salaries",
+    "description": "asdf;ljdsafjdsfjkdsjf;kdjslfkjsda;klfjasd"
+}
+    ,
+{
+    "label": "Instructional Support Salaries",
+    "description": "lkjkljiopeasdfdsafasdfs"
+},
+{
+    "label": "Non Instructional Support Salaries",
+    "description": "dafadsfdseadsfadsfdasfasd"
+},
+{
+    "label": "Temp",
+    "description": "asdf;ljdsafjdsfjkdsjf;kdjslfkjsda;klfjasd"
+},
+{
+    "label": "Benefits",
+    "description": "dafadsfdseadsfadsfdasfasd"
+},
+{
+    "label": "Transportation",
+    "description": "asdf;ljdsafjdsfjkdsjf;kdjslfkjsda;klfjasd"
+},
+{
+    "label": "Discretionary",
+    "description": "lkjkljiopeasdfdsafasdfs"
+}]
+
 export const rows: ITableData[] = [
     { label: "Total", key: "total" },
     { label: "Administrative Salaries", key: "administrativeSalaries" },
@@ -18,4 +57,4 @@ export const rows: ITableData[] = [
     { label: "Discretionary", key: "discretionary" }
 ];
 
-export const colors = ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'];
+export const colors = ['#92C5DE', '#053061', '#FFD75E', '#FF7E56', '#B2182B', '#ffa600']

@@ -1,21 +1,49 @@
-.panel {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap-reverse;
-}
+.general-expense {
+  position: relative;
+  .panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+  }
 
-.key {
-  padding: 0.5em;
-  margin: 0.5em;
-}
+  .key {
+    padding: 0.75em;
+    margin: 0.5em;
+  }
 
-table {
-  margin: 0.5em;
-}
+  table {
+    margin: 0.5em;
+  }
 
-.chart-container {
-  padding: 0.5em;
-  margin: 0.5em;
-  width: 800px;
+  .chart-container {
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 800px;
+  }
+
+  .school-list {
+    border-bottom: solid;
+    border-color: grey;
+    border-width: thin;
+  }
+
+  .school-list-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 125%;
+  }
+  .school-list-item {
+    padding: .25em;
+  }
+  .school-list-item svg {
+    margin-right: .25em;
+  }
+  .category-description-header {
+    font-weight: bold;
+  }
+  .category-description-container, .category-list {
+    padding-top: .25em;
+    padding-bottom: .25em;
+  }
 }

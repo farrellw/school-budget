@@ -10,7 +10,7 @@ function Header({ schools }: Props) {
       <header className="main-header">
         <h1>SLPS BUDGET</h1>
       </header>
-      {schools.length <= 0 && <Search />}
+      {<Search selectedSchools={schools}/>}
     </>
   );
 }

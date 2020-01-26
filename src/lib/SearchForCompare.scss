@@ -1,2 +1,10 @@
-.search {
+.search-for-compare {
+  .card {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .content {
+      flex-grow: 1;
+    }
+  }
 }

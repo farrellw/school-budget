@@ -1,8 +1,15 @@
 @import "reset";
+@import "variables";
+@import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 
 html {
   font-family: Helvetica, Arial, sans-serif;
   background-color: rgba(0, 0, 0, 0.05);
+  color: var(--dark);
+}
+
+body {
+  min-height: 100vh;
 }
 
 h1 {
@@ -17,7 +24,7 @@ h2 {
 
 dl {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-areas: "dt dd";
   grid-gap: 0.5em;
   align-items: center;
@@ -37,7 +44,8 @@ dl {
 .body {
   padding: 1em;
   display: grid;
-  grid-gap: 1em;
+  grid-gap: 30px;
+  grid-template-rows: auto 1fr;
 }
 
 .main-header {
