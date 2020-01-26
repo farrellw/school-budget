@@ -63,8 +63,14 @@ function Search({ selectedSchools }: IProps) {
       <Card>
         <CardContent>
           <label>
-            Select a school ( Maximum of 5):
-            <Select options={options} onChange={selectSchool} isMulti={true} isOptionDisabled={isDisabled} value={selectedIds}/>
+            Compare Budget Data by Schools ( Max of 5 Schools )
+            <Select
+              options={options}
+              onChange={selectSchool}
+              isMulti={true}
+              isOptionDisabled={isDisabled}
+              value={selectedIds}
+            />
           </label>
           {/* <button onClick={resetAll}>Reset All</button> */}
         </CardContent>
