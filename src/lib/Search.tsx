@@ -5,7 +5,6 @@ import { ISchool } from "src/models/Data.js";
 import { useHistory } from "react-router-dom";
 import { Card, CardContent } from "./Card";
 import "./Search.scss";
-import * as Url from "../utils/Url";
 
 interface IOption {
   value: string;
@@ -20,10 +19,15 @@ interface IProps {
   selectedSchools: ISchool[];
 }
 
-function Search({selectedSchools}: IProps) {
+function Search({ selectedSchools }: IProps) {
   const history = useHistory();
 
-  const selectedIds = selectedSchools.map(s => s.id);
+  const selectedIds = selectedSchools.map(s => {
+    return {
+      value: s.id, label: s.name
+    }
+  }
+  );
 
   function notAlreadySelected(school: any): boolean {
     return !selectedIds.find(schoolId => schoolId === school.id);
@@ -52,9 +56,10 @@ function Search({selectedSchools}: IProps) {
       <Card>
         <CardContent>
           <label>
-            Find your school:
+            Select a school ( Maximum of 5):
             <Select options={options} onChange={selectSchool} isMulti={true} />
           </label>
+          {/* <button onClick={resetAll}>Reset All</button> */}
         </CardContent>
       </Card>
     </div>
