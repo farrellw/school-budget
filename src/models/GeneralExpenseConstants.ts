@@ -1,5 +1,44 @@
 import { ITableData } from './Data';
 
+interface IDescription {
+    label: string;
+    description: string;
+}
+
+export const descriptions: IDescription[] = [{
+    "label": "Administrative Salaries",
+    "description": "dafadsfdseadsfadsfdasfasd"
+},
+{
+    "label": "Instructional Salaries",
+    "description": "asdf;ljdsafjdsfjkdsjf;kdjslfkjsda;klfjasd"
+}
+    ,
+{
+    "label": "Instructional Support Salaries",
+    "description": "lkjkljiopeasdfdsafasdfs"
+},
+{
+    "label": "Non Instructional Support Salaries",
+    "description": "dafadsfdseadsfadsfdasfasd"
+},
+{
+    "label": "Temp",
+    "description": "asdf;ljdsafjdsfjkdsjf;kdjslfkjsda;klfjasd"
+},
+{
+    "label": "Benefits",
+    "description": "dafadsfdseadsfadsfdasfasd"
+},
+{
+    "label": "Transportation",
+    "description": "asdf;ljdsafjdsfjkdsjf;kdjslfkjsda;klfjasd"
+},
+{
+    "label": "Discretionary",
+    "description": "lkjkljiopeasdfdsafasdfs"
+}]
+
 export const rows: ITableData[] = [
     { label: "Total", key: "total" },
     { label: "Administrative Salaries", key: "administrativeSalaries" },
