@@ -64,7 +64,7 @@ function Search({ selectedSchools }: IProps) {
         <CardContent>
           <label>
             Select a school ( Maximum of 5):
-            <Select options={options} onChange={selectSchool} isMulti={true} isOptionDisabled={isDisabled}/>
+            <Select options={options} onChange={selectSchool} isMulti={true} isOptionDisabled={isDisabled} value={selectedIds}/>
           </label>
           {/* <button onClick={resetAll}>Reset All</button> */}
         </CardContent>
