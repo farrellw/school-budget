@@ -42,20 +42,9 @@ dl {
 }
 
 .body {
-  padding: 1em;
   display: grid;
-  grid-gap: 30px;
   grid-template-rows: auto 1fr;
-}
-
-.main-header {
-  background-color: #faba56;
-  padding: 1.5em 0;
-  color: #ffffff;
-
-  h1 {
-    margin-left: 1em;
-  }
+  margin-top: 1.5rem;
 }
 
 .footer {
