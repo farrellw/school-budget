@@ -1,6 +1,7 @@
 .general-expense {
   position: relative;
   .panel {
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -8,8 +9,8 @@
   }
 
   .key {
-    padding: 0.75em;
-    margin: 0.5em;
+    width: 35%;
+    margin-right: 1.3em;
   }
 
   table {
@@ -17,9 +18,7 @@
   }
 
   .chart-container {
-    padding: 0.5em;
-    margin: 0.5em;
-    width: 700px;
+    width: 60%;
   }
 
   .school-list {
@@ -34,16 +33,17 @@
     font-size: 125%;
   }
   .school-list-item {
-    padding: .25em;
+    padding: 0.25em;
   }
   .school-list-item svg {
-    margin-right: .25em;
+    margin-right: 0.25em;
   }
   .category-description-header {
     font-weight: bold;
   }
-  .category-description-container, .category-list {
-    padding-top: .25em;
-    padding-bottom: .25em;
+  .category-description-container,
+  .category-list {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
   }
 }

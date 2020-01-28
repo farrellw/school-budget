@@ -7,8 +7,8 @@ type Props = { schools: ISchool[] };
 function Header({ schools }: Props) {
   return (
     <>
-      <header className="header">
-        <h1>SLPS Budget</h1>
+      <header className="main-header">
+        <h1>SLPS BUDGET</h1>
       </header>
       {<Search selectedSchools={schools}/>}
     </>
