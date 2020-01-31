@@ -135,17 +135,18 @@ function GeneralExpense({ schools }: IProps) {
             </ul>
           </div>
           <div className="category-list">
-            {rows.filter(r => r.label !== "Total").map((n, j: number) => {
-              
-              const description = (descriptions.find(d => d.label === n.label))
+            {rows
+              .filter(r => r.label !== "Total")
+              .map((n, j: number) => {
+                const description = descriptions.find(d => d.label === n.label);
 
-              return (
-                <div className="category-description-container" key={j}>
-                  <h4 className="category-description-header">{n.label}:</h4>
-                  <span>{description ? description.description : ""}</span>
-                </div>
-              );
-            })}
+                return (
+                  <div className="category-description-container" key={j}>
+                    <h4 className="category-description-header">{n.label}:</h4>
+                    <p>{description ? description.description : ""}</p>
+                  </div>
+                );
+              })}
           </div>
         </div>
         <div className="chart-container card">

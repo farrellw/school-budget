@@ -22,7 +22,7 @@ interface IProps {
 
 function Table({ headers, rows, caption }: IProps) {
   return (
-    <div className="card">
+    <div className="card expense">
       <table>
         <caption>{caption}</caption>
         <thead>
