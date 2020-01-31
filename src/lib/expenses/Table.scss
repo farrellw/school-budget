@@ -1,9 +1,13 @@
+.expense {
+  width: 100%;
+  margin: 0 1rem;
+}
 
 table {
   table-layout: fixed;
   border-spacing: 5px;
 }
-  
+
 th,
 td {
   padding: 10px;
@@ -19,7 +23,9 @@ td:nth-child(1) {
   text-align: left;
 }
 
-tbody > tr:nth-child(odd) {background-color: #f2f2f2;}
+tbody > tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
 
 .total {
   border-bottom: 2px solid black;
