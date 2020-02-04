@@ -24,8 +24,8 @@ interface IProps {
 
 
 const getValue = (val: number): string => {
-  if(val > 1000) { 
-    return "$ " +  (Math.floor(val / 1000) + "k").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  if (val > 1000) {
+    return "$ " + (Math.floor(val / 1000) + "k").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   } else {
     return "$ " + val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -91,6 +91,13 @@ function Chart({ caption, rows, series }: IProps) {
         fontWeight: "bold",
         fontSize: "15px",
         color: "#303030"
+      }
+    },
+    exporting: {
+      buttons: {
+        contextButton: {
+          text: "Actions"
+        }
       }
     }
   };
